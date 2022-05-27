@@ -1,0 +1,67 @@
+May-05 21:09:38.677 [main] DEBUG nextflow.cli.Launcher - $> nextflow -C nextflow.config -C conf/genome-seq-prep.config -C conf/pr-enh-prep.config run ../nxf-scripts/genome-seq-prep.nf --refgen mm10 -profile slurm -w /fastscratch/agarwa/nf-tmp/work -with-timeline -resume
+May-05 21:09:38.905 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 21.10.6
+May-05 21:09:38.951 [main] INFO  nextflow.cli.CmdRun - Launching `../nxf-scripts/genome-seq-prep.nf` [evil_wescoff] - revision: 90130ca96e
+May-05 21:09:38.969 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /pod/2/li-lab/agarwa/CUBE/DeepTact/DeepTact-Pipeline/exec_dir/TestSet/nxf_TestSet/2-TestSet_nxf/nextflow.config
+May-05 21:09:38.970 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /pod/2/li-lab/agarwa/CUBE/DeepTact/DeepTact-Pipeline/exec_dir/TestSet/nxf_TestSet/2-TestSet_nxf/conf/genome-seq-prep.config
+May-05 21:09:38.970 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /pod/2/li-lab/agarwa/CUBE/DeepTact/DeepTact-Pipeline/exec_dir/TestSet/nxf_TestSet/2-TestSet_nxf/conf/pr-enh-prep.config
+May-05 21:09:38.998 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `slurm`
+May-05 21:09:39.741 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `slurm`
+May-05 21:09:39.764 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `slurm`
+May-05 21:09:39.858 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [standard, slurm]
+May-05 21:09:39.907 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/home/agarwa/.nextflow/plugins
+May-05 21:09:39.910 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+May-05 21:09:39.925 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+May-05 21:09:39.926 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+May-05 21:09:39.930 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+May-05 21:09:39.940 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+May-05 21:09:39.989 [main] DEBUG nextflow.Session - Session uuid: 0414832d-a87d-46d7-a455-d5b0eaf8a9f3
+May-05 21:09:39.990 [main] DEBUG nextflow.Session - Run name: evil_wescoff
+May-05 21:09:39.990 [main] DEBUG nextflow.Session - Executor pool size: 48
+May-05 21:09:40.049 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 21.10.6 build 5660
+  Created: 21-12-2021 16:55 UTC (11:55 EDT)
+  System: Linux 3.10.0-1062.1.2.el7.x86_64
+  Runtime: Groovy 3.0.9 on OpenJDK 64-Bit Server VM 11.0.1+13-LTS
+  Encoding: UTF-8 (UTF-8)
+  Process: 96427@sumner-log1 [10.5.33.12]
+  CPUs: 48 - Mem: 93.1 GB (589.9 MB) - Swap: 48 GB (15.9 GB)
+May-05 21:09:40.104 [main] DEBUG nextflow.Session - Work-dir: /fastscratch/agarwa/nf-tmp/work [gpfs]
+May-05 21:09:40.120 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+May-05 21:09:40.132 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+May-05 21:09:40.196 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 49; maxThreads: 1000
+May-05 21:09:40.357 [main] DEBUG nextflow.Session - Session start invoked
+May-05 21:09:40.409 [main] WARN  nextflow.NextflowMeta$Preview - DSL 2 PREVIEW MODE IS DEPRECATED - USE THE STABLE VERSION INSTEAD -- Read more at https://www.nextflow.io/docs/latest/dsl2.html#dsl2-migration-notes
+May-05 21:09:40.672 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+May-05 21:09:40.764 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 49; maxThreads: 1000
+May-05 21:09:40.893 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+May-05 21:09:40.893 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+May-05 21:09:40.903 [main] DEBUG nextflow.executor.Executor - [warm up] executor > slurm
+May-05 21:09:40.908 [main] DEBUG n.processor.TaskPollingMonitor - Creating task monitor for executor 'slurm' > capacity: 100; pollInterval: 5s; dumpInterval: 5m 
+May-05 21:09:40.912 [main] DEBUG n.executor.AbstractGridExecutor - Creating executor 'slurm' > queue-stat-interval: 1m
+May-05 21:09:40.974 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+May-05 21:09:40.974 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+May-05 21:09:40.982 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+May-05 21:09:40.982 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+May-05 21:09:40.993 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: GEN_FASTA, GEN_CSV, GEN_NPZ
+May-05 21:09:40.994 [main] DEBUG nextflow.Session - Ignite dataflow network (6)
+May-05 21:09:41.004 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > GEN_FASTA
+May-05 21:09:41.005 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > GEN_CSV
+May-05 21:09:41.005 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > GEN_NPZ
+May-05 21:09:41.006 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+May-05 21:09:41.006 [main] DEBUG nextflow.Session - Session await
+May-05 21:09:41.192 [Actor Thread 26] DEBUG nextflow.conda.CondaCache - conda found local env for environment=/projects/li-lab/agarwa/conda_envs/cube; path=/projects/li-lab/agarwa/conda_envs/cube
+May-05 21:09:41.295 [Actor Thread 23] INFO  nextflow.processor.TaskProcessor - [86/61b951] Cached process > GEN_FASTA (1)
+May-05 21:09:41.295 [Actor Thread 24] INFO  nextflow.processor.TaskProcessor - [2c/d64737] Cached process > GEN_FASTA (2)
+May-05 21:09:41.327 [Actor Thread 33] INFO  nextflow.processor.TaskProcessor - [02/687ad4] Cached process > GEN_CSV (2)
+May-05 21:09:41.336 [Actor Thread 30] INFO  nextflow.processor.TaskProcessor - [8a/48e504] Cached process > GEN_CSV (1)
+May-05 21:09:41.345 [Actor Thread 40] INFO  nextflow.processor.TaskProcessor - [ae/faba9c] Cached process > GEN_NPZ (1)
+May-05 21:09:41.353 [Actor Thread 45] INFO  nextflow.processor.TaskProcessor - [47/05dc9a] Cached process > GEN_NPZ (2)
+May-05 21:09:41.378 [main] DEBUG nextflow.Session - Session await > all process finished
+May-05 21:09:45.920 [main] DEBUG nextflow.Session - Session await > all barriers passed
+May-05 21:09:45.936 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=0; ignoredCount=0; cachedCount=6; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=0ms; cachedDuration=8m 10s;loadCpus=0; loadMemory=0; peakRunning=0; peakCpus=0; peakMemory=0; ]
+May-05 21:09:45.936 [main] DEBUG nextflow.trace.ReportObserver - Flow completing -- rendering html report
+May-05 21:09:46.009 [main] DEBUG nextflow.trace.ReportObserver - Execution report summary data:
+  [{"cpuUsage":{"mean":34.9,"min":34,"q1":34.45,"q2":34.9,"q3":35.35,"max":35.8,"minLabel":"GEN_FASTA (2)","maxLabel":"GEN_FASTA (1)","q1Label":"GEN_FASTA (2)","q2Label":"GEN_FASTA (2)","q3Label":"GEN_FASTA (2)"},"process":"GEN_FASTA","mem":{"mean":219549696,"min":174075904,"q1":196812800,"q2":219549696,"q3":242286592,"max":265023488,"minLabel":"GEN_FASTA (2)","maxLabel":"GEN_FASTA (1)","q1Label":"GEN_FASTA (2)","q2Label":"GEN_FASTA (2)","q3Label":"GEN_FASTA (2)"},"memUsage":{"mean":0.2,"min":0.16,"q1":0.18,"q2":0.2,"q3":0.23,"max":0.25,"minLabel":"GEN_FASTA (2)","maxLabel":"GEN_FASTA (1)","q1Label":"GEN_FASTA (2)","q2Label":"GEN_FASTA (2)","q3Label":"GEN_FASTA (2)"},"timeUsage":{"mean":0.03,"min":0.03,"q1":0.03,"q2":0.03,"q3":0.03,"max":0.03,"minLabel":"GEN_FASTA (1)","maxLabel":"GEN_FASTA (2)","q1Label":"GEN_FASTA (1)","q2Label":"GEN_FASTA (1)","q3Label":"GEN_FASTA (1)"},"vmem":{"mean":2912604160,"min":2912604160,"q1":2912604160,"q2":2912604160,"q3":2912604160,"max":2912604160,"minLabel":"GEN_FASTA (1)","maxLabel":"GEN_FASTA (2)","q1Label":"GEN_FASTA (1)","q2Label":"GEN_FASTA (1)","q3Label":"GEN_FASTA (1)"},"reads":{"mean":5569628.5,"min":4597484,"q1":5083556.25,"q2":5569628.5,"q3":6055700.75,"max":6541773,"minLabel":"GEN_FASTA (1)","maxLabel":"GEN_FASTA (2)","q1Label":"GEN_FASTA (1)","q2Label":"GEN_FASTA (1)","q3Label":"GEN_FASTA (1)"},"cpu":{"mean":34.9,"min":34,"q1":34.45,"q2":34.9,"q3":35.35,"max":35.8,"minLabel":"GEN_FASTA (2)","maxLabel":"GEN_FASTA (1)","q1Label":"GEN_FASTA (2)","q2Label":"GEN_FASTA (2)","q3Label":"GEN_FASTA (2)"},"time":{"mean":6990,"min":6566,"q1":6778,"q2":6990,"q3":7202,"max":7414,"minLabel":"GEN_FASTA (1)","maxLabel":"GEN_FASTA (2)","q1Label":"GEN_FASTA (1)","q2Label":"GEN_FASTA (1)","q3Label":"GEN_FASTA (1)"},"writes":{"mean":138447618,"min":124966089,"q1":131706853.5,"q2":138447618,"q3":145188382.5,"max":151929147,"minLabel":"GEN_FASTA (2)","maxLabel":"GEN_FASTA (1)","q1Label":"GEN_FASTA (2)","q2Label":"GEN_FASTA (2)","q3Label":"GEN_FASTA (2)"}},{"cpuUsage":{"mean":88.7,"min":88.1,"q1":88.4,"q2":88.7,"q3":89,"max":89.3,"minLabel":"GEN_CSV (2)","maxLabel":"GEN_CSV (1)","q1Label":"GEN_CSV (2)","q2Label":"GEN_CSV (2)","q3Label":"GEN_CSV (2)"},"process":"GEN_CSV","mem":{"mean":481419264,"min":462397440,"q1":471908352,"q2":481419264,"q3":490930176,"max":500441088,"minLabel":"GEN_CSV (1)","maxLabel":"GEN_CSV (2)","q1Label":"GEN_CSV (1)","q2Label":"GEN_CSV (1)","q3Label":"GEN_CSV (1)"},"memUsage":{"mean":0.45,"min":0.43,"q1":0.44,"q2":0.45,"q3":0.46,"max":0.47,"minLabel":"GEN_CSV (1)","maxLabel":"GEN_CSV (2)","q1Label":"GEN_CSV (1)","q2Label":"GEN_CSV (1)","q3Label":"GEN_CSV (1)"},"timeUsage":{"mean":0.02,"min":0.02,"q1":0.02,"q2":0.02,"q3":0.02,"max":0.02,"minLabel":"GEN_CSV (1)","maxLabel":"GEN_CSV (2)","q1Label":"GEN_CSV (1)","q2Label":"GEN_CSV (1)","q3Label":"GEN_CSV (1)"},"vmem":{"mean":796545024,"min":779509760,"q1":788027392,"q2":796545024,"q3":805062656,"max":813580288,"minLabel":"GEN_CSV (1)","maxLabel":"GEN_CSV (2)","q1Label":"GEN_CSV (1)","q2Label":"GEN_CSV (1)","q3Label":"GEN_CSV (1)"},"reads":{"mean":292892742.5,"min":265929950,"q1":279411346.25,"q2":292892742.5,"q3":306374138.75,"max":319855535,"minLabel":"GEN_CSV (1)","maxLabel":"GEN_CSV (2)","q1Label":"GEN_CSV (1)","q2Label":"GEN_CSV (1)","q3Label":"GEN_CSV (1)"},"cpu":{"mean":88.7,"min":88.1,"q1":88.4,"q2":88.7,"q3":89,"max":89.3,"minLabel":"GEN_CSV (2)","maxLabel":"GEN_CSV (1)","q1Label":"GEN_CSV (2)","q2Label":"GEN_CSV (2)","q3Label":"GEN_CSV (2)"},"time":{"mean":4890,"min":4851,"q1":4870.5,"q2":4890,"q3":4909.5,"max":4929,"minLabel":"GEN_CSV (1)","maxLabel":"GEN_CSV (2)","q1Label":"GEN_CSV (1)","q2Label":"GEN_CSV (1)","q3Label":"GEN_CSV (1)"},"writes":{"mean":138613162,"min":125145859,"q1":131879510.5,"q2":138613162,"q3":145346813.5,"max":152080465,"minLabel":"GEN_CSV (1)","maxLabel":"GEN_CSV (2)","q1Label":"GEN_CSV (1)","q2Label":"GEN_CSV (1)","q3Label":"GEN_CSV (1)"}},{"cpuUsage":{"mean":97.55,"min":97.2,"q1":97.38,"q2":97.55,"q3":97.73,"max":97.9,"minLabel":"GEN_NPZ (2)","maxLabel":"GEN_NPZ (1)","q1Label":"GEN_NPZ (2)","q2Label":"GEN_NPZ (2)","q3Label":"GEN_NPZ (2)"},"process":"GEN_NPZ","mem":{"mean":34949656576,"min":30994542592,"q1":32972099584,"q2":34949656576,"q3":36927213568,"max":38904770560,"minLabel":"GEN_NPZ (2)","maxLabel":"GEN_NPZ (1)","q1Label":"GEN_NPZ (2)","q2Label":"GEN_NPZ (2)","q3Label":"GEN_NPZ (2)"},"memUsage":{"mean":32.55,"min":28.87,"q1":30.71,"q2":32.55,"q3":34.39,"max":36.23,"minLabel":"GEN_NPZ (2)","maxLabel":"GEN_NPZ (1)","q1Label":"GEN_NPZ (2)","q2Label":"GEN_NPZ (2)","q3Label":"GEN_NPZ (2)"},"timeUsage":{"mean":1.08,"min":0.88,"q1":0.98,"q2":1.08,"q3":1.18,"max":1.28,"minLabel":"GEN_NPZ (1)","maxLabel":"GEN_NPZ (2)","q1Label":"GEN_NPZ (1)","q2Label":"GEN_NPZ (1)","q3Label":"GEN_NPZ (1)"},"vmem":{"mean":35598839808,"min":31566225408,"q1":33582532608,"q2":35598839808,"q3":37615147008,"max":39631454208,"minLabel":"GEN_NPZ (2)","maxLabel":"GEN_NPZ (1)","q1Label":"GEN_NPZ (2)","q2Label":"GEN_NPZ (2)","q3Label":"GEN_NPZ (2)"},"reads":{"mean":153891299.5,"min":140424113,"q1":147157706.25,"q2":153891299.5,"q3":160624892.75,"max":167358486,"minLabel":"GEN_NPZ (2)","maxLabel":"GEN_NPZ (1)","q1Label":"GEN_NPZ (2)","q2Label":"GEN_NPZ (2)","q3Label":"GEN_NPZ (2)"},"cpu":{"mean":97.55,"min":97.2,"q1":97.38,"q2":97.55,"q3":97.73,"max":97.9,"minLabel":"GEN_NPZ (2)","maxLabel":"GEN_NPZ (1)","q1Label":"GEN_NPZ (2)","q2Label":"GEN_NPZ (2)","q3Label":"GEN_NPZ (2)"},"time":{"mean":232985.5,"min":190195,"q1":211590.25,"q2":232985.5,"q3":254380.75,"max":275776,"minLabel":"GEN_NPZ (1)","maxLabel":"GEN_NPZ (2)","q1Label":"GEN_NPZ (1)","q2Label":"GEN_NPZ (1)","q3Label":"GEN_NPZ (1)"},"writes":{"mean":4292537311.5,"min":3801277430,"q1":4046907370.75,"q2":4292537311.5,"q3":4538167252.25,"max":4783797193,"minLabel":"GEN_NPZ (2)","maxLabel":"GEN_NPZ (1)","q1Label":"GEN_NPZ (2)","q2Label":"GEN_NPZ (2)","q3Label":"GEN_NPZ (2)"}}]
+May-05 21:09:46.895 [main] DEBUG nextflow.trace.TimelineObserver - Flow completing -- rendering html timeline
+May-05 21:09:47.101 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+May-05 21:09:47.120 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

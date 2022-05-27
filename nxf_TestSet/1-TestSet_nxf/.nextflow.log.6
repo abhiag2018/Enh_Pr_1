@@ -1,0 +1,39 @@
+May-05 10:42:25.556 [main] DEBUG nextflow.cli.Launcher - $> nextflow -C nextflow.config -C conf/pr-enh-prep.config run /projects/li-lab/agarwa/CUBE/DeepTact/DeepTact-Pipeline/DeepTact_NF_code/pr-enh-prep.nf --refgen mm10 -profile slurm -w /fastscratch/agarwa/nf-tmp/work -with-timeline -resume
+May-05 10:42:25.890 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 21.10.6
+May-05 10:42:25.929 [main] INFO  nextflow.cli.CmdRun - Launching `/projects/li-lab/agarwa/CUBE/DeepTact/DeepTact-Pipeline/DeepTact_NF_code/pr-enh-prep.nf` [jolly_dijkstra] - revision: 9bc3d77eed
+May-05 10:42:25.949 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /pod/2/li-lab/agarwa/CUBE/DeepTact/DeepTact-Pipeline/exec_dir/TestSet_nxf/TestSet_nxf-1/nextflow.config
+May-05 10:42:25.950 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /pod/2/li-lab/agarwa/CUBE/DeepTact/DeepTact-Pipeline/exec_dir/TestSet_nxf/TestSet_nxf-1/conf/pr-enh-prep.config
+May-05 10:42:25.978 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `slurm`
+May-05 10:42:26.666 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `slurm`
+May-05 10:42:26.788 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [standard, slurm]
+May-05 10:42:26.852 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/home/agarwa/.nextflow/plugins
+May-05 10:42:26.856 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+May-05 10:42:26.877 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+May-05 10:42:26.879 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+May-05 10:42:26.885 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+May-05 10:42:26.900 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+May-05 10:42:26.968 [main] DEBUG nextflow.Session - Session uuid: 74fd7232-d52f-476e-ac65-4302fdf14fe3
+May-05 10:42:26.969 [main] DEBUG nextflow.Session - Run name: jolly_dijkstra
+May-05 10:42:26.969 [main] DEBUG nextflow.Session - Executor pool size: 48
+May-05 10:42:27.040 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 21.10.6 build 5660
+  Created: 21-12-2021 16:55 UTC (11:55 EDT)
+  System: Linux 3.10.0-1062.1.2.el7.x86_64
+  Runtime: Groovy 3.0.9 on OpenJDK 64-Bit Server VM 11.0.1+13-LTS
+  Encoding: UTF-8 (UTF-8)
+  Process: 25694@sumner-log1 [10.5.33.12]
+  CPUs: 48 - Mem: 93.1 GB (8.8 GB) - Swap: 48 GB (16 GB)
+May-05 10:42:27.093 [main] DEBUG nextflow.Session - Work-dir: /fastscratch/agarwa/nf-tmp/work [gpfs]
+May-05 10:42:27.119 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+May-05 10:42:27.131 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+May-05 10:42:27.177 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 49; maxThreads: 1000
+May-05 10:42:27.350 [main] DEBUG nextflow.Session - Session start invoked
+May-05 10:42:27.405 [main] DEBUG nextflow.ast.NextflowDSLImpl - Missing name in process definition at line: 27
+May-05 10:42:27.429 [main] ERROR nextflow.cli.Launcher - Script compilation error
+- file : /projects/li-lab/agarwa/CUBE/DeepTact/DeepTact-Pipeline/DeepTact_NF_code/pr-enh-prep.nf
+- cause: Process definition syntax error -- A string identifier must be provided after the `process` keyword @ line 27, column 12.
+       process {
+              ^
+
+1 error
+

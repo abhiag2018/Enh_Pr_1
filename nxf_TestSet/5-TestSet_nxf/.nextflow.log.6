@@ -1,0 +1,210 @@
+May-05 17:27:12.740 [main] DEBUG nextflow.cli.Launcher - $> nextflow -C nextflow.config -C conf/feature-prep.config -C conf/pr-enh-prep.config run ../nxf-scripts/NN-feature-prep.nf -profile slurm -w /fastscratch/agarwa/nf-tmp/work -with-timeline --refgen mm10 -resume --randomize
+May-05 17:27:12.825 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 21.10.6
+May-05 17:27:12.849 [main] INFO  nextflow.cli.CmdRun - Launching `../nxf-scripts/NN-feature-prep.nf` [kickass_avogadro] - revision: 0194bd3fbd
+May-05 17:27:12.863 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /pod/2/li-lab/agarwa/CUBE/DeepTact/DeepTact-Pipeline/exec_dir/TestSet/nxf_TestSet/5-TestSet_nxf/nextflow.config
+May-05 17:27:12.864 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /pod/2/li-lab/agarwa/CUBE/DeepTact/DeepTact-Pipeline/exec_dir/TestSet/nxf_TestSet/5-TestSet_nxf/conf/feature-prep.config
+May-05 17:27:12.864 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /pod/2/li-lab/agarwa/CUBE/DeepTact/DeepTact-Pipeline/exec_dir/TestSet/nxf_TestSet/5-TestSet_nxf/conf/pr-enh-prep.config
+May-05 17:27:12.886 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `slurm`
+May-05 17:27:13.579 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `slurm`
+May-05 17:27:13.605 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `slurm`
+May-05 17:27:13.668 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [standard, slurm]
+May-05 17:27:13.714 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/home/agarwa/.nextflow/plugins
+May-05 17:27:13.716 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+May-05 17:27:13.728 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+May-05 17:27:13.729 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+May-05 17:27:13.734 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+May-05 17:27:13.744 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+May-05 17:27:13.789 [main] DEBUG nextflow.Session - Session uuid: b7bbb51d-c638-45ea-a75e-48b5e8415f84
+May-05 17:27:13.789 [main] DEBUG nextflow.Session - Run name: kickass_avogadro
+May-05 17:27:13.790 [main] DEBUG nextflow.Session - Executor pool size: 48
+May-05 17:27:13.829 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 21.10.6 build 5660
+  Created: 21-12-2021 16:55 UTC (11:55 EDT)
+  System: Linux 3.10.0-1062.1.2.el7.x86_64
+  Runtime: Groovy 3.0.9 on OpenJDK 64-Bit Server VM 11.0.1+13-LTS
+  Encoding: UTF-8 (UTF-8)
+  Process: 82635@sumner-log2 [10.5.33.13]
+  CPUs: 48 - Mem: 93.1 GB (13.3 GB) - Swap: 48 GB (23.9 GB)
+May-05 17:27:13.880 [main] DEBUG nextflow.Session - Work-dir: /fastscratch/agarwa/nf-tmp/work [gpfs]
+May-05 17:27:13.899 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+May-05 17:27:13.912 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+May-05 17:27:13.964 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 49; maxThreads: 1000
+May-05 17:27:14.107 [main] DEBUG nextflow.Session - Session start invoked
+May-05 17:27:14.143 [main] WARN  nextflow.NextflowMeta$Preview - DSL 2 PREVIEW MODE IS DEPRECATED - USE THE STABLE VERSION INSTEAD -- Read more at https://www.nextflow.io/docs/latest/dsl2.html#dsl2-migration-notes
+May-05 17:27:14.718 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+May-05 17:27:15.030 [main] WARN  nextflow.script.ScriptBinding - Access to undefined parameter `hic_split_process` -- Initialise it to a default value eg. `params.hic_split_process = some_value`
+May-05 17:27:15.127 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 49; maxThreads: 1000
+May-05 17:27:15.340 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+May-05 17:27:15.340 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+May-05 17:27:15.350 [main] DEBUG nextflow.executor.Executor - [warm up] executor > slurm
+May-05 17:27:15.356 [main] DEBUG n.processor.TaskPollingMonitor - Creating task monitor for executor 'slurm' > capacity: 100; pollInterval: 5s; dumpInterval: 5m 
+May-05 17:27:15.361 [main] DEBUG n.executor.AbstractGridExecutor - Creating executor 'slurm' > queue-stat-interval: 1m
+May-05 17:27:15.445 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+May-05 17:27:15.445 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+May-05 17:27:15.454 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+May-05 17:27:15.454 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+May-05 17:27:15.467 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+May-05 17:27:15.467 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+May-05 17:27:15.478 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+May-05 17:27:15.478 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+May-05 17:27:15.488 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+May-05 17:27:15.488 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+May-05 17:27:15.506 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_intense` matches labels `process_intense` for process with name combine_data_v1:COMBINE_PCHIC_FEATURES
+May-05 17:27:15.507 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+May-05 17:27:15.507 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+May-05 17:27:15.515 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_intense` matches labels `process_intense` for process with name combine_data_v1:CONSOLIDATE_1
+May-05 17:27:15.516 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+May-05 17:27:15.516 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+May-05 17:27:15.531 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_intense` matches labels `process_intense` for process with name combine_data_v1:RANDOMIZE_1
+May-05 17:27:15.532 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+May-05 17:27:15.532 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+May-05 17:27:15.538 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_intense` matches labels `process_intense` for process with name combine_data_v1:RANDOMIZE_2
+May-05 17:27:15.539 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+May-05 17:27:15.539 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+May-05 17:27:15.546 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_intense` matches labels `process_intense` for process with name combine_data_v1:RANDOMIZE_3
+May-05 17:27:15.547 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+May-05 17:27:15.547 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+May-05 17:27:15.559 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_intense` matches labels `process_intense` for process with name combine_data_v1:RANDOMIZE_A
+May-05 17:27:15.559 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+May-05 17:27:15.559 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+May-05 17:27:15.564 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_intense` matches labels `process_intense` for process with name combine_data_v1:CONSOLIDATE_2
+May-05 17:27:15.565 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+May-05 17:27:15.565 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+May-05 17:27:15.569 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: combine_data_v1:CHUNK_DATA_3, combine_data_v1:CHUNK_DATA_4, combine_data_v1:CHUNK_DATA_1, CONSOLIDATE_OUT, combine_data_v1:CHUNK_DATA_2, SUBLIST, combine_data_v1:RANDOMIZE_1, combine_data_v1:RANDOMIZE_3, combine_data_v1:RANDOMIZE_2, SELECT_UNIQ_REGELEM, COMBINE_PCHIC_FEATURES, RANDOMIZE, combine_data_v1:ALIGN_PCHIC_ENHPR, SPLIT_HIC, KNAPSACK, CONSOLIDATE_2, RANDOMIZE_A, COMBINE_HIC, CONSOLIDATE_1, CHROM_OPENN_SCORE_PROFILE, INTEGRATE, ALIGN_PCHIC_ENHPR, CHUNK_DATA_A, CHUNK_DATA_4, combine_data_v1:CONSOLIDATE_2, CHUNK_DATA_3, COMBINE_FILES, CHUNK_DATA, combine_data_v1:CONSOLIDATE_1, combine_data_v1:COMBINE_PCHIC_FEATURES, combine_data_v1:CHUNK_DATA_A, RANDOMIZE_1, RANDOMIZE_2, RANDOMIZE_3, CHUNK_DATA_2, CHUNK_DATA_1, MATCH_HIC_REGELEM, combine_data_v1:RANDOMIZE_A, SPLIT_BY_CHROM, AUGMENT_DATA
+May-05 17:27:15.570 [main] DEBUG nextflow.Session - Ignite dataflow network (32)
+May-05 17:27:15.579 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > combine_data_v1:ALIGN_PCHIC_ENHPR
+May-05 17:27:15.580 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > combine_data_v1:CHUNK_DATA_1
+May-05 17:27:15.580 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > combine_data_v1:CHUNK_DATA_2
+May-05 17:27:15.580 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > combine_data_v1:CHUNK_DATA_3
+May-05 17:27:15.581 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > combine_data_v1:CHUNK_DATA_4
+May-05 17:27:15.581 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > combine_data_v1:CHUNK_DATA_A
+May-05 17:27:15.582 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > combine_data_v1:COMBINE_PCHIC_FEATURES
+May-05 17:27:15.585 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > combine_data_v1:CONSOLIDATE_1
+May-05 17:27:15.589 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > combine_data_v1:RANDOMIZE_1
+May-05 17:27:15.589 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > combine_data_v1:RANDOMIZE_2
+May-05 17:27:15.589 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > combine_data_v1:RANDOMIZE_3
+May-05 17:27:15.589 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > combine_data_v1:RANDOMIZE_A
+May-05 17:27:15.590 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > combine_data_v1:CONSOLIDATE_2
+May-05 17:27:15.590 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+May-05 17:27:15.590 [main] DEBUG nextflow.Session - Session await
+May-05 17:27:15.613 [Actor Thread 37] ERROR nextflow.extension.OperatorEx - @unknown
+java.nio.file.NoSuchFileException: /pod/2/li-lab/agarwa/CUBE/DeepTact/DeepTact-Pipeline/exec_dir/TestSet/nxf_TestSet/5-TestSet_nxf/null
+	at nextflow.file.FileHelper.checkIfExists(FileHelper.groovy:1032)
+	at nextflow.file.FileHelper$checkIfExists$3.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:148)
+	at nextflow.Nextflow.file(Nextflow.groovy:159)
+	at nextflow.Nextflow$file.callStatic(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallStatic(CallSiteArray.java:55)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callStatic(AbstractCallSite.java:217)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callStatic(AbstractCallSite.java:240)
+	at Script_f5304e48$_runScript_closure13.doCall(Script_f5304e48:40)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:274)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1035)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:38)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
+	at nextflow.extension.MapOp$_apply_closure1.doCall(MapOp.groovy:57)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:274)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1035)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at groovyx.gpars.dataflow.operator.DataflowOperatorActor.startTask(DataflowOperatorActor.java:120)
+	at groovyx.gpars.dataflow.operator.DataflowOperatorActor.onMessage(DataflowOperatorActor.java:108)
+	at groovyx.gpars.actor.impl.SDAClosure$1.call(SDAClosure.java:43)
+	at groovyx.gpars.actor.AbstractLoopingActor.runEnhancedWithoutRepliesOnMessages(AbstractLoopingActor.java:293)
+	at groovyx.gpars.actor.AbstractLoopingActor.access$400(AbstractLoopingActor.java:30)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:93)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+May-05 17:27:15.628 [Actor Thread 37] DEBUG nextflow.Session - Session aborted -- Cause: /pod/2/li-lab/agarwa/CUBE/DeepTact/DeepTact-Pipeline/exec_dir/TestSet/nxf_TestSet/5-TestSet_nxf/null
+May-05 17:27:15.651 [Actor Thread 37] DEBUG nextflow.Session - The following nodes are still active:
+[process] combine_data_v1:ALIGN_PCHIC_ENHPR
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] combine_data_v1:CHUNK_DATA_1
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] combine_data_v1:CHUNK_DATA_2
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] combine_data_v1:CHUNK_DATA_3
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] combine_data_v1:CHUNK_DATA_4
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] combine_data_v1:CHUNK_DATA_A
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] combine_data_v1:COMBINE_PCHIC_FEATURES
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] combine_data_v1:CONSOLIDATE_1
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] combine_data_v1:RANDOMIZE_1
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] combine_data_v1:RANDOMIZE_2
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] combine_data_v1:RANDOMIZE_3
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] combine_data_v1:RANDOMIZE_A
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] combine_data_v1:CONSOLIDATE_2
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+May-05 17:27:15.653 [main] DEBUG nextflow.Session - Session await > all process finished
+May-05 17:27:15.659 [main] DEBUG nextflow.Session - Session await > all barriers passed
+May-05 17:27:15.677 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=0; peakCpus=0; peakMemory=0; ]
+May-05 17:27:15.677 [main] DEBUG nextflow.trace.ReportObserver - Flow completing -- rendering html report
+May-05 17:27:15.681 [main] DEBUG nextflow.trace.ReportObserver - Execution report summary data:
+  []
+May-05 17:27:16.373 [main] DEBUG nextflow.trace.TimelineObserver - Flow completing -- rendering html timeline
+May-05 17:27:16.452 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+May-05 17:27:16.466 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

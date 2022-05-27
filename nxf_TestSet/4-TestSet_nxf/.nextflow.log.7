@@ -1,0 +1,41 @@
+May-05 17:04:53.245 [main] DEBUG nextflow.cli.Launcher - $> nextflow -C nextflow.config -C conf/pchic-prep.config -C conf/pr-enh-prep.config run ../nxf-scripts/pchic-prep.nf -profile slurm -w /fastscratch/agarwa/nf-tmp/work -with-timeline --refgen mm10 --dev -resume
+May-05 17:04:53.406 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 21.10.6
+May-05 17:04:53.439 [main] INFO  nextflow.cli.CmdRun - Launching `../nxf-scripts/pchic-prep.nf` [golden_colden] - revision: 16d3c903ff
+May-05 17:04:53.458 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /pod/2/li-lab/agarwa/CUBE/DeepTact/DeepTact-Pipeline/exec_dir/TestSet/nxf_TestSet/4-TestSet_nxf/nextflow.config
+May-05 17:04:53.458 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /pod/2/li-lab/agarwa/CUBE/DeepTact/DeepTact-Pipeline/exec_dir/TestSet/nxf_TestSet/4-TestSet_nxf/conf/pchic-prep.config
+May-05 17:04:53.458 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /pod/2/li-lab/agarwa/CUBE/DeepTact/DeepTact-Pipeline/exec_dir/TestSet/nxf_TestSet/4-TestSet_nxf/conf/pr-enh-prep.config
+May-05 17:04:53.484 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `slurm`
+May-05 17:04:54.151 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `slurm`
+May-05 17:04:54.203 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `slurm`
+May-05 17:04:54.296 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [standard, slurm]
+May-05 17:04:54.345 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/home/agarwa/.nextflow/plugins
+May-05 17:04:54.347 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+May-05 17:04:54.359 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+May-05 17:04:54.361 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+May-05 17:04:54.365 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+May-05 17:04:54.374 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+May-05 17:04:54.414 [main] DEBUG nextflow.Session - Session uuid: 2e6e04d2-9fce-403d-90f3-8bc6fce0c185
+May-05 17:04:54.414 [main] DEBUG nextflow.Session - Run name: golden_colden
+May-05 17:04:54.414 [main] DEBUG nextflow.Session - Executor pool size: 48
+May-05 17:04:54.438 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 21.10.6 build 5660
+  Created: 21-12-2021 16:55 UTC (11:55 EDT)
+  System: Linux 3.10.0-1062.1.2.el7.x86_64
+  Runtime: Groovy 3.0.9 on OpenJDK 64-Bit Server VM 11.0.1+13-LTS
+  Encoding: UTF-8 (UTF-8)
+  Process: 63137@sumner-log2 [10.5.33.13]
+  CPUs: 48 - Mem: 93.1 GB (22.8 GB) - Swap: 48 GB (23.9 GB)
+May-05 17:04:54.484 [main] DEBUG nextflow.Session - Work-dir: /fastscratch/agarwa/nf-tmp/work [gpfs]
+May-05 17:04:54.511 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+May-05 17:04:54.529 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+May-05 17:04:54.585 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 49; maxThreads: 1000
+May-05 17:04:54.771 [main] DEBUG nextflow.Session - Session start invoked
+May-05 17:04:54.804 [main] WARN  nextflow.NextflowMeta$Preview - DSL 2 PREVIEW MODE IS DEPRECATED - USE THE STABLE VERSION INSTEAD -- Read more at https://www.nextflow.io/docs/latest/dsl2.html#dsl2-migration-notes
+May-05 17:04:55.120 [main] ERROR nextflow.cli.Launcher - Script compilation error
+- file : /pod/2/li-lab/agarwa/CUBE/DeepTact/DeepTact-Pipeline/exec_dir/TestSet/nxf_TestSet/nxf-scripts/pchic-prep.nf
+- cause: Unexpected input: '{' @ line 28, column 20.
+   workflow prep_pchic{ 
+                      ^
+
+1 error
+

@@ -1,0 +1,2 @@
+lines: 32399
+chrom: [chr5, chr19, chr10]

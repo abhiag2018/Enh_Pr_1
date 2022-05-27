@@ -1,0 +1,4 @@
+celltype,repetition,bam
+type66,1,../../dataset/ATAC-Seq/CUBE/ATAC_Seq_BAMs/1011-L_GT20_03816_TACGCTGC-AAGGAGTA_cat.sorted.rmDup.rmChrM.rmMulti.filtered.shifted.mm10.bam
+type66,2,../../dataset/ATAC-Seq/CUBE/ATAC_Seq_BAMs/1144-L_GT20_04905_AGGCAGAA-GCGTAAGA_cat.sorted.rmDup.rmChrM.rmMulti.filtered.shifted.mm10.bam
+type66,3,../../dataset/ATAC-Seq/CUBE/ATAC_Seq_BAMs/1012-L_GT20_03818_TACGCTGC-CGTCTAAT_cat.sorted.rmDup.rmChrM.rmMulti.filtered.shifted.mm10.bam

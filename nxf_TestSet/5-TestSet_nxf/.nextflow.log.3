@@ -1,0 +1,54 @@
+May-05 17:53:14.436 [main] DEBUG nextflow.cli.Launcher - $> nextflow -C nextflow.config -C conf/feature-prep.config -C conf/pr-enh-prep.config run ../nxf-scripts/NN-feature-prep.nf -profile slurm -w /fastscratch/agarwa/nf-tmp/work -with-timeline --refgen mm10 -resume
+May-05 17:53:14.728 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 21.10.6
+May-05 17:53:14.775 [main] INFO  nextflow.cli.CmdRun - Launching `../nxf-scripts/NN-feature-prep.nf` [fervent_stone] - revision: 0194bd3fbd
+May-05 17:53:14.803 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /pod/2/li-lab/agarwa/CUBE/DeepTact/DeepTact-Pipeline/exec_dir/TestSet/nxf_TestSet/5-TestSet_nxf/nextflow.config
+May-05 17:53:14.803 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /pod/2/li-lab/agarwa/CUBE/DeepTact/DeepTact-Pipeline/exec_dir/TestSet/nxf_TestSet/5-TestSet_nxf/conf/feature-prep.config
+May-05 17:53:14.803 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /pod/2/li-lab/agarwa/CUBE/DeepTact/DeepTact-Pipeline/exec_dir/TestSet/nxf_TestSet/5-TestSet_nxf/conf/pr-enh-prep.config
+May-05 17:53:14.844 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `slurm`
+May-05 17:53:16.213 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `slurm`
+May-05 17:53:16.264 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `slurm`
+May-05 17:53:16.429 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [standard, slurm]
+May-05 17:53:16.500 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/home/agarwa/.nextflow/plugins
+May-05 17:53:16.506 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+May-05 17:53:16.530 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+May-05 17:53:16.531 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+May-05 17:53:16.534 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+May-05 17:53:16.547 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+May-05 17:53:16.625 [main] DEBUG nextflow.Session - Session uuid: b7bbb51d-c638-45ea-a75e-48b5e8415f84
+May-05 17:53:16.625 [main] DEBUG nextflow.Session - Run name: fervent_stone
+May-05 17:53:16.626 [main] DEBUG nextflow.Session - Executor pool size: 2
+May-05 17:53:16.669 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 21.10.6 build 5660
+  Created: 21-12-2021 16:55 UTC (11:55 EDT)
+  System: Linux 3.10.0-1062.1.2.el7.x86_64
+  Runtime: Groovy 3.0.9 on OpenJDK 64-Bit Server VM 11.0.1+13-LTS
+  Encoding: UTF-8 (UTF-8)
+  Process: 56421@sumner061 [10.5.32.61]
+  CPUs: 1 - Mem: 754.6 GB (90.9 GB) - Swap: 63.9 GB (63.9 GB)
+May-05 17:53:16.757 [main] DEBUG nextflow.Session - Work-dir: /fastscratch/agarwa/nf-tmp/work [gpfs]
+May-05 17:53:16.769 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+May-05 17:53:16.777 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+May-05 17:53:16.850 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 2; maxThreads: 1000
+May-05 17:53:16.870 [main] ERROR nextflow.cli.Launcher - Unable to acquire lock on session with ID b7bbb51d-c638-45ea-a75e-48b5e8415f84
+
+Common reasons of this error are:
+ - You are trying to resume the execution of an already running pipeline
+ - A previous execution was abruptly interrupted leaving the session open
+
+You can check what process is holding the lock file by using the following command:
+ - lsof /pod/2/li-lab/agarwa/CUBE/DeepTact/DeepTact-Pipeline/exec_dir/TestSet/nxf_TestSet/5-TestSet_nxf/.nextflow/cache/b7bbb51d-c638-45ea-a75e-48b5e8415f84/db/LOCK
+java.io.IOException: Unable to acquire lock on session with ID b7bbb51d-c638-45ea-a75e-48b5e8415f84
+
+Common reasons of this error are:
+ - You are trying to resume the execution of an already running pipeline
+ - A previous execution was abruptly interrupted leaving the session open
+
+You can check what process is holding the lock file by using the following command:
+ - lsof /pod/2/li-lab/agarwa/CUBE/DeepTact/DeepTact-Pipeline/exec_dir/TestSet/nxf_TestSet/5-TestSet_nxf/.nextflow/cache/b7bbb51d-c638-45ea-a75e-48b5e8415f84/db/LOCK
+	at nextflow.CacheDB.openDb(CacheDB.groovy:110)
+	at nextflow.CacheDB.open(CacheDB.groovy:129)
+	at nextflow.Session.init(Session.groovy:378)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:112)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:308)
+	at nextflow.cli.Launcher.run(Launcher.groovy:480)
+	at nextflow.cli.Launcher.main(Launcher.groovy:639)

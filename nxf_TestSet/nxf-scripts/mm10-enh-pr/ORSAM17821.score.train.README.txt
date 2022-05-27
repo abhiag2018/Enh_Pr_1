@@ -1,0 +1,2 @@
+lines: 184799
+chrom: [chr12, chr2, chr15, chr7, chr6, chrCROSS, chr19, chr10, chr9, chr13, chr18, chr8]

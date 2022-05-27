@@ -1,0 +1,2 @@
+lines: 48200
+chrom: [chr5, chr17, chr16]

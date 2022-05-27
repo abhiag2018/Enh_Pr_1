@@ -1,0 +1,61 @@
+May-05 17:17:02.154 [main] DEBUG nextflow.cli.Launcher - $> nextflow -C nextflow.config -C conf/pchic-prep.config -C conf/pr-enh-prep.config run ../nxf-scripts/pchic-prep.nf -profile slurm -w /fastscratch/agarwa/nf-tmp/work -with-timeline --refgen mm10 --dev -resume
+May-05 17:17:02.279 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 21.10.6
+May-05 17:17:02.305 [main] INFO  nextflow.cli.CmdRun - Launching `../nxf-scripts/pchic-prep.nf` [cheesy_gautier] - revision: 17887cf8ae
+May-05 17:17:02.322 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /pod/2/li-lab/agarwa/CUBE/DeepTact/DeepTact-Pipeline/exec_dir/TestSet/nxf_TestSet/4-TestSet_nxf/nextflow.config
+May-05 17:17:02.323 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /pod/2/li-lab/agarwa/CUBE/DeepTact/DeepTact-Pipeline/exec_dir/TestSet/nxf_TestSet/4-TestSet_nxf/conf/pchic-prep.config
+May-05 17:17:02.323 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /pod/2/li-lab/agarwa/CUBE/DeepTact/DeepTact-Pipeline/exec_dir/TestSet/nxf_TestSet/4-TestSet_nxf/conf/pr-enh-prep.config
+May-05 17:17:02.348 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `slurm`
+May-05 17:17:02.958 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `slurm`
+May-05 17:17:03.009 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `slurm`
+May-05 17:17:03.101 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [standard, slurm]
+May-05 17:17:03.152 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/home/agarwa/.nextflow/plugins
+May-05 17:17:03.153 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+May-05 17:17:03.167 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+May-05 17:17:03.168 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+May-05 17:17:03.173 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+May-05 17:17:03.184 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+May-05 17:17:03.230 [main] DEBUG nextflow.Session - Session uuid: 2e6e04d2-9fce-403d-90f3-8bc6fce0c185
+May-05 17:17:03.230 [main] DEBUG nextflow.Session - Run name: cheesy_gautier
+May-05 17:17:03.230 [main] DEBUG nextflow.Session - Executor pool size: 48
+May-05 17:17:03.257 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 21.10.6 build 5660
+  Created: 21-12-2021 16:55 UTC (11:55 EDT)
+  System: Linux 3.10.0-1062.1.2.el7.x86_64
+  Runtime: Groovy 3.0.9 on OpenJDK 64-Bit Server VM 11.0.1+13-LTS
+  Encoding: UTF-8 (UTF-8)
+  Process: 71262@sumner-log2 [10.5.33.13]
+  CPUs: 48 - Mem: 93.1 GB (16.4 GB) - Swap: 48 GB (23.9 GB)
+May-05 17:17:03.306 [main] DEBUG nextflow.Session - Work-dir: /fastscratch/agarwa/nf-tmp/work [gpfs]
+May-05 17:17:03.321 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+May-05 17:17:03.332 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+May-05 17:17:03.370 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 49; maxThreads: 1000
+May-05 17:17:03.546 [main] DEBUG nextflow.Session - Session start invoked
+May-05 17:17:03.575 [main] WARN  nextflow.NextflowMeta$Preview - DSL 2 PREVIEW MODE IS DEPRECATED - USE THE STABLE VERSION INSTEAD -- Read more at https://www.nextflow.io/docs/latest/dsl2.html#dsl2-migration-notes
+May-05 17:17:04.142 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+May-05 17:17:04.552 [main] DEBUG nextflow.Session - Session aborted -- Cause: Cannot find a component with name 'COMBINE_CHR' in module: /pod/2/li-lab/agarwa/CUBE/DeepTact/DeepTact-Pipeline/exec_dir/TestSet/nxf_TestSet/nxf-scripts/./module.nf
+
+Did you mean any of these?
+  COMBINE_HIC
+
+May-05 17:17:04.572 [main] ERROR nextflow.cli.Launcher - @unknown
+nextflow.exception.MissingModuleComponentException: Cannot find a component with name 'COMBINE_CHR' in module: /pod/2/li-lab/agarwa/CUBE/DeepTact/DeepTact-Pipeline/exec_dir/TestSet/nxf_TestSet/nxf-scripts/./module.nf
+
+Did you mean any of these?
+  COMBINE_HIC
+
+	at nextflow.script.ScriptMeta.addModule(ScriptMeta.groovy:251)
+	at nextflow.script.ScriptMeta.addModule(ScriptMeta.groovy:242)
+	at nextflow.script.IncludeDef.load0(IncludeDef.groovy:117)
+	at nextflow.script.IncludeDef$load0$1.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
+	at Script_cf20e9c0.runScript(Script_cf20e9c0:4)
+	at nextflow.script.BaseScript.runDsl2(BaseScript.groovy:169)
+	at nextflow.script.BaseScript.run(BaseScript.groovy:200)
+	at nextflow.script.ScriptParser.runScript(ScriptParser.groovy:221)
+	at nextflow.script.ScriptRunner.run(ScriptRunner.groovy:212)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:120)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:308)
+	at nextflow.cli.Launcher.run(Launcher.groovy:480)
+	at nextflow.cli.Launcher.main(Launcher.groovy:639)

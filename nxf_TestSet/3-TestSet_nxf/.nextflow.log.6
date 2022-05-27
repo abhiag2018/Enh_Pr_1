@@ -1,0 +1,112 @@
+May-05 11:27:25.716 [main] DEBUG nextflow.cli.Launcher - $> nextflow -C nextflow.config -C conf/co-score-prep.config -C conf/pr-enh-prep.config run ../nxf-scripts/co-score-prep.nf -profile slurm -w /fastscratch/agarwa/nf-tmp/work -with-timeline --refgen mm10 -resume --dev
+May-05 11:27:25.812 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 21.10.6
+May-05 11:27:25.840 [main] INFO  nextflow.cli.CmdRun - Launching `../nxf-scripts/co-score-prep.nf` [happy_meitner] - revision: 378a7d2703
+May-05 11:27:25.859 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /pod/2/li-lab/agarwa/CUBE/DeepTact/DeepTact-Pipeline/exec_dir/TestSet_nxf/TestSet_nxf-3/nextflow.config
+May-05 11:27:25.859 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /pod/2/li-lab/agarwa/CUBE/DeepTact/DeepTact-Pipeline/exec_dir/TestSet_nxf/TestSet_nxf-3/conf/co-score-prep.config
+May-05 11:27:25.859 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /pod/2/li-lab/agarwa/CUBE/DeepTact/DeepTact-Pipeline/exec_dir/TestSet_nxf/TestSet_nxf-3/conf/pr-enh-prep.config
+May-05 11:27:25.886 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `slurm`
+May-05 11:27:26.450 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `slurm`
+May-05 11:27:26.479 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `slurm`
+May-05 11:27:26.589 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [standard, slurm]
+May-05 11:27:26.637 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/home/agarwa/.nextflow/plugins
+May-05 11:27:26.638 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+May-05 11:27:26.651 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+May-05 11:27:26.652 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+May-05 11:27:26.657 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+May-05 11:27:26.667 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+May-05 11:27:26.709 [main] DEBUG nextflow.Session - Session uuid: 3cf73d13-5980-46ca-837b-103c9e6afd7f
+May-05 11:27:26.710 [main] DEBUG nextflow.Session - Run name: happy_meitner
+May-05 11:27:26.710 [main] DEBUG nextflow.Session - Executor pool size: 48
+May-05 11:27:26.743 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 21.10.6 build 5660
+  Created: 21-12-2021 16:55 UTC (11:55 EDT)
+  System: Linux 3.10.0-1062.1.2.el7.x86_64
+  Runtime: Groovy 3.0.9 on OpenJDK 64-Bit Server VM 11.0.1+13-LTS
+  Encoding: UTF-8 (UTF-8)
+  Process: 63526@sumner-log1 [10.5.33.12]
+  CPUs: 48 - Mem: 93.1 GB (8 GB) - Swap: 48 GB (16 GB)
+May-05 11:27:26.801 [main] DEBUG nextflow.Session - Work-dir: /fastscratch/agarwa/nf-tmp/work [gpfs]
+May-05 11:27:26.823 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+May-05 11:27:26.835 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+May-05 11:27:26.883 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 49; maxThreads: 1000
+May-05 11:27:27.088 [main] DEBUG nextflow.Session - Session start invoked
+May-05 11:27:27.124 [main] WARN  nextflow.NextflowMeta$Preview - DSL 2 PREVIEW MODE IS DEPRECATED - USE THE STABLE VERSION INSTEAD -- Read more at https://www.nextflow.io/docs/latest/dsl2.html#dsl2-migration-notes
+May-05 11:27:27.681 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+May-05 11:27:28.225 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 49; maxThreads: 1000
+May-05 11:27:28.352 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+May-05 11:27:28.352 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+May-05 11:27:28.361 [main] DEBUG nextflow.executor.Executor - [warm up] executor > slurm
+May-05 11:27:28.368 [main] DEBUG n.processor.TaskPollingMonitor - Creating task monitor for executor 'slurm' > capacity: 100; pollInterval: 5s; dumpInterval: 5m 
+May-05 11:27:28.372 [main] DEBUG n.executor.AbstractGridExecutor - Creating executor 'slurm' > queue-stat-interval: 1m
+May-05 11:27:28.449 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+May-05 11:27:28.449 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+May-05 11:27:28.468 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+May-05 11:27:28.469 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+May-05 11:27:28.479 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+May-05 11:27:28.480 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+May-05 11:27:28.490 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: CONSOLIDATE_OUT, COMBINE_HIC, CHROM_OPENN_SCORE_PROFILE, INTEGRATE, SUBLIST, PROFILE_PR, CHUNK_DATA, GEN_BAM_INDEX, COMBINE_CHR, SELECT_UNIQ_REGELEM, CHROM_OPENN_SCORE, RANDOMIZE, PROFILE_ENH, SPLIT_HIC, MATCH_HIC_REGELEM, SPLIT_BY_CHROM, AUGMENT_DATA, KNAPSACK
+May-05 11:27:28.491 [main] DEBUG nextflow.Session - Ignite dataflow network (10)
+May-05 11:27:28.498 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > GEN_BAM_INDEX
+May-05 11:27:28.500 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > CHROM_OPENN_SCORE
+May-05 11:27:28.501 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > PROFILE_ENH
+May-05 11:27:28.503 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > PROFILE_PR
+May-05 11:27:28.503 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+May-05 11:27:28.503 [main] DEBUG nextflow.Session - Session await
+May-05 11:27:28.637 [Actor Thread 35] DEBUG nextflow.conda.CondaCache - conda found local env for environment=/projects/li-lab/agarwa/conda_envs/cube; path=/projects/li-lab/agarwa/conda_envs/cube
+May-05 11:27:28.739 [Actor Thread 34] INFO  nextflow.processor.TaskProcessor - [9d/ee2d17] Cached process > GEN_BAM_INDEX (1)
+May-05 11:27:28.739 [Actor Thread 49] INFO  nextflow.processor.TaskProcessor - [8b/2db5c2] Cached process > GEN_BAM_INDEX (2)
+May-05 11:27:28.813 [Actor Thread 42] INFO  nextflow.processor.TaskProcessor - [24/f594b6] Cached process > CHROM_OPENN_SCORE (11)
+May-05 11:27:28.813 [Actor Thread 16] INFO  nextflow.processor.TaskProcessor - [d8/436165] Cached process > CHROM_OPENN_SCORE (33)
+May-05 11:27:28.814 [Actor Thread 44] INFO  nextflow.processor.TaskProcessor - [14/ca8d01] Cached process > CHROM_OPENN_SCORE (9)
+May-05 11:27:28.814 [Actor Thread 49] INFO  nextflow.processor.TaskProcessor - [eb/a0b04f] Cached process > CHROM_OPENN_SCORE (2)
+May-05 11:27:28.813 [Actor Thread 40] INFO  nextflow.processor.TaskProcessor - [a2/d157c3] Cached process > CHROM_OPENN_SCORE (1)
+May-05 11:27:28.813 [Actor Thread 39] INFO  nextflow.processor.TaskProcessor - [37/28f5da] Cached process > CHROM_OPENN_SCORE (8)
+May-05 11:27:28.813 [Actor Thread 35] INFO  nextflow.processor.TaskProcessor - [ce/bc9de2] Cached process > CHROM_OPENN_SCORE (4)
+May-05 11:27:28.814 [Actor Thread 48] INFO  nextflow.processor.TaskProcessor - [f5/838193] Cached process > CHROM_OPENN_SCORE (5)
+May-05 11:27:28.814 [Actor Thread 47] INFO  nextflow.processor.TaskProcessor - [26/f7f6f7] Cached process > CHROM_OPENN_SCORE (3)
+May-05 11:27:28.814 [Actor Thread 36] INFO  nextflow.processor.TaskProcessor - [ca/56ca7c] Cached process > CHROM_OPENN_SCORE (18)
+May-05 11:27:28.813 [Actor Thread 43] INFO  nextflow.processor.TaskProcessor - [d2/b77397] Cached process > CHROM_OPENN_SCORE (10)
+May-05 11:27:28.813 [Actor Thread 46] INFO  nextflow.processor.TaskProcessor - [5f/3440b0] Cached process > CHROM_OPENN_SCORE (6)
+May-05 11:27:28.817 [Actor Thread 18] INFO  nextflow.processor.TaskProcessor - [f6/fffc76] Cached process > CHROM_OPENN_SCORE (31)
+May-05 11:27:28.818 [Actor Thread 20] INFO  nextflow.processor.TaskProcessor - [c6/dfe150] Cached process > CHROM_OPENN_SCORE (29)
+May-05 11:27:28.821 [Actor Thread 15] INFO  nextflow.processor.TaskProcessor - [28/f0cd92] Cached process > CHROM_OPENN_SCORE (34)
+May-05 11:27:28.826 [Actor Thread 32] INFO  nextflow.processor.TaskProcessor - [41/0077b2] Cached process > CHROM_OPENN_SCORE (17)
+May-05 11:27:28.826 [Actor Thread 8] INFO  nextflow.processor.TaskProcessor - [83/dd4491] Cached process > CHROM_OPENN_SCORE (41)
+May-05 11:27:28.826 [Actor Thread 25] INFO  nextflow.processor.TaskProcessor - [2e/6b953e] Cached process > CHROM_OPENN_SCORE (24)
+May-05 11:27:28.826 [Actor Thread 9] INFO  nextflow.processor.TaskProcessor - [c0/8cda24] Cached process > CHROM_OPENN_SCORE (40)
+May-05 11:27:28.826 [Actor Thread 26] INFO  nextflow.processor.TaskProcessor - [10/8c6d8d] Cached process > CHROM_OPENN_SCORE (22)
+May-05 11:27:28.826 [Actor Thread 23] INFO  nextflow.processor.TaskProcessor - [f7/dd28de] Cached process > CHROM_OPENN_SCORE (26)
+May-05 11:27:28.826 [Actor Thread 10] INFO  nextflow.processor.TaskProcessor - [6d/868cd9] Cached process > CHROM_OPENN_SCORE (39)
+May-05 11:27:28.826 [Actor Thread 12] INFO  nextflow.processor.TaskProcessor - [18/4ce28c] Cached process > CHROM_OPENN_SCORE (37)
+May-05 11:27:28.826 [Actor Thread 19] INFO  nextflow.processor.TaskProcessor - [8a/c24193] Cached process > CHROM_OPENN_SCORE (30)
+May-05 11:27:28.826 [Actor Thread 45] INFO  nextflow.processor.TaskProcessor - [ad/521688] Cached process > CHROM_OPENN_SCORE (7)
+May-05 11:27:28.826 [Actor Thread 13] INFO  nextflow.processor.TaskProcessor - [7f/97904a] Cached process > CHROM_OPENN_SCORE (36)
+May-05 11:27:28.826 [Actor Thread 11] INFO  nextflow.processor.TaskProcessor - [2e/cfb871] Cached process > CHROM_OPENN_SCORE (38)
+May-05 11:27:28.826 [Actor Thread 21] INFO  nextflow.processor.TaskProcessor - [d4/ec225b] Cached process > CHROM_OPENN_SCORE (28)
+May-05 11:27:28.826 [Actor Thread 37] INFO  nextflow.processor.TaskProcessor - [99/7b0831] Cached process > CHROM_OPENN_SCORE (14)
+May-05 11:27:28.826 [Actor Thread 24] INFO  nextflow.processor.TaskProcessor - [5b/e351a8] Cached process > CHROM_OPENN_SCORE (25)
+May-05 11:27:28.826 [Actor Thread 27] INFO  nextflow.processor.TaskProcessor - [a9/2fb6e8] Cached process > CHROM_OPENN_SCORE (16)
+May-05 11:27:28.826 [Actor Thread 38] INFO  nextflow.processor.TaskProcessor - [16/ed09a1] Cached process > CHROM_OPENN_SCORE (13)
+May-05 11:27:28.826 [Actor Thread 22] INFO  nextflow.processor.TaskProcessor - [40/da0ce0] Cached process > CHROM_OPENN_SCORE (27)
+May-05 11:27:28.826 [Actor Thread 30] INFO  nextflow.processor.TaskProcessor - [8c/330ef0] Cached process > CHROM_OPENN_SCORE (20)
+May-05 11:27:28.827 [Actor Thread 17] INFO  nextflow.processor.TaskProcessor - [73/ce5f72] Cached process > CHROM_OPENN_SCORE (32)
+May-05 11:27:28.827 [Actor Thread 14] INFO  nextflow.processor.TaskProcessor - [ab/ac32ab] Cached process > CHROM_OPENN_SCORE (35)
+May-05 11:27:28.827 [Actor Thread 41] INFO  nextflow.processor.TaskProcessor - [83/05cb3f] Cached process > CHROM_OPENN_SCORE (12)
+May-05 11:27:28.827 [Actor Thread 29] INFO  nextflow.processor.TaskProcessor - [9d/bbc65a] Cached process > CHROM_OPENN_SCORE (23)
+May-05 11:27:28.827 [Actor Thread 7] INFO  nextflow.processor.TaskProcessor - [6a/f0ac2d] Cached process > CHROM_OPENN_SCORE (42)
+May-05 11:27:28.828 [Actor Thread 33] INFO  nextflow.processor.TaskProcessor - [99/316f2e] Cached process > CHROM_OPENN_SCORE (19)
+May-05 11:27:28.828 [Actor Thread 28] INFO  nextflow.processor.TaskProcessor - [42/4a79e1] Cached process > CHROM_OPENN_SCORE (15)
+May-05 11:27:28.830 [Actor Thread 31] INFO  nextflow.processor.TaskProcessor - [e4/87b8fc] Cached process > CHROM_OPENN_SCORE (21)
+May-05 11:27:28.897 [Actor Thread 15] INFO  nextflow.processor.TaskProcessor - [ff/2f6f47] Cached process > PROFILE_ENH (1)
+May-05 11:27:28.897 [Actor Thread 9] INFO  nextflow.processor.TaskProcessor - [65/e941d2] Cached process > PROFILE_PR (2)
+May-05 11:27:28.897 [Actor Thread 20] INFO  nextflow.processor.TaskProcessor - [88/45e48e] Cached process > PROFILE_PR (1)
+May-05 11:27:28.897 [Actor Thread 32] INFO  nextflow.processor.TaskProcessor - [8b/df5dcf] Cached process > PROFILE_ENH (2)
+May-05 11:27:28.918 [main] DEBUG nextflow.Session - Session await > all process finished
+May-05 11:27:33.380 [main] DEBUG nextflow.Session - Session await > all barriers passed
+May-05 11:27:33.396 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=0; ignoredCount=0; cachedCount=48; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=0ms; cachedDuration=1h 14m 43s;loadCpus=0; loadMemory=0; peakRunning=0; peakCpus=0; peakMemory=0; ]
+May-05 11:27:33.396 [main] DEBUG nextflow.trace.ReportObserver - Flow completing -- rendering html report
+May-05 11:27:33.523 [main] DEBUG nextflow.trace.ReportObserver - Execution report summary data:
+  [{"cpuUsage":{"mean":93.35,"min":93.3,"q1":93.33,"q2":93.35,"q3":93.38,"max":93.4,"minLabel":"GEN_BAM_INDEX (1)","maxLabel":"GEN_BAM_INDEX (2)","q1Label":"GEN_BAM_INDEX (1)","q2Label":"GEN_BAM_INDEX (1)","q3Label":"GEN_BAM_INDEX (1)"},"process":"GEN_BAM_INDEX","mem":{"mean":21096448,"min":19742720,"q1":20419584,"q2":21096448,"q3":21773312,"max":22450176,"minLabel":"GEN_BAM_INDEX (2)","maxLabel":"GEN_BAM_INDEX (1)","q1Label":"GEN_BAM_INDEX (2)","q2Label":"GEN_BAM_INDEX (2)","q3Label":"GEN_BAM_INDEX (2)"},"memUsage":{"mean":0.02,"min":0.02,"q1":0.02,"q2":0.02,"q3":0.02,"max":0.02,"minLabel":"GEN_BAM_INDEX (2)","maxLabel":"GEN_BAM_INDEX (1)","q1Label":"GEN_BAM_INDEX (2)","q2Label":"GEN_BAM_INDEX (2)","q3Label":"GEN_BAM_INDEX (2)"},"timeUsage":{"mean":0.14,"min":0.14,"q1":0.14,"q2":0.14,"q3":0.14,"max":0.15,"minLabel":"GEN_BAM_INDEX (2)","maxLabel":"GEN_BAM_INDEX (1)","q1Label":"GEN_BAM_INDEX (2)","q2Label":"GEN_BAM_INDEX (2)","q3Label":"GEN_BAM_INDEX (2)"},"vmem":{"mean":159580160,"min":158035968,"q1":158808064,"q2":159580160,"q3":160352256,"max":161124352,"minLabel":"GEN_BAM_INDEX (2)","maxLabel":"GEN_BAM_INDEX (1)","q1Label":"GEN_BAM_INDEX (2)","q2Label":"GEN_BAM_INDEX (2)","q3Label":"GEN_BAM_INDEX (2)"},"reads":{"mean":2016669151,"min":1942867701,"q1":1979768426,"q2":2016669151,"q3":2053569876,"max":2090470601,"minLabel":"GEN_BAM_INDEX (2)","maxLabel":"GEN_BAM_INDEX (1)","q1Label":"GEN_BAM_INDEX (2)","q2Label":"GEN_BAM_INDEX (2)","q3Label":"GEN_BAM_INDEX (2)"},"cpu":{"mean":93.35,"min":93.3,"q1":93.33,"q2":93.35,"q3":93.38,"max":93.4,"minLabel":"GEN_BAM_INDEX (1)","maxLabel":"GEN_BAM_INDEX (2)","q1Label":"GEN_BAM_INDEX (1)","q2Label":"GEN_BAM_INDEX (1)","q3Label":"GEN_BAM_INDEX (1)"},"time":{"mean":30915,"min":30117,"q1":30516,"q2":30915,"q3":31314,"max":31713,"minLabel":"GEN_BAM_INDEX (2)","maxLabel":"GEN_BAM_INDEX (1)","q1Label":"GEN_BAM_INDEX (2)","q2Label":"GEN_BAM_INDEX (2)","q3Label":"GEN_BAM_INDEX (2)"},"writes":{"mean":2014556,"min":1989980,"q1":2002268,"q2":2014556,"q3":2026844,"max":2039132,"minLabel":"GEN_BAM_INDEX (1)","maxLabel":"GEN_BAM_INDEX (2)","q1Label":"GEN_BAM_INDEX (1)","q2Label":"GEN_BAM_INDEX (1)","q3Label":"GEN_BAM_INDEX (1)"}},{"cpuUsage":{"mean":96.6,"min":93.3,"q1":96.6,"q2":96.8,"q3":97,"max":97.5,"minLabel":"CHROM_OPENN_SCORE (21)","maxLabel":"CHROM_OPENN_SCORE (22)","q1Label":"CHROM_OPENN_SCORE (8)","q2Label":"CHROM_OPENN_SCORE (30)","q3Label":"CHROM_OPENN_SCORE (23)"},"process":"CHROM_OPENN_SCORE","mem":{"mean":8396229388.19,"min":4042104832,"q1":6785930240,"q2":8103567360,"q3":9827929088,"max":12654612480,"minLabel":"CHROM_OPENN_SCORE (40)","maxLabel":"CHROM_OPENN_SCORE (22)","q1Label":"CHROM_OPENN_SCORE (36)","q2Label":"CHROM_OPENN_SCORE (9)","q3Label":"CHROM_OPENN_SCORE (5)"},"memUsage":{"mean":7.82,"min":3.76,"q1":6.32,"q2":7.55,"q3":9.15,"max":11.79,"minLabel":"CHROM_OPENN_SCORE (40)","maxLabel":"CHROM_OPENN_SCORE (22)","q1Label":"CHROM_OPENN_SCORE (36)","q2Label":"CHROM_OPENN_SCORE (9)","q3Label":"CHROM_OPENN_SCORE (5)"},"timeUsage":{"mean":0.45,"min":0.1,"q1":0.31,"q2":0.43,"q3":0.57,"max":0.8,"minLabel":"CHROM_OPENN_SCORE (21)","maxLabel":"CHROM_OPENN_SCORE (23)","q1Label":"CHROM_OPENN_SCORE (12)","q2Label":"CHROM_OPENN_SCORE (37)","q3Label":"CHROM_OPENN_SCORE (32)"},"vmem":{"mean":8966220653.71,"min":4487168000,"q1":7279147008,"q2":8645660672,"q3":10411595776,"max":13270102016,"minLabel":"CHROM_OPENN_SCORE (18)","maxLabel":"CHROM_OPENN_SCORE (22)","q1Label":"CHROM_OPENN_SCORE (16)","q2Label":"CHROM_OPENN_SCORE (14)","q3Label":"CHROM_OPENN_SCORE (5)"},"reads":{"mean":119662938.1,"min":23667826,"q1":107003805.25,"q2":122797620,"q3":137788299.5,"max":176422725,"minLabel":"CHROM_OPENN_SCORE (21)","maxLabel":"CHROM_OPENN_SCORE (2)","q1Label":"CHROM_OPENN_SCORE (35)","q2Label":"CHROM_OPENN_SCORE (31)","q3Label":"CHROM_OPENN_SCORE (3)"},"cpu":{"mean":96.6,"min":93.3,"q1":96.6,"q2":96.8,"q3":97,"max":97.5,"minLabel":"CHROM_OPENN_SCORE (21)","maxLabel":"CHROM_OPENN_SCORE (22)","q1Label":"CHROM_OPENN_SCORE (8)","q2Label":"CHROM_OPENN_SCORE (30)","q3Label":"CHROM_OPENN_SCORE (23)"},"time":{"mean":96871.88,"min":22560,"q1":67257.75,"q2":93875,"q3":123111.75,"max":173297,"minLabel":"CHROM_OPENN_SCORE (21)","maxLabel":"CHROM_OPENN_SCORE (23)","q1Label":"CHROM_OPENN_SCORE (12)","q2Label":"CHROM_OPENN_SCORE (37)","q3Label":"CHROM_OPENN_SCORE (32)"},"writes":{"mean":1038294425.71,"min":491453087,"q1":832350042.75,"q2":999218526.5,"q3":1214678044.5,"max":1563776344,"minLabel":"CHROM_OPENN_SCORE (18)","maxLabel":"CHROM_OPENN_SCORE (1)","q1Label":"CHROM_OPENN_SCORE (16)","q2Label":"CHROM_OPENN_SCORE (14)","q3Label":"CHROM_OPENN_SCORE (5)"}},{"cpuUsage":{"mean":92.5,"min":92,"q1":92.25,"q2":92.5,"q3":92.75,"max":93,"minLabel":"PROFILE_ENH (1)","maxLabel":"PROFILE_ENH (2)","q1Label":"PROFILE_ENH (1)","q2Label":"PROFILE_ENH (1)","q3Label":"PROFILE_ENH (1)"},"process":"PROFILE_ENH","mem":{"mean":25015744512,"min":24488910848,"q1":24752327680,"q2":25015744512,"q3":25279161344,"max":25542578176,"minLabel":"PROFILE_ENH (1)","maxLabel":"PROFILE_ENH (2)","q1Label":"PROFILE_ENH (1)","q2Label":"PROFILE_ENH (1)","q3Label":"PROFILE_ENH (1)"},"memUsage":{"mean":23.3,"min":22.81,"q1":23.05,"q2":23.3,"q3":23.54,"max":23.79,"minLabel":"PROFILE_ENH (1)","maxLabel":"PROFILE_ENH (2)","q1Label":"PROFILE_ENH (1)","q2Label":"PROFILE_ENH (1)","q3Label":"PROFILE_ENH (1)"},"timeUsage":{"mean":0.41,"min":0.41,"q1":0.41,"q2":0.41,"q3":0.41,"max":0.41,"minLabel":"PROFILE_ENH (2)","maxLabel":"PROFILE_ENH (1)","q1Label":"PROFILE_ENH (2)","q2Label":"PROFILE_ENH (2)","q3Label":"PROFILE_ENH (2)"},"vmem":{"mean":26001674240,"min":26001674240,"q1":26001674240,"q2":26001674240,"q3":26001674240,"max":26001674240,"minLabel":"PROFILE_ENH (2)","maxLabel":"PROFILE_ENH (1)","q1Label":"PROFILE_ENH (2)","q2Label":"PROFILE_ENH (2)","q3Label":"PROFILE_ENH (2)"},"reads":{"mean":23115896611,"min":23115896137,"q1":23115896374,"q2":23115896611,"q3":23115896848,"max":23115897085,"minLabel":"PROFILE_ENH (2)","maxLabel":"PROFILE_ENH (1)","q1Label":"PROFILE_ENH (2)","q2Label":"PROFILE_ENH (2)","q3Label":"PROFILE_ENH (2)"},"cpu":{"mean":92.5,"min":92,"q1":92.25,"q2":92.5,"q3":92.75,"max":93,"minLabel":"PROFILE_ENH (1)","maxLabel":"PROFILE_ENH (2)","q1Label":"PROFILE_ENH (1)","q2Label":"PROFILE_ENH (1)","q3Label":"PROFILE_ENH (1)"},"time":{"mean":88931,"min":88234,"q1":88582.5,"q2":88931,"q3":89279.5,"max":89628,"minLabel":"PROFILE_ENH (2)","maxLabel":"PROFILE_ENH (1)","q1Label":"PROFILE_ENH (2)","q2Label":"PROFILE_ENH (2)","q3Label":"PROFILE_ENH (2)"},"writes":{"mean":1238899797,"min":1236939825,"q1":1237919811,"q2":1238899797,"q3":1239879783,"max":1240859769,"minLabel":"PROFILE_ENH (1)","maxLabel":"PROFILE_ENH (2)","q1Label":"PROFILE_ENH (1)","q2Label":"PROFILE_ENH (1)","q3Label":"PROFILE_ENH (1)"}},{"cpuUsage":{"mean":92.1,"min":91.5,"q1":91.8,"q2":92.1,"q3":92.4,"max":92.7,"minLabel":"PROFILE_PR (2)","maxLabel":"PROFILE_PR (1)","q1Label":"PROFILE_PR (2)","q2Label":"PROFILE_PR (2)","q3Label":"PROFILE_PR (2)"},"process":"PROFILE_PR","mem":{"mean":24804665344,"min":24803631104,"q1":24804148224,"q2":24804665344,"q3":24805182464,"max":24805699584,"minLabel":"PROFILE_PR (1)","maxLabel":"PROFILE_PR (2)","q1Label":"PROFILE_PR (1)","q2Label":"PROFILE_PR (1)","q3Label":"PROFILE_PR (1)"},"memUsage":{"mean":23.1,"min":23.1,"q1":23.1,"q2":23.1,"q3":23.1,"max":23.1,"minLabel":"PROFILE_PR (1)","maxLabel":"PROFILE_PR (2)","q1Label":"PROFILE_PR (1)","q2Label":"PROFILE_PR (1)","q3Label":"PROFILE_PR (1)"},"timeUsage":{"mean":0.4,"min":0.39,"q1":0.4,"q2":0.4,"q3":0.41,"max":0.42,"minLabel":"PROFILE_PR (2)","maxLabel":"PROFILE_PR (1)","q1Label":"PROFILE_PR (2)","q2Label":"PROFILE_PR (2)","q3Label":"PROFILE_PR (2)"},"vmem":{"mean":25262456832,"min":25262456832,"q1":25262456832,"q2":25262456832,"q3":25262456832,"max":25262456832,"minLabel":"PROFILE_PR (1)","maxLabel":"PROFILE_PR (2)","q1Label":"PROFILE_PR (1)","q2Label":"PROFILE_PR (1)","q3Label":"PROFILE_PR (1)"},"reads":{"mean":22873151580.5,"min":22873150960,"q1":22873151270.25,"q2":22873151580.5,"q3":22873151890.75,"max":22873152201,"minLabel":"PROFILE_PR (2)","maxLabel":"PROFILE_PR (1)","q1Label":"PROFILE_PR (2)","q2Label":"PROFILE_PR (2)","q3Label":"PROFILE_PR (2)"},"cpu":{"mean":92.1,"min":91.5,"q1":91.8,"q2":92.1,"q3":92.4,"max":92.7,"minLabel":"PROFILE_PR (2)","maxLabel":"PROFILE_PR (1)","q1Label":"PROFILE_PR (2)","q2Label":"PROFILE_PR (2)","q3Label":"PROFILE_PR (2)"},"time":{"mean":87476,"min":84866,"q1":86171,"q2":87476,"q3":88781,"max":90086,"minLabel":"PROFILE_PR (2)","maxLabel":"PROFILE_PR (1)","q1Label":"PROFILE_PR (2)","q2Label":"PROFILE_PR (2)","q3Label":"PROFILE_PR (2)"},"writes":{"mean":1011009527,"min":1007472568,"q1":1009241047.5,"q2":1011009527,"q3":1012778006.5,"max":1014546486,"minLabel":"PROFILE_PR (1)","maxLabel":"PROFILE_PR (2)","q1Label":"PROFILE_PR (1)","q2Label":"PROFILE_PR (1)","q3Label":"PROFILE_PR (1)"}}]
+May-05 11:27:34.336 [main] DEBUG nextflow.trace.TimelineObserver - Flow completing -- rendering html timeline
+May-05 11:27:34.617 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+May-05 11:27:34.644 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

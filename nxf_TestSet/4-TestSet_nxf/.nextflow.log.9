@@ -1,0 +1,596 @@
+May-05 17:02:41.702 [main] DEBUG nextflow.cli.Launcher - $> nextflow -C nextflow.config -C conf/pchic-prep.config -C conf/pr-enh-prep.config run ../nxf-scripts/pchic-prep.nf -profile slurm -w /fastscratch/agarwa/nf-tmp/work -with-timeline --refgen mm10 --dev -resume
+May-05 17:02:41.827 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 21.10.6
+May-05 17:02:41.854 [main] INFO  nextflow.cli.CmdRun - Launching `../nxf-scripts/pchic-prep.nf` [gigantic_murdock] - revision: 2075c75779
+May-05 17:02:41.870 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /pod/2/li-lab/agarwa/CUBE/DeepTact/DeepTact-Pipeline/exec_dir/TestSet/nxf_TestSet/4-TestSet_nxf/nextflow.config
+May-05 17:02:41.870 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /pod/2/li-lab/agarwa/CUBE/DeepTact/DeepTact-Pipeline/exec_dir/TestSet/nxf_TestSet/4-TestSet_nxf/conf/pchic-prep.config
+May-05 17:02:41.870 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /pod/2/li-lab/agarwa/CUBE/DeepTact/DeepTact-Pipeline/exec_dir/TestSet/nxf_TestSet/4-TestSet_nxf/conf/pr-enh-prep.config
+May-05 17:02:41.894 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `slurm`
+May-05 17:02:42.537 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `slurm`
+May-05 17:02:42.586 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `slurm`
+May-05 17:02:42.682 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [standard, slurm]
+May-05 17:02:42.728 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/home/agarwa/.nextflow/plugins
+May-05 17:02:42.729 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+May-05 17:02:42.741 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+May-05 17:02:42.742 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+May-05 17:02:42.746 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+May-05 17:02:42.755 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+May-05 17:02:42.796 [main] DEBUG nextflow.Session - Session uuid: 2e6e04d2-9fce-403d-90f3-8bc6fce0c185
+May-05 17:02:42.796 [main] DEBUG nextflow.Session - Run name: gigantic_murdock
+May-05 17:02:42.797 [main] DEBUG nextflow.Session - Executor pool size: 48
+May-05 17:02:42.821 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 21.10.6 build 5660
+  Created: 21-12-2021 16:55 UTC (11:55 EDT)
+  System: Linux 3.10.0-1062.1.2.el7.x86_64
+  Runtime: Groovy 3.0.9 on OpenJDK 64-Bit Server VM 11.0.1+13-LTS
+  Encoding: UTF-8 (UTF-8)
+  Process: 61335@sumner-log2 [10.5.33.13]
+  CPUs: 48 - Mem: 93.1 GB (22.8 GB) - Swap: 48 GB (23.9 GB)
+May-05 17:02:42.873 [main] DEBUG nextflow.Session - Work-dir: /fastscratch/agarwa/nf-tmp/work [gpfs]
+May-05 17:02:42.888 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+May-05 17:02:42.898 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+May-05 17:02:42.936 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 49; maxThreads: 1000
+May-05 17:02:43.141 [main] DEBUG nextflow.Session - Session start invoked
+May-05 17:02:43.173 [main] WARN  nextflow.NextflowMeta$Preview - DSL 2 PREVIEW MODE IS DEPRECATED - USE THE STABLE VERSION INSTEAD -- Read more at https://www.nextflow.io/docs/latest/dsl2.html#dsl2-migration-notes
+May-05 17:02:43.777 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+May-05 17:02:44.273 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 49; maxThreads: 1000
+May-05 17:02:44.407 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+May-05 17:02:44.408 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+May-05 17:02:44.419 [main] DEBUG nextflow.executor.Executor - [warm up] executor > slurm
+May-05 17:02:44.426 [main] DEBUG n.processor.TaskPollingMonitor - Creating task monitor for executor 'slurm' > capacity: 100; pollInterval: 5s; dumpInterval: 5m 
+May-05 17:02:44.431 [main] DEBUG n.executor.AbstractGridExecutor - Creating executor 'slurm' > queue-stat-interval: 1m
+May-05 17:02:44.535 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+May-05 17:02:44.535 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+May-05 17:02:44.568 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+May-05 17:02:44.568 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+May-05 17:02:44.577 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+May-05 17:02:44.577 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+May-05 17:02:44.587 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+May-05 17:02:44.587 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+May-05 17:02:44.597 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+May-05 17:02:44.598 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+May-05 17:02:44.607 [main] WARN  nextflow.script.params.BaseOutParam - Process output `mode` is not supported any more
+May-05 17:02:44.610 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+May-05 17:02:44.610 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+May-05 17:02:44.621 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+May-05 17:02:44.622 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+May-05 17:02:44.641 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+May-05 17:02:44.641 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+May-05 17:02:44.643 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+May-05 17:02:44.643 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+May-05 17:02:44.660 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+May-05 17:02:44.660 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+May-05 17:02:44.667 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: CONSOLIDATE_OUT, SUBLIST_0, SUBLIST, COMBINE_CHR, SELECT_UNIQ_REGELEM, RANDOMIZE, prep_pchic:AUGMENT_DATA, SPLIT_HIC, prep_pchic:SPLIT_BY_CHROM, prep_pchic:COMBINE_FILES, SUBLIST_3, SUBLIST_2, prep_pchic:SUBLIST_0, SUBLIST_1, prep_pchic:SUBLIST_1, prep_pchic:KNAPSACK_0, KNAPSACK, prep_pchic:INTEGRATE, prep_pchic:COMBINE_HIC, COMBINE_HIC, prep_pchic:SPLIT_HIC, CHROM_OPENN_SCORE_PROFILE, INTEGRATE, COMBINE_FILES, KNAPSACK_0, CHUNK_DATA, prep_pchic:SELECT_UNIQ_REGELEM, MATCH_HIC_REGELEM, SPLIT_BY_CHROM, prep_pchic:MATCH_HIC_REGELEM, AUGMENT_DATA
+May-05 17:02:44.667 [main] DEBUG nextflow.Session - Ignite dataflow network (15)
+May-05 17:02:44.673 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > prep_pchic:SPLIT_BY_CHROM
+May-05 17:02:44.674 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > prep_pchic:SPLIT_HIC
+May-05 17:02:44.674 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > prep_pchic:MATCH_HIC_REGELEM
+May-05 17:02:44.674 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > prep_pchic:SELECT_UNIQ_REGELEM
+May-05 17:02:44.674 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > prep_pchic:COMBINE_HIC
+May-05 17:02:44.674 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > prep_pchic:INTEGRATE
+May-05 17:02:44.674 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > prep_pchic:AUGMENT_DATA
+May-05 17:02:44.674 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > prep_pchic:KNAPSACK_0
+May-05 17:02:44.674 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > prep_pchic:SUBLIST_0
+May-05 17:02:44.675 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > prep_pchic:SUBLIST_1
+May-05 17:02:44.676 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > prep_pchic:COMBINE_FILES
+May-05 17:02:44.676 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+May-05 17:02:44.676 [main] DEBUG nextflow.Session - Session await
+May-05 17:02:44.792 [Actor Thread 43] DEBUG nextflow.conda.CondaCache - conda found local env for environment=/projects/li-lab/agarwa/conda_envs/cube; path=/projects/li-lab/agarwa/conda_envs/cube
+May-05 17:02:44.919 [Actor Thread 40] INFO  nextflow.processor.TaskProcessor - [db/a4d46a] Cached process > prep_pchic:SPLIT_BY_CHROM (1)
+May-05 17:02:44.919 [Actor Thread 39] INFO  nextflow.processor.TaskProcessor - [17/029a34] Cached process > prep_pchic:SPLIT_BY_CHROM (2)
+May-05 17:02:44.944 [Actor Thread 43] DEBUG n.splitter.AbstractTextSplitter - Splitter `Text` collector path: nextflow.splitter.TextFileCollector$CachePath(/fastscratch/agarwa/nf-tmp/work/ed/124e782532e95ab7246813077a8b56/ORSAM17821-2.chr1.tsv, null)
+May-05 17:02:44.950 [Actor Thread 43] DEBUG nextflow.splitter.AbstractSplitter - Operator `Text` reusing cached chunks at path: /fastscratch/agarwa/nf-tmp/work/ed/124e782532e95ab7246813077a8b56/ORSAM17821-2.chr1.tsv
+May-05 17:02:44.951 [Actor Thread 43] DEBUG n.splitter.AbstractTextSplitter - Splitter `Text` collector path: nextflow.splitter.TextFileCollector$CachePath(/fastscratch/agarwa/nf-tmp/work/f2/7e10f82cc3bae60d26021b1b074f8f/ORSAM17821-2.chr10.tsv, null)
+May-05 17:02:44.951 [Actor Thread 43] DEBUG nextflow.splitter.AbstractSplitter - Operator `Text` reusing cached chunks at path: /fastscratch/agarwa/nf-tmp/work/f2/7e10f82cc3bae60d26021b1b074f8f/ORSAM17821-2.chr10.tsv
+May-05 17:02:44.952 [Actor Thread 43] DEBUG n.splitter.AbstractTextSplitter - Splitter `Text` collector path: nextflow.splitter.TextFileCollector$CachePath(/fastscratch/agarwa/nf-tmp/work/36/760713aa8825fda1dc817600335e23/ORSAM17821-2.chr11.tsv, null)
+May-05 17:02:44.952 [Actor Thread 43] DEBUG nextflow.splitter.AbstractSplitter - Operator `Text` reusing cached chunks at path: /fastscratch/agarwa/nf-tmp/work/36/760713aa8825fda1dc817600335e23/ORSAM17821-2.chr11.tsv
+May-05 17:02:44.953 [Actor Thread 43] DEBUG n.splitter.AbstractTextSplitter - Splitter `Text` collector path: nextflow.splitter.TextFileCollector$CachePath(/fastscratch/agarwa/nf-tmp/work/ac/db9f15a21b174668fdff1b5f0789d6/ORSAM17821-2.chr12.tsv, null)
+May-05 17:02:44.954 [Actor Thread 43] DEBUG nextflow.splitter.AbstractSplitter - Operator `Text` reusing cached chunks at path: /fastscratch/agarwa/nf-tmp/work/ac/db9f15a21b174668fdff1b5f0789d6/ORSAM17821-2.chr12.tsv
+May-05 17:02:44.954 [Actor Thread 43] DEBUG n.splitter.AbstractTextSplitter - Splitter `Text` collector path: nextflow.splitter.TextFileCollector$CachePath(/fastscratch/agarwa/nf-tmp/work/17/38251dec96c737aa9e682bd67b759d/ORSAM17821-2.chr13.tsv, null)
+May-05 17:02:44.956 [Actor Thread 43] DEBUG nextflow.splitter.AbstractSplitter - Operator `Text` reusing cached chunks at path: /fastscratch/agarwa/nf-tmp/work/17/38251dec96c737aa9e682bd67b759d/ORSAM17821-2.chr13.tsv
+May-05 17:02:44.956 [Actor Thread 43] DEBUG n.splitter.AbstractTextSplitter - Splitter `Text` collector path: nextflow.splitter.TextFileCollector$CachePath(/fastscratch/agarwa/nf-tmp/work/71/ffabdd8560dc3383ab1ffe286ef9ee/ORSAM17821-2.chr14.tsv, null)
+May-05 17:02:44.957 [Actor Thread 43] DEBUG nextflow.splitter.AbstractSplitter - Operator `Text` reusing cached chunks at path: /fastscratch/agarwa/nf-tmp/work/71/ffabdd8560dc3383ab1ffe286ef9ee/ORSAM17821-2.chr14.tsv
+May-05 17:02:44.957 [Actor Thread 43] DEBUG n.splitter.AbstractTextSplitter - Splitter `Text` collector path: nextflow.splitter.TextFileCollector$CachePath(/fastscratch/agarwa/nf-tmp/work/67/a7090d9cfd90b53096b6d7d429123e/ORSAM17821-2.chr15.tsv, null)
+May-05 17:02:44.957 [Actor Thread 43] DEBUG nextflow.splitter.AbstractSplitter - Operator `Text` reusing cached chunks at path: /fastscratch/agarwa/nf-tmp/work/67/a7090d9cfd90b53096b6d7d429123e/ORSAM17821-2.chr15.tsv
+May-05 17:02:44.958 [Actor Thread 43] DEBUG n.splitter.AbstractTextSplitter - Splitter `Text` collector path: nextflow.splitter.TextFileCollector$CachePath(/fastscratch/agarwa/nf-tmp/work/00/cf761bb0c124237f8fa6d210ed0308/ORSAM17821-2.chr16.tsv, null)
+May-05 17:02:44.958 [Actor Thread 43] DEBUG nextflow.splitter.AbstractSplitter - Operator `Text` reusing cached chunks at path: /fastscratch/agarwa/nf-tmp/work/00/cf761bb0c124237f8fa6d210ed0308/ORSAM17821-2.chr16.tsv
+May-05 17:02:44.959 [Actor Thread 43] DEBUG n.splitter.AbstractTextSplitter - Splitter `Text` collector path: nextflow.splitter.TextFileCollector$CachePath(/fastscratch/agarwa/nf-tmp/work/80/e9f788771b8c022f64c3da42d1f4cd/ORSAM17821-2.chr17.tsv, null)
+May-05 17:02:44.959 [Actor Thread 43] DEBUG nextflow.splitter.AbstractSplitter - Operator `Text` reusing cached chunks at path: /fastscratch/agarwa/nf-tmp/work/80/e9f788771b8c022f64c3da42d1f4cd/ORSAM17821-2.chr17.tsv
+May-05 17:02:44.960 [Actor Thread 43] DEBUG n.splitter.AbstractTextSplitter - Splitter `Text` collector path: nextflow.splitter.TextFileCollector$CachePath(/fastscratch/agarwa/nf-tmp/work/66/6a93ba76654951b43f88a341ded6e7/ORSAM17821-2.chr18.tsv, null)
+May-05 17:02:44.960 [Actor Thread 43] DEBUG nextflow.splitter.AbstractSplitter - Operator `Text` reusing cached chunks at path: /fastscratch/agarwa/nf-tmp/work/66/6a93ba76654951b43f88a341ded6e7/ORSAM17821-2.chr18.tsv
+May-05 17:02:44.961 [Actor Thread 43] DEBUG n.splitter.AbstractTextSplitter - Splitter `Text` collector path: nextflow.splitter.TextFileCollector$CachePath(/fastscratch/agarwa/nf-tmp/work/24/2850098e69d0dfeb6c6b6895fb647d/ORSAM17821-2.chr19.tsv, null)
+May-05 17:02:44.961 [Actor Thread 43] DEBUG nextflow.splitter.AbstractSplitter - Operator `Text` reusing cached chunks at path: /fastscratch/agarwa/nf-tmp/work/24/2850098e69d0dfeb6c6b6895fb647d/ORSAM17821-2.chr19.tsv
+May-05 17:02:44.962 [Actor Thread 43] DEBUG n.splitter.AbstractTextSplitter - Splitter `Text` collector path: nextflow.splitter.TextFileCollector$CachePath(/fastscratch/agarwa/nf-tmp/work/e3/9b2157a5fccb87b0f0617b51cc3cda/ORSAM17821-2.chr2.tsv, null)
+May-05 17:02:44.962 [Actor Thread 43] DEBUG nextflow.splitter.AbstractSplitter - Operator `Text` reusing cached chunks at path: /fastscratch/agarwa/nf-tmp/work/e3/9b2157a5fccb87b0f0617b51cc3cda/ORSAM17821-2.chr2.tsv
+May-05 17:02:44.962 [Actor Thread 39] INFO  nextflow.processor.TaskProcessor - [eb/e6945f] Cached process > prep_pchic:SPLIT_HIC (2)
+May-05 17:02:44.962 [Actor Thread 41] INFO  nextflow.processor.TaskProcessor - [2d/2c5c2b] Cached process > prep_pchic:SPLIT_HIC (1)
+May-05 17:02:44.963 [Actor Thread 43] DEBUG n.splitter.AbstractTextSplitter - Splitter `Text` collector path: nextflow.splitter.TextFileCollector$CachePath(/fastscratch/agarwa/nf-tmp/work/1a/98491b8eb145549035cf1e6a26c6c4/ORSAM17821-2.chr3.tsv, null)
+May-05 17:02:44.963 [Actor Thread 43] DEBUG nextflow.splitter.AbstractSplitter - Operator `Text` reusing cached chunks at path: /fastscratch/agarwa/nf-tmp/work/1a/98491b8eb145549035cf1e6a26c6c4/ORSAM17821-2.chr3.tsv
+May-05 17:02:44.964 [Actor Thread 43] DEBUG n.splitter.AbstractTextSplitter - Splitter `Text` collector path: nextflow.splitter.TextFileCollector$CachePath(/fastscratch/agarwa/nf-tmp/work/e1/fd05107c7d524d5e0fc60375c1e93a/ORSAM17821-2.chr4.tsv, null)
+May-05 17:02:44.966 [Actor Thread 43] DEBUG nextflow.splitter.AbstractSplitter - Operator `Text` reusing cached chunks at path: /fastscratch/agarwa/nf-tmp/work/e1/fd05107c7d524d5e0fc60375c1e93a/ORSAM17821-2.chr4.tsv
+May-05 17:02:44.967 [Actor Thread 40] INFO  nextflow.processor.TaskProcessor - [17/8907df] Cached process > prep_pchic:SPLIT_HIC (4)
+May-05 17:02:44.967 [Actor Thread 43] DEBUG n.splitter.AbstractTextSplitter - Splitter `Text` collector path: nextflow.splitter.TextFileCollector$CachePath(/fastscratch/agarwa/nf-tmp/work/e4/7bc3f99712c12ba3fdd22b8a3151ba/ORSAM17821-2.chr5.tsv, null)
+May-05 17:02:44.968 [Actor Thread 43] DEBUG nextflow.splitter.AbstractSplitter - Operator `Text` reusing cached chunks at path: /fastscratch/agarwa/nf-tmp/work/e4/7bc3f99712c12ba3fdd22b8a3151ba/ORSAM17821-2.chr5.tsv
+May-05 17:02:44.968 [Actor Thread 47] INFO  nextflow.processor.TaskProcessor - [83/e6b77a] Cached process > prep_pchic:SPLIT_HIC (3)
+May-05 17:02:44.969 [Actor Thread 43] DEBUG n.splitter.AbstractTextSplitter - Splitter `Text` collector path: nextflow.splitter.TextFileCollector$CachePath(/fastscratch/agarwa/nf-tmp/work/41/4c8105cd5283d0d36cedc1249f1408/ORSAM17821-2.chr6.tsv, null)
+May-05 17:02:44.970 [Actor Thread 46] INFO  nextflow.processor.TaskProcessor - [91/69db4f] Cached process > prep_pchic:SPLIT_HIC (6)
+May-05 17:02:44.970 [Actor Thread 43] DEBUG nextflow.splitter.AbstractSplitter - Operator `Text` reusing cached chunks at path: /fastscratch/agarwa/nf-tmp/work/41/4c8105cd5283d0d36cedc1249f1408/ORSAM17821-2.chr6.tsv
+May-05 17:02:44.971 [Actor Thread 43] DEBUG n.splitter.AbstractTextSplitter - Splitter `Text` collector path: nextflow.splitter.TextFileCollector$CachePath(/fastscratch/agarwa/nf-tmp/work/a2/ae414d928ca6d9c6ae0e0177848f77/ORSAM17821-2.chr7.tsv, null)
+May-05 17:02:44.972 [Actor Thread 43] DEBUG nextflow.splitter.AbstractSplitter - Operator `Text` reusing cached chunks at path: /fastscratch/agarwa/nf-tmp/work/a2/ae414d928ca6d9c6ae0e0177848f77/ORSAM17821-2.chr7.tsv
+May-05 17:02:44.972 [Actor Thread 44] INFO  nextflow.processor.TaskProcessor - [21/351da3] Cached process > prep_pchic:SPLIT_HIC (9)
+May-05 17:02:44.972 [Actor Thread 43] DEBUG n.splitter.AbstractTextSplitter - Splitter `Text` collector path: nextflow.splitter.TextFileCollector$CachePath(/fastscratch/agarwa/nf-tmp/work/ce/69ee4de6218ec437ff20436aa070e9/ORSAM17821-2.chr8.tsv, null)
+May-05 17:02:44.973 [Actor Thread 43] DEBUG nextflow.splitter.AbstractSplitter - Operator `Text` reusing cached chunks at path: /fastscratch/agarwa/nf-tmp/work/ce/69ee4de6218ec437ff20436aa070e9/ORSAM17821-2.chr8.tsv
+May-05 17:02:44.973 [Actor Thread 43] DEBUG n.splitter.AbstractTextSplitter - Splitter `Text` collector path: nextflow.splitter.TextFileCollector$CachePath(/fastscratch/agarwa/nf-tmp/work/f0/e7a2e78ffb7b118ea6ba8cb060a224/ORSAM17821-2.chr9.tsv, null)
+May-05 17:02:44.974 [Actor Thread 43] DEBUG nextflow.splitter.AbstractSplitter - Operator `Text` reusing cached chunks at path: /fastscratch/agarwa/nf-tmp/work/f0/e7a2e78ffb7b118ea6ba8cb060a224/ORSAM17821-2.chr9.tsv
+May-05 17:02:44.974 [Actor Thread 43] DEBUG n.splitter.AbstractTextSplitter - Splitter `Text` collector path: nextflow.splitter.TextFileCollector$CachePath(/fastscratch/agarwa/nf-tmp/work/2a/59fd017fca62c140448febdcb4877a/ORSAM17821-2.chrCROSS.tsv, null)
+May-05 17:02:44.975 [Actor Thread 43] DEBUG nextflow.splitter.AbstractSplitter - Operator `Text` reusing cached chunks at path: /fastscratch/agarwa/nf-tmp/work/2a/59fd017fca62c140448febdcb4877a/ORSAM17821-2.chrCROSS.tsv
+May-05 17:02:44.975 [Actor Thread 35] INFO  nextflow.processor.TaskProcessor - [d9/b42b81] Cached process > prep_pchic:SPLIT_HIC (12)
+May-05 17:02:44.976 [Actor Thread 43] DEBUG n.splitter.AbstractTextSplitter - Splitter `Text` collector path: nextflow.splitter.TextFileCollector$CachePath(/fastscratch/agarwa/nf-tmp/work/fb/91cd2be6b1afb47c6ede5761cb50cc/ORSAM17821-2.chrX.tsv, null)
+May-05 17:02:44.976 [Actor Thread 43] DEBUG nextflow.splitter.AbstractSplitter - Operator `Text` reusing cached chunks at path: /fastscratch/agarwa/nf-tmp/work/fb/91cd2be6b1afb47c6ede5761cb50cc/ORSAM17821-2.chrX.tsv
+May-05 17:02:44.976 [Actor Thread 49] INFO  nextflow.processor.TaskProcessor - [82/f3cf14] Cached process > prep_pchic:SPLIT_HIC (10)
+May-05 17:02:44.976 [Actor Thread 42] INFO  nextflow.processor.TaskProcessor - [9f/9c1506] Cached process > prep_pchic:SPLIT_HIC (5)
+May-05 17:02:44.976 [Actor Thread 48] INFO  nextflow.processor.TaskProcessor - [09/100d13] Cached process > prep_pchic:SPLIT_HIC (8)
+May-05 17:02:44.977 [Actor Thread 43] DEBUG n.splitter.AbstractTextSplitter - Splitter `Text` collector path: nextflow.splitter.TextFileCollector$CachePath(/fastscratch/agarwa/nf-tmp/work/e2/86266efd246efe44928a01c0de859d/ORSAM17821-2.chrY.tsv, null)
+May-05 17:02:44.977 [Actor Thread 43] DEBUG nextflow.splitter.AbstractSplitter - Operator `Text` reusing cached chunks at path: /fastscratch/agarwa/nf-tmp/work/e2/86266efd246efe44928a01c0de859d/ORSAM17821-2.chrY.tsv
+May-05 17:02:44.977 [Actor Thread 36] INFO  nextflow.processor.TaskProcessor - [29/732e3b] Cached process > prep_pchic:SPLIT_HIC (13)
+May-05 17:02:44.977 [Actor Thread 43] DEBUG n.splitter.AbstractTextSplitter - Splitter `Text` collector path: nextflow.splitter.TextFileCollector$CachePath(/fastscratch/agarwa/nf-tmp/work/78/e2e03aea30409b8039b39784b8ee69/ORSAM17820-2.chr1.tsv, null)
+May-05 17:02:44.978 [Actor Thread 43] DEBUG nextflow.splitter.AbstractSplitter - Operator `Text` reusing cached chunks at path: /fastscratch/agarwa/nf-tmp/work/78/e2e03aea30409b8039b39784b8ee69/ORSAM17820-2.chr1.tsv
+May-05 17:02:44.979 [Actor Thread 45] INFO  nextflow.processor.TaskProcessor - [86/069b6c] Cached process > prep_pchic:SPLIT_HIC (7)
+May-05 17:02:44.980 [Actor Thread 43] DEBUG n.splitter.AbstractTextSplitter - Splitter `Text` collector path: nextflow.splitter.TextFileCollector$CachePath(/fastscratch/agarwa/nf-tmp/work/fd/8899e47409576d5e2bdc1a6f25c302/ORSAM17820-2.chr10.tsv, null)
+May-05 17:02:44.980 [Actor Thread 37] INFO  nextflow.processor.TaskProcessor - [71/3b8490] Cached process > prep_pchic:SPLIT_HIC (11)
+May-05 17:02:44.980 [Actor Thread 43] DEBUG nextflow.splitter.AbstractSplitter - Operator `Text` reusing cached chunks at path: /fastscratch/agarwa/nf-tmp/work/fd/8899e47409576d5e2bdc1a6f25c302/ORSAM17820-2.chr10.tsv
+May-05 17:02:44.981 [Actor Thread 43] DEBUG n.splitter.AbstractTextSplitter - Splitter `Text` collector path: nextflow.splitter.TextFileCollector$CachePath(/fastscratch/agarwa/nf-tmp/work/b0/d119312f5078e8dd15fc3ffe889049/ORSAM17820-2.chr11.tsv, null)
+May-05 17:02:44.982 [Actor Thread 43] DEBUG nextflow.splitter.AbstractSplitter - Operator `Text` reusing cached chunks at path: /fastscratch/agarwa/nf-tmp/work/b0/d119312f5078e8dd15fc3ffe889049/ORSAM17820-2.chr11.tsv
+May-05 17:02:44.983 [Actor Thread 43] DEBUG n.splitter.AbstractTextSplitter - Splitter `Text` collector path: nextflow.splitter.TextFileCollector$CachePath(/fastscratch/agarwa/nf-tmp/work/df/f4304705e7655299f3e7ed491c28c8/ORSAM17820-2.chr12.tsv, null)
+May-05 17:02:44.984 [Actor Thread 43] DEBUG nextflow.splitter.AbstractSplitter - Operator `Text` reusing cached chunks at path: /fastscratch/agarwa/nf-tmp/work/df/f4304705e7655299f3e7ed491c28c8/ORSAM17820-2.chr12.tsv
+May-05 17:02:44.984 [Actor Thread 43] DEBUG n.splitter.AbstractTextSplitter - Splitter `Text` collector path: nextflow.splitter.TextFileCollector$CachePath(/fastscratch/agarwa/nf-tmp/work/d0/6f5e071d8792f7f56f756e53d8a6e6/ORSAM17820-2.chr13.tsv, null)
+May-05 17:02:44.985 [Actor Thread 43] DEBUG nextflow.splitter.AbstractSplitter - Operator `Text` reusing cached chunks at path: /fastscratch/agarwa/nf-tmp/work/d0/6f5e071d8792f7f56f756e53d8a6e6/ORSAM17820-2.chr13.tsv
+May-05 17:02:44.985 [Actor Thread 43] DEBUG n.splitter.AbstractTextSplitter - Splitter `Text` collector path: nextflow.splitter.TextFileCollector$CachePath(/fastscratch/agarwa/nf-tmp/work/cb/4b38a58d0d085834ae13ffa68df969/ORSAM17820-2.chr14.tsv, null)
+May-05 17:02:44.986 [Actor Thread 43] DEBUG nextflow.splitter.AbstractSplitter - Operator `Text` reusing cached chunks at path: /fastscratch/agarwa/nf-tmp/work/cb/4b38a58d0d085834ae13ffa68df969/ORSAM17820-2.chr14.tsv
+May-05 17:02:44.986 [Actor Thread 43] DEBUG n.splitter.AbstractTextSplitter - Splitter `Text` collector path: nextflow.splitter.TextFileCollector$CachePath(/fastscratch/agarwa/nf-tmp/work/af/590a4b70462d77007268b660e18cfa/ORSAM17820-2.chr15.tsv, null)
+May-05 17:02:44.987 [Actor Thread 43] DEBUG nextflow.splitter.AbstractSplitter - Operator `Text` reusing cached chunks at path: /fastscratch/agarwa/nf-tmp/work/af/590a4b70462d77007268b660e18cfa/ORSAM17820-2.chr15.tsv
+May-05 17:02:44.987 [Actor Thread 43] DEBUG n.splitter.AbstractTextSplitter - Splitter `Text` collector path: nextflow.splitter.TextFileCollector$CachePath(/fastscratch/agarwa/nf-tmp/work/5e/01bbbab3d2ee2a33683f862255bc38/ORSAM17820-2.chr16.tsv, null)
+May-05 17:02:44.988 [Actor Thread 43] DEBUG nextflow.splitter.AbstractSplitter - Operator `Text` reusing cached chunks at path: /fastscratch/agarwa/nf-tmp/work/5e/01bbbab3d2ee2a33683f862255bc38/ORSAM17820-2.chr16.tsv
+May-05 17:02:44.988 [Actor Thread 43] DEBUG n.splitter.AbstractTextSplitter - Splitter `Text` collector path: nextflow.splitter.TextFileCollector$CachePath(/fastscratch/agarwa/nf-tmp/work/c3/5815315c256ed9a190be4f656c728c/ORSAM17820-2.chr17.tsv, null)
+May-05 17:02:44.989 [Actor Thread 43] DEBUG nextflow.splitter.AbstractSplitter - Operator `Text` reusing cached chunks at path: /fastscratch/agarwa/nf-tmp/work/c3/5815315c256ed9a190be4f656c728c/ORSAM17820-2.chr17.tsv
+May-05 17:02:44.990 [Actor Thread 43] DEBUG n.splitter.AbstractTextSplitter - Splitter `Text` collector path: nextflow.splitter.TextFileCollector$CachePath(/fastscratch/agarwa/nf-tmp/work/e9/05d26e25ed82627f7b2eff69cc90f2/ORSAM17820-2.chr18.tsv, null)
+May-05 17:02:44.991 [Actor Thread 43] DEBUG nextflow.splitter.AbstractSplitter - Operator `Text` reusing cached chunks at path: /fastscratch/agarwa/nf-tmp/work/e9/05d26e25ed82627f7b2eff69cc90f2/ORSAM17820-2.chr18.tsv
+May-05 17:02:44.992 [Actor Thread 43] DEBUG n.splitter.AbstractTextSplitter - Splitter `Text` collector path: nextflow.splitter.TextFileCollector$CachePath(/fastscratch/agarwa/nf-tmp/work/8c/42e79d3adde0f37f0b25df7fdf8a24/ORSAM17820-2.chr19.tsv, null)
+May-05 17:02:44.992 [Actor Thread 43] DEBUG nextflow.splitter.AbstractSplitter - Operator `Text` reusing cached chunks at path: /fastscratch/agarwa/nf-tmp/work/8c/42e79d3adde0f37f0b25df7fdf8a24/ORSAM17820-2.chr19.tsv
+May-05 17:02:44.993 [Actor Thread 43] DEBUG n.splitter.AbstractTextSplitter - Splitter `Text` collector path: nextflow.splitter.TextFileCollector$CachePath(/fastscratch/agarwa/nf-tmp/work/e1/005851b8119029d686302c583daa93/ORSAM17820-2.chr2.tsv, null)
+May-05 17:02:44.994 [Actor Thread 43] DEBUG nextflow.splitter.AbstractSplitter - Operator `Text` reusing cached chunks at path: /fastscratch/agarwa/nf-tmp/work/e1/005851b8119029d686302c583daa93/ORSAM17820-2.chr2.tsv
+May-05 17:02:44.995 [Actor Thread 43] DEBUG n.splitter.AbstractTextSplitter - Splitter `Text` collector path: nextflow.splitter.TextFileCollector$CachePath(/fastscratch/agarwa/nf-tmp/work/ed/0f3ba30db4a012fab5e85eef1c37b4/ORSAM17820-2.chr3.tsv, null)
+May-05 17:02:44.996 [Actor Thread 43] DEBUG nextflow.splitter.AbstractSplitter - Operator `Text` reusing cached chunks at path: /fastscratch/agarwa/nf-tmp/work/ed/0f3ba30db4a012fab5e85eef1c37b4/ORSAM17820-2.chr3.tsv
+May-05 17:02:44.996 [Actor Thread 34] INFO  nextflow.processor.TaskProcessor - [39/0aea58] Cached process > prep_pchic:SPLIT_HIC (16)
+May-05 17:02:44.996 [Actor Thread 43] DEBUG n.splitter.AbstractTextSplitter - Splitter `Text` collector path: nextflow.splitter.TextFileCollector$CachePath(/fastscratch/agarwa/nf-tmp/work/b7/c1bc89247e555bf46d873ee1d9b6d1/ORSAM17820-2.chr4.tsv, null)
+May-05 17:02:44.997 [Actor Thread 43] DEBUG nextflow.splitter.AbstractSplitter - Operator `Text` reusing cached chunks at path: /fastscratch/agarwa/nf-tmp/work/b7/c1bc89247e555bf46d873ee1d9b6d1/ORSAM17820-2.chr4.tsv
+May-05 17:02:44.998 [Actor Thread 43] DEBUG n.splitter.AbstractTextSplitter - Splitter `Text` collector path: nextflow.splitter.TextFileCollector$CachePath(/fastscratch/agarwa/nf-tmp/work/6c/222051820cd6d2fc0a65ab4d96aed5/ORSAM17820-2.chr5.tsv, null)
+May-05 17:02:44.998 [Actor Thread 43] DEBUG nextflow.splitter.AbstractSplitter - Operator `Text` reusing cached chunks at path: /fastscratch/agarwa/nf-tmp/work/6c/222051820cd6d2fc0a65ab4d96aed5/ORSAM17820-2.chr5.tsv
+May-05 17:02:44.999 [Actor Thread 43] DEBUG n.splitter.AbstractTextSplitter - Splitter `Text` collector path: nextflow.splitter.TextFileCollector$CachePath(/fastscratch/agarwa/nf-tmp/work/8e/bddd95670c1113e03917156e16a6cf/ORSAM17820-2.chr6.tsv, null)
+May-05 17:02:44.999 [Actor Thread 43] DEBUG nextflow.splitter.AbstractSplitter - Operator `Text` reusing cached chunks at path: /fastscratch/agarwa/nf-tmp/work/8e/bddd95670c1113e03917156e16a6cf/ORSAM17820-2.chr6.tsv
+May-05 17:02:44.999 [Actor Thread 43] DEBUG n.splitter.AbstractTextSplitter - Splitter `Text` collector path: nextflow.splitter.TextFileCollector$CachePath(/fastscratch/agarwa/nf-tmp/work/48/2c08a1d83b2cfdb51366b8dcaa337e/ORSAM17820-2.chr7.tsv, null)
+May-05 17:02:45.000 [Actor Thread 49] INFO  nextflow.processor.TaskProcessor - [f0/2a3318] Cached process > prep_pchic:SPLIT_HIC (29)
+May-05 17:02:45.000 [Actor Thread 45] INFO  nextflow.processor.TaskProcessor - [46/7f91a7] Cached process > prep_pchic:SPLIT_HIC (26)
+May-05 17:02:45.000 [Actor Thread 42] INFO  nextflow.processor.TaskProcessor - [c6/d0b76f] Cached process > prep_pchic:MATCH_HIC_REGELEM (1)
+May-05 17:02:45.000 [Actor Thread 43] DEBUG nextflow.splitter.AbstractSplitter - Operator `Text` reusing cached chunks at path: /fastscratch/agarwa/nf-tmp/work/48/2c08a1d83b2cfdb51366b8dcaa337e/ORSAM17820-2.chr7.tsv
+May-05 17:02:45.000 [Actor Thread 36] INFO  nextflow.processor.TaskProcessor - [29/88cef1] Cached process > prep_pchic:SPLIT_HIC (28)
+May-05 17:02:45.000 [Actor Thread 32] INFO  nextflow.processor.TaskProcessor - [63/9394a6] Cached process > prep_pchic:SPLIT_HIC (25)
+May-05 17:02:45.000 [Actor Thread 39] INFO  nextflow.processor.TaskProcessor - [f4/c3281c] Cached process > prep_pchic:SPLIT_HIC (14)
+May-05 17:02:45.000 [Actor Thread 48] INFO  nextflow.processor.TaskProcessor - [1b/be4a9d] Cached process > prep_pchic:SPLIT_HIC (27)
+May-05 17:02:45.000 [Actor Thread 35] INFO  nextflow.processor.TaskProcessor - [76/b3b451] Cached process > prep_pchic:SPLIT_HIC (21)
+May-05 17:02:45.000 [Actor Thread 44] INFO  nextflow.processor.TaskProcessor - [d4/6a2313] Cached process > prep_pchic:SPLIT_HIC (20)
+May-05 17:02:45.000 [Actor Thread 37] INFO  nextflow.processor.TaskProcessor - [f9/a4f8d4] Cached process > prep_pchic:SPLIT_HIC (24)
+May-05 17:02:45.000 [Actor Thread 46] INFO  nextflow.processor.TaskProcessor - [fb/5c9db1] Cached process > prep_pchic:SPLIT_HIC (18)
+May-05 17:02:45.000 [Actor Thread 31] INFO  nextflow.processor.TaskProcessor - [33/4e8bb2] Cached process > prep_pchic:MATCH_HIC_REGELEM (2)
+May-05 17:02:45.000 [Actor Thread 33] INFO  nextflow.processor.TaskProcessor - [1a/a99905] Cached process > prep_pchic:SPLIT_HIC (15)
+May-05 17:02:45.001 [Actor Thread 40] INFO  nextflow.processor.TaskProcessor - [ec/e0ddd3] Cached process > prep_pchic:SPLIT_HIC (19)
+May-05 17:02:45.001 [Actor Thread 47] INFO  nextflow.processor.TaskProcessor - [cf/04e702] Cached process > prep_pchic:SPLIT_HIC (17)
+May-05 17:02:45.001 [Actor Thread 43] DEBUG n.splitter.AbstractTextSplitter - Splitter `Text` collector path: nextflow.splitter.TextFileCollector$CachePath(/fastscratch/agarwa/nf-tmp/work/5d/305382dab097b54c0d9d63e55e7cd0/ORSAM17820-2.chr8.tsv, null)
+May-05 17:02:45.001 [Actor Thread 41] INFO  nextflow.processor.TaskProcessor - [35/7eb739] Cached process > prep_pchic:SPLIT_HIC (22)
+May-05 17:02:45.002 [Actor Thread 30] INFO  nextflow.processor.TaskProcessor - [d6/5b423d] Cached process > prep_pchic:SPLIT_HIC (23)
+May-05 17:02:45.003 [Actor Thread 43] DEBUG nextflow.splitter.AbstractSplitter - Operator `Text` reusing cached chunks at path: /fastscratch/agarwa/nf-tmp/work/5d/305382dab097b54c0d9d63e55e7cd0/ORSAM17820-2.chr8.tsv
+May-05 17:02:45.003 [Actor Thread 28] INFO  nextflow.processor.TaskProcessor - [2b/91d088] Cached process > prep_pchic:SPLIT_HIC (31)
+May-05 17:02:45.004 [Actor Thread 25] INFO  nextflow.processor.TaskProcessor - [1e/c1d503] Cached process > prep_pchic:SPLIT_HIC (33)
+May-05 17:02:45.004 [Actor Thread 27] INFO  nextflow.processor.TaskProcessor - [b4/ed06c2] Cached process > prep_pchic:SPLIT_HIC (32)
+May-05 17:02:45.004 [Actor Thread 43] DEBUG n.splitter.AbstractTextSplitter - Splitter `Text` collector path: nextflow.splitter.TextFileCollector$CachePath(/fastscratch/agarwa/nf-tmp/work/a2/d580fbcc9cc305a18d7c1e72e3b758/ORSAM17820-2.chr9.tsv, null)
+May-05 17:02:45.004 [Actor Thread 24] INFO  nextflow.processor.TaskProcessor - [94/104b4e] Cached process > prep_pchic:SPLIT_HIC (34)
+May-05 17:02:45.005 [Actor Thread 29] INFO  nextflow.processor.TaskProcessor - [77/922d7d] Cached process > prep_pchic:SPLIT_HIC (30)
+May-05 17:02:45.005 [Actor Thread 43] DEBUG nextflow.splitter.AbstractSplitter - Operator `Text` reusing cached chunks at path: /fastscratch/agarwa/nf-tmp/work/a2/d580fbcc9cc305a18d7c1e72e3b758/ORSAM17820-2.chr9.tsv
+May-05 17:02:45.006 [Actor Thread 43] DEBUG n.splitter.AbstractTextSplitter - Splitter `Text` collector path: nextflow.splitter.TextFileCollector$CachePath(/fastscratch/agarwa/nf-tmp/work/4f/e55d9542b2d939b967e9d25fd7c044/ORSAM17820-2.chrCROSS.tsv, null)
+May-05 17:02:45.007 [Actor Thread 43] DEBUG nextflow.splitter.AbstractSplitter - Operator `Text` reusing cached chunks at path: /fastscratch/agarwa/nf-tmp/work/4f/e55d9542b2d939b967e9d25fd7c044/ORSAM17820-2.chrCROSS.tsv
+May-05 17:02:45.007 [Actor Thread 43] DEBUG n.splitter.AbstractTextSplitter - Splitter `Text` collector path: nextflow.splitter.TextFileCollector$CachePath(/fastscratch/agarwa/nf-tmp/work/7b/be5d299533dfda5d5cdca2457f6cb0/ORSAM17820-2.chrX.tsv, null)
+May-05 17:02:45.007 [Actor Thread 26] INFO  nextflow.processor.TaskProcessor - [d8/e59007] Cached process > prep_pchic:MATCH_HIC_REGELEM (3)
+May-05 17:02:45.008 [Actor Thread 43] DEBUG nextflow.splitter.AbstractSplitter - Operator `Text` reusing cached chunks at path: /fastscratch/agarwa/nf-tmp/work/7b/be5d299533dfda5d5cdca2457f6cb0/ORSAM17820-2.chrX.tsv
+May-05 17:02:45.009 [Actor Thread 23] INFO  nextflow.processor.TaskProcessor - [4d/9dfe7f] Cached process > prep_pchic:SPLIT_HIC (35)
+May-05 17:02:45.010 [Actor Thread 20] INFO  nextflow.processor.TaskProcessor - [2b/1a74ac] Cached process > prep_pchic:SPLIT_HIC (36)
+May-05 17:02:45.011 [Actor Thread 17] INFO  nextflow.processor.TaskProcessor - [65/449a5d] Cached process > prep_pchic:SPLIT_HIC (38)
+May-05 17:02:45.012 [Actor Thread 18] INFO  nextflow.processor.TaskProcessor - [f5/4384d8] Cached process > prep_pchic:SPLIT_HIC (37)
+May-05 17:02:45.013 [Actor Thread 21] INFO  nextflow.processor.TaskProcessor - [2b/296e84] Cached process > prep_pchic:MATCH_HIC_REGELEM (4)
+May-05 17:02:45.013 [Actor Thread 43] DEBUG n.splitter.AbstractTextSplitter - Splitter `Text` collector path: nextflow.splitter.TextFileCollector$CachePath(/fastscratch/agarwa/nf-tmp/work/ad/e6a251958d0922339086502a13c520/ORSAM17820-2.chrY.tsv, null)
+May-05 17:02:45.014 [Actor Thread 43] DEBUG nextflow.splitter.AbstractSplitter - Operator `Text` reusing cached chunks at path: /fastscratch/agarwa/nf-tmp/work/ad/e6a251958d0922339086502a13c520/ORSAM17820-2.chrY.tsv
+May-05 17:02:45.015 [Actor Thread 13] INFO  nextflow.processor.TaskProcessor - [6d/29f55f] Cached process > prep_pchic:SPLIT_HIC (39)
+May-05 17:02:45.019 [Actor Thread 15] INFO  nextflow.processor.TaskProcessor - [ad/b27e57] Cached process > prep_pchic:MATCH_HIC_REGELEM (5)
+May-05 17:02:45.019 [Actor Thread 14] INFO  nextflow.processor.TaskProcessor - [9d/a1a93e] Cached process > prep_pchic:SPLIT_HIC (40)
+May-05 17:02:45.020 [Actor Thread 33] INFO  nextflow.processor.TaskProcessor - [2a/44b303] Cached process > prep_pchic:SPLIT_HIC (41)
+May-05 17:02:45.021 [Actor Thread 42] INFO  nextflow.processor.TaskProcessor - [23/f6ea97] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (2)
+May-05 17:02:45.024 [Actor Thread 30] INFO  nextflow.processor.TaskProcessor - [b4/deb586] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (1)
+May-05 17:02:45.026 [Actor Thread 21] INFO  nextflow.processor.TaskProcessor - [fd/28c4ad] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (3)
+May-05 17:02:45.027 [Actor Thread 45] INFO  nextflow.processor.TaskProcessor - [83/8c5f8d] Cached process > prep_pchic:SPLIT_HIC (42)
+May-05 17:02:45.027 [Actor Thread 37] INFO  nextflow.processor.TaskProcessor - [08/d50b44] Cached process > prep_pchic:MATCH_HIC_REGELEM (6)
+May-05 17:02:45.028 [Actor Thread 49] INFO  nextflow.processor.TaskProcessor - [de/e4d722] Cached process > prep_pchic:MATCH_HIC_REGELEM (7)
+May-05 17:02:45.032 [Actor Thread 48] INFO  nextflow.processor.TaskProcessor - [e6/076d11] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (4)
+May-05 17:02:45.033 [Actor Thread 26] INFO  nextflow.processor.TaskProcessor - [9e/2de6c9] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (5)
+May-05 17:02:45.034 [Actor Thread 15] INFO  nextflow.processor.TaskProcessor - [0a/d536c0] Cached process > prep_pchic:MATCH_HIC_REGELEM (8)
+May-05 17:02:45.036 [Actor Thread 49] INFO  nextflow.processor.TaskProcessor - [9d/25bb63] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (7)
+May-05 17:02:45.038 [Actor Thread 37] INFO  nextflow.processor.TaskProcessor - [4e/f10da3] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (6)
+May-05 17:02:45.040 [Actor Thread 30] INFO  nextflow.processor.TaskProcessor - [cd/056a22] Cached process > prep_pchic:MATCH_HIC_REGELEM (9)
+May-05 17:02:45.043 [Actor Thread 15] INFO  nextflow.processor.TaskProcessor - [45/1e4f50] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (8)
+May-05 17:02:45.044 [Actor Thread 18] INFO  nextflow.processor.TaskProcessor - [a1/2f8cba] Cached process > prep_pchic:MATCH_HIC_REGELEM (10)
+May-05 17:02:45.047 [Actor Thread 30] INFO  nextflow.processor.TaskProcessor - [94/b41544] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (9)
+May-05 17:02:45.048 [Actor Thread 48] INFO  nextflow.processor.TaskProcessor - [ac/08e6f7] Cached process > prep_pchic:MATCH_HIC_REGELEM (11)
+May-05 17:02:45.051 [Actor Thread 18] INFO  nextflow.processor.TaskProcessor - [51/87c4af] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (10)
+May-05 17:02:45.054 [Actor Thread 37] INFO  nextflow.processor.TaskProcessor - [bb/7b93f9] Cached process > prep_pchic:MATCH_HIC_REGELEM (12)
+May-05 17:02:45.055 [Actor Thread 30] INFO  nextflow.processor.TaskProcessor - [e3/ac9c6b] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (11)
+May-05 17:02:45.056 [Actor Thread 15] INFO  nextflow.processor.TaskProcessor - [af/3e44cc] Cached process > prep_pchic:MATCH_HIC_REGELEM (13)
+May-05 17:02:45.058 [Actor Thread 48] INFO  nextflow.processor.TaskProcessor - [3f/3799ff] Cached process > prep_pchic:MATCH_HIC_REGELEM (14)
+May-05 17:02:45.060 [Actor Thread 18] INFO  nextflow.processor.TaskProcessor - [8d/e66714] Cached process > prep_pchic:MATCH_HIC_REGELEM (15)
+May-05 17:02:45.061 [Actor Thread 26] INFO  nextflow.processor.TaskProcessor - [07/46884b] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (12)
+May-05 17:02:45.062 [Actor Thread 37] INFO  nextflow.processor.TaskProcessor - [fe/fab2d6] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (13)
+May-05 17:02:45.065 [Actor Thread 48] INFO  nextflow.processor.TaskProcessor - [e1/2fb28c] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (15)
+May-05 17:02:45.066 [Actor Thread 15] INFO  nextflow.processor.TaskProcessor - [10/fbb7d0] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (14)
+May-05 17:02:45.066 [Actor Thread 49] INFO  nextflow.processor.TaskProcessor - [f3/1bb5a6] Cached process > prep_pchic:MATCH_HIC_REGELEM (16)
+May-05 17:02:45.068 [Actor Thread 30] INFO  nextflow.processor.TaskProcessor - [6d/84929b] Cached process > prep_pchic:MATCH_HIC_REGELEM (18)
+May-05 17:02:45.069 [Actor Thread 43] INFO  nextflow.processor.TaskProcessor - [46/e488f3] Cached process > prep_pchic:MATCH_HIC_REGELEM (17)
+May-05 17:02:45.072 [Actor Thread 26] INFO  nextflow.processor.TaskProcessor - [c8/6e4934] Cached process > prep_pchic:MATCH_HIC_REGELEM (19)
+May-05 17:02:45.072 [Actor Thread 18] INFO  nextflow.processor.TaskProcessor - [6c/865137] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (16)
+May-05 17:02:45.074 [Actor Thread 30] INFO  nextflow.processor.TaskProcessor - [1a/5af672] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (17)
+May-05 17:02:45.074 [Actor Thread 37] INFO  nextflow.processor.TaskProcessor - [33/b50a76] Cached process > prep_pchic:MATCH_HIC_REGELEM (20)
+May-05 17:02:45.076 [Actor Thread 43] INFO  nextflow.processor.TaskProcessor - [4d/2169d6] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (18)
+May-05 17:02:45.077 [Actor Thread 21] INFO  nextflow.processor.TaskProcessor - [29/b2fcb3] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (19)
+May-05 17:02:45.078 [Actor Thread 49] INFO  nextflow.processor.TaskProcessor - [57/a0792a] Cached process > prep_pchic:MATCH_HIC_REGELEM (21)
+May-05 17:02:45.080 [Actor Thread 37] INFO  nextflow.processor.TaskProcessor - [73/1c4cab] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (20)
+May-05 17:02:45.080 [Actor Thread 15] INFO  nextflow.processor.TaskProcessor - [5e/4a7734] Cached process > prep_pchic:MATCH_HIC_REGELEM (22)
+May-05 17:02:45.083 [Actor Thread 26] INFO  nextflow.processor.TaskProcessor - [23/a69ee3] Cached process > prep_pchic:MATCH_HIC_REGELEM (23)
+May-05 17:02:45.086 [Actor Thread 49] INFO  nextflow.processor.TaskProcessor - [f4/8d2ead] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (21)
+May-05 17:02:45.087 [Actor Thread 15] INFO  nextflow.processor.TaskProcessor - [1f/cd765e] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (22)
+May-05 17:02:45.088 [Actor Thread 21] INFO  nextflow.processor.TaskProcessor - [dd/c94986] Cached process > prep_pchic:MATCH_HIC_REGELEM (25)
+May-05 17:02:45.088 [Actor Thread 43] INFO  nextflow.processor.TaskProcessor - [85/0b1398] Cached process > prep_pchic:MATCH_HIC_REGELEM (24)
+May-05 17:02:45.089 [Actor Thread 30] INFO  nextflow.processor.TaskProcessor - [6d/7ffd5d] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (23)
+May-05 17:02:45.091 [Actor Thread 37] INFO  nextflow.processor.TaskProcessor - [43/429c07] Cached process > prep_pchic:MATCH_HIC_REGELEM (26)
+May-05 17:02:45.094 [Actor Thread 21] INFO  nextflow.processor.TaskProcessor - [9c/ceea6f] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (24)
+May-05 17:02:45.094 [Actor Thread 43] INFO  nextflow.processor.TaskProcessor - [40/3a84d8] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (25)
+May-05 17:02:45.096 [Actor Thread 26] INFO  nextflow.processor.TaskProcessor - [8f/fdfbe3] Cached process > prep_pchic:MATCH_HIC_REGELEM (27)
+May-05 17:02:45.097 [Actor Thread 37] INFO  nextflow.processor.TaskProcessor - [fa/3bce7e] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (26)
+May-05 17:02:45.099 [Actor Thread 49] INFO  nextflow.processor.TaskProcessor - [b3/3f4dc4] Cached process > prep_pchic:MATCH_HIC_REGELEM (28)
+May-05 17:02:45.100 [Actor Thread 30] INFO  nextflow.processor.TaskProcessor - [68/eed46a] Cached process > prep_pchic:MATCH_HIC_REGELEM (29)
+May-05 17:02:45.102 [Actor Thread 26] INFO  nextflow.processor.TaskProcessor - [8a/35b081] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (27)
+May-05 17:02:45.102 [Actor Thread 15] INFO  nextflow.processor.TaskProcessor - [18/0d3f39] Cached process > prep_pchic:MATCH_HIC_REGELEM (30)
+May-05 17:02:45.105 [Actor Thread 21] INFO  nextflow.processor.TaskProcessor - [6a/000dff] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (28)
+May-05 17:02:45.105 [Actor Thread 43] INFO  nextflow.processor.TaskProcessor - [f3/4bb2c3] Cached process > prep_pchic:MATCH_HIC_REGELEM (31)
+May-05 17:02:45.106 [Actor Thread 30] INFO  nextflow.processor.TaskProcessor - [57/4b08f5] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (29)
+May-05 17:02:45.107 [Actor Thread 37] INFO  nextflow.processor.TaskProcessor - [54/847112] Cached process > prep_pchic:MATCH_HIC_REGELEM (32)
+May-05 17:02:45.108 [Actor Thread 49] INFO  nextflow.processor.TaskProcessor - [97/5ed6af] Cached process > prep_pchic:MATCH_HIC_REGELEM (33)
+May-05 17:02:45.108 [Actor Thread 15] INFO  nextflow.processor.TaskProcessor - [e7/d76659] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (30)
+May-05 17:02:45.111 [Actor Thread 18] INFO  nextflow.processor.TaskProcessor - [28/621d5e] Cached process > prep_pchic:MATCH_HIC_REGELEM (34)
+May-05 17:02:45.112 [Actor Thread 26] INFO  nextflow.processor.TaskProcessor - [63/8201ea] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (31)
+May-05 17:02:45.113 [Actor Thread 37] INFO  nextflow.processor.TaskProcessor - [aa/62e52b] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (32)
+May-05 17:02:45.114 [Actor Thread 30] INFO  nextflow.processor.TaskProcessor - [79/225379] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (33)
+May-05 17:02:45.114 [Actor Thread 43] INFO  nextflow.processor.TaskProcessor - [8a/29f70b] Cached process > prep_pchic:MATCH_HIC_REGELEM (35)
+May-05 17:02:45.116 [Actor Thread 48] INFO  nextflow.processor.TaskProcessor - [82/4db536] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (34)
+May-05 17:02:45.116 [Actor Thread 21] INFO  nextflow.processor.TaskProcessor - [d6/cb1411] Cached process > prep_pchic:MATCH_HIC_REGELEM (36)
+May-05 17:02:45.118 [Actor Thread 49] INFO  nextflow.processor.TaskProcessor - [b5/b1b5cf] Cached process > prep_pchic:MATCH_HIC_REGELEM (37)
+May-05 17:02:45.120 [Actor Thread 26] INFO  nextflow.processor.TaskProcessor - [dc/575261] Cached process > prep_pchic:MATCH_HIC_REGELEM (38)
+May-05 17:02:45.121 [Actor Thread 43] INFO  nextflow.processor.TaskProcessor - [76/c41c51] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (35)
+May-05 17:02:45.121 [Actor Thread 21] INFO  nextflow.processor.TaskProcessor - [0e/6fad11] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (36)
+May-05 17:02:45.123 [Actor Thread 30] INFO  nextflow.processor.TaskProcessor - [b4/8f5b87] Cached process > prep_pchic:MATCH_HIC_REGELEM (39)
+May-05 17:02:45.124 [Actor Thread 26] INFO  nextflow.processor.TaskProcessor - [f6/0a6b1b] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (38)
+May-05 17:02:45.124 [Actor Thread 48] INFO  nextflow.processor.TaskProcessor - [fa/6afea2] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (37)
+May-05 17:02:45.125 [Actor Thread 15] INFO  nextflow.processor.TaskProcessor - [26/03b3f9] Cached process > prep_pchic:MATCH_HIC_REGELEM (40)
+May-05 17:02:45.126 [Actor Thread 37] INFO  nextflow.processor.TaskProcessor - [cf/e9e69a] Cached process > prep_pchic:MATCH_HIC_REGELEM (41)
+May-05 17:02:45.128 [Actor Thread 49] INFO  nextflow.processor.TaskProcessor - [55/2800b7] Cached process > prep_pchic:MATCH_HIC_REGELEM (42)
+May-05 17:02:45.128 [Actor Thread 30] INFO  nextflow.processor.TaskProcessor - [4c/273b4c] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (39)
+May-05 17:02:45.129 [Actor Thread 21] INFO  nextflow.processor.TaskProcessor - [3e/5938fb] Cached process > prep_pchic:MATCH_HIC_REGELEM (43)
+May-05 17:02:45.130 [Actor Thread 26] INFO  nextflow.processor.TaskProcessor - [81/0315aa] Cached process > prep_pchic:MATCH_HIC_REGELEM (44)
+May-05 17:02:45.132 [Actor Thread 15] INFO  nextflow.processor.TaskProcessor - [8c/c9a688] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (40)
+May-05 17:02:45.133 [Actor Thread 49] INFO  nextflow.processor.TaskProcessor - [62/503ba7] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (42)
+May-05 17:02:45.133 [Actor Thread 37] INFO  nextflow.processor.TaskProcessor - [b0/670307] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (41)
+May-05 17:02:45.134 [Actor Thread 21] INFO  nextflow.processor.TaskProcessor - [71/921508] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (43)
+May-05 17:02:45.135 [Actor Thread 26] INFO  nextflow.processor.TaskProcessor - [33/3c5690] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (44)
+May-05 17:02:45.135 [Actor Thread 43] INFO  nextflow.processor.TaskProcessor - [db/24c3b9] Cached process > prep_pchic:MATCH_HIC_REGELEM (45)
+May-05 17:02:45.135 [Actor Thread 18] INFO  nextflow.processor.TaskProcessor - [5b/f5da75] Cached process > prep_pchic:MATCH_HIC_REGELEM (46)
+May-05 17:02:45.136 [Actor Thread 30] INFO  nextflow.processor.TaskProcessor - [d3/0c420c] Cached process > prep_pchic:MATCH_HIC_REGELEM (47)
+May-05 17:02:45.137 [Actor Thread 48] INFO  nextflow.processor.TaskProcessor - [cb/c65f43] Cached process > prep_pchic:MATCH_HIC_REGELEM (48)
+May-05 17:02:45.140 [Actor Thread 33] INFO  nextflow.processor.TaskProcessor - [b5/fd49c6] Cached process > prep_pchic:MATCH_HIC_REGELEM (49)
+May-05 17:02:45.140 [Actor Thread 18] INFO  nextflow.processor.TaskProcessor - [53/35392e] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (46)
+May-05 17:02:45.140 [Actor Thread 43] INFO  nextflow.processor.TaskProcessor - [9f/bd7ffc] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (45)
+May-05 17:02:45.141 [Actor Thread 30] INFO  nextflow.processor.TaskProcessor - [a8/080f8f] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (47)
+May-05 17:02:45.141 [Actor Thread 21] INFO  nextflow.processor.TaskProcessor - [7e/e59377] Cached process > prep_pchic:MATCH_HIC_REGELEM (50)
+May-05 17:02:45.142 [Actor Thread 45] INFO  nextflow.processor.TaskProcessor - [80/e763ec] Cached process > prep_pchic:MATCH_HIC_REGELEM (51)
+May-05 17:02:45.143 [Actor Thread 48] INFO  nextflow.processor.TaskProcessor - [e9/c87811] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (48)
+May-05 17:02:45.145 [Actor Thread 33] INFO  nextflow.processor.TaskProcessor - [db/36048f] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (49)
+May-05 17:02:45.145 [Actor Thread 21] INFO  nextflow.processor.TaskProcessor - [7f/f15071] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (50)
+May-05 17:02:45.146 [Actor Thread 45] INFO  nextflow.processor.TaskProcessor - [8b/76e17c] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (51)
+May-05 17:02:45.146 [Actor Thread 37] INFO  nextflow.processor.TaskProcessor - [31/95280a] Cached process > prep_pchic:MATCH_HIC_REGELEM (52)
+May-05 17:02:45.147 [Actor Thread 26] INFO  nextflow.processor.TaskProcessor - [f9/9ea44e] Cached process > prep_pchic:MATCH_HIC_REGELEM (53)
+May-05 17:02:45.148 [Actor Thread 30] INFO  nextflow.processor.TaskProcessor - [4c/8f1fe6] Cached process > prep_pchic:MATCH_HIC_REGELEM (54)
+May-05 17:02:45.150 [Actor Thread 48] INFO  nextflow.processor.TaskProcessor - [6e/086e89] Cached process > prep_pchic:MATCH_HIC_REGELEM (55)
+May-05 17:02:45.150 [Actor Thread 37] INFO  nextflow.processor.TaskProcessor - [2e/20887f] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (52)
+May-05 17:02:45.151 [Actor Thread 26] INFO  nextflow.processor.TaskProcessor - [95/d3ceca] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (53)
+May-05 17:02:45.153 [Actor Thread 15] INFO  nextflow.processor.TaskProcessor - [48/e6a8c1] Cached process > prep_pchic:MATCH_HIC_REGELEM (56)
+May-05 17:02:45.153 [Actor Thread 21] INFO  nextflow.processor.TaskProcessor - [43/cbbe6d] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (54)
+May-05 17:02:45.154 [Actor Thread 43] INFO  nextflow.processor.TaskProcessor - [7a/888f83] Cached process > prep_pchic:MATCH_HIC_REGELEM (57)
+May-05 17:02:45.155 [Actor Thread 18] INFO  nextflow.processor.TaskProcessor - [c4/6f5748] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (55)
+May-05 17:02:45.155 [Actor Thread 45] INFO  nextflow.processor.TaskProcessor - [42/af756f] Cached process > prep_pchic:MATCH_HIC_REGELEM (58)
+May-05 17:02:45.157 [Actor Thread 30] INFO  nextflow.processor.TaskProcessor - [46/f53191] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (56)
+May-05 17:02:45.157 [Actor Thread 33] INFO  nextflow.processor.TaskProcessor - [45/ce5b57] Cached process > prep_pchic:MATCH_HIC_REGELEM (59)
+May-05 17:02:45.159 [Actor Thread 26] INFO  nextflow.processor.TaskProcessor - [17/e3cbaf] Cached process > prep_pchic:MATCH_HIC_REGELEM (61)
+May-05 17:02:45.159 [Actor Thread 48] INFO  nextflow.processor.TaskProcessor - [97/b87753] Cached process > prep_pchic:MATCH_HIC_REGELEM (60)
+May-05 17:02:45.159 [Actor Thread 43] INFO  nextflow.processor.TaskProcessor - [b9/8f1b73] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (57)
+May-05 17:02:45.173 [Actor Thread 45] INFO  nextflow.processor.TaskProcessor - [80/df890f] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (58)
+May-05 17:02:45.175 [Actor Thread 21] INFO  nextflow.processor.TaskProcessor - [0c/c0aed2] Cached process > prep_pchic:MATCH_HIC_REGELEM (62)
+May-05 17:02:45.176 [Actor Thread 30] INFO  nextflow.processor.TaskProcessor - [5b/14cef3] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (59)
+May-05 17:02:45.176 [Actor Thread 26] INFO  nextflow.processor.TaskProcessor - [4c/8217ff] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (60)
+May-05 17:02:45.177 [Actor Thread 33] INFO  nextflow.processor.TaskProcessor - [cc/33d0b1] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (61)
+May-05 17:02:45.178 [Actor Thread 37] INFO  nextflow.processor.TaskProcessor - [fd/cb42b2] Cached process > prep_pchic:MATCH_HIC_REGELEM (63)
+May-05 17:02:45.179 [Actor Thread 21] INFO  nextflow.processor.TaskProcessor - [96/a47965] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (62)
+May-05 17:02:45.180 [Actor Thread 18] INFO  nextflow.processor.TaskProcessor - [b6/dd052e] Cached process > prep_pchic:MATCH_HIC_REGELEM (64)
+May-05 17:02:45.181 [Actor Thread 45] INFO  nextflow.processor.TaskProcessor - [c1/5ee32b] Cached process > prep_pchic:MATCH_HIC_REGELEM (65)
+May-05 17:02:45.181 [Actor Thread 37] INFO  nextflow.processor.TaskProcessor - [0f/210846] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (63)
+May-05 17:02:45.182 [Actor Thread 48] INFO  nextflow.processor.TaskProcessor - [1a/fdee4c] Cached process > prep_pchic:MATCH_HIC_REGELEM (66)
+May-05 17:02:45.182 [Actor Thread 30] INFO  nextflow.processor.TaskProcessor - [9c/5c5f0d] Cached process > prep_pchic:MATCH_HIC_REGELEM (67)
+May-05 17:02:45.182 [Actor Thread 49] INFO  nextflow.processor.TaskProcessor - [b9/108ca0] Cached process > prep_pchic:MATCH_HIC_REGELEM (68)
+May-05 17:02:45.183 [Actor Thread 33] INFO  nextflow.processor.TaskProcessor - [14/12d459] Cached process > prep_pchic:MATCH_HIC_REGELEM (69)
+May-05 17:02:45.185 [Actor Thread 15] INFO  nextflow.processor.TaskProcessor - [b7/5ff802] Cached process > prep_pchic:MATCH_HIC_REGELEM (70)
+May-05 17:02:45.185 [Actor Thread 43] INFO  nextflow.processor.TaskProcessor - [b0/c2afc4] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (64)
+May-05 17:02:45.186 [Actor Thread 18] INFO  nextflow.processor.TaskProcessor - [50/eeaa3b] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (65)
+May-05 17:02:45.186 [Actor Thread 30] INFO  nextflow.processor.TaskProcessor - [b8/fd1d59] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (68)
+May-05 17:02:45.186 [Actor Thread 26] INFO  nextflow.processor.TaskProcessor - [e6/19f28e] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (67)
+May-05 17:02:45.186 [Actor Thread 48] INFO  nextflow.processor.TaskProcessor - [8d/d3bcb9] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (66)
+May-05 17:02:45.187 [Actor Thread 33] INFO  nextflow.processor.TaskProcessor - [b2/df13d6] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (69)
+May-05 17:02:45.188 [Actor Thread 21] INFO  nextflow.processor.TaskProcessor - [9f/db32f0] Cached process > prep_pchic:MATCH_HIC_REGELEM (71)
+May-05 17:02:45.188 [Actor Thread 45] INFO  nextflow.processor.TaskProcessor - [a3/3eb47e] Cached process > prep_pchic:MATCH_HIC_REGELEM (72)
+May-05 17:02:45.189 [Actor Thread 15] INFO  nextflow.processor.TaskProcessor - [ef/88e367] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (70)
+May-05 17:02:45.189 [Actor Thread 37] INFO  nextflow.processor.TaskProcessor - [73/9db737] Cached process > prep_pchic:MATCH_HIC_REGELEM (73)
+May-05 17:02:45.191 [Actor Thread 49] INFO  nextflow.processor.TaskProcessor - [c2/0c578b] Cached process > prep_pchic:MATCH_HIC_REGELEM (74)
+May-05 17:02:45.191 [Actor Thread 26] INFO  nextflow.processor.TaskProcessor - [ee/8c01b6] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (71)
+May-05 17:02:45.192 [Actor Thread 42] INFO  nextflow.processor.TaskProcessor - [9d/d5a4bd] Cached process > prep_pchic:MATCH_HIC_REGELEM (75)
+May-05 17:02:45.192 [Actor Thread 45] INFO  nextflow.processor.TaskProcessor - [1a/0560d2] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (72)
+May-05 17:02:45.193 [Actor Thread 33] INFO  nextflow.processor.TaskProcessor - [f2/8f7dea] Cached process > prep_pchic:MATCH_HIC_REGELEM (76)
+May-05 17:02:45.193 [Actor Thread 30] INFO  nextflow.processor.TaskProcessor - [c8/7ef2d4] Cached process > prep_pchic:MATCH_HIC_REGELEM (77)
+May-05 17:02:45.194 [Actor Thread 21] INFO  nextflow.processor.TaskProcessor - [49/acd2c4] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (73)
+May-05 17:02:45.195 [Actor Thread 48] INFO  nextflow.processor.TaskProcessor - [f3/722f17] Cached process > prep_pchic:MATCH_HIC_REGELEM (78)
+May-05 17:02:45.195 [Actor Thread 49] INFO  nextflow.processor.TaskProcessor - [cb/c6b609] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (74)
+May-05 17:02:45.196 [Actor Thread 15] INFO  nextflow.processor.TaskProcessor - [23/0771e7] Cached process > prep_pchic:MATCH_HIC_REGELEM (79)
+May-05 17:02:45.196 [Actor Thread 42] INFO  nextflow.processor.TaskProcessor - [64/6cceab] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (75)
+May-05 17:02:45.197 [Actor Thread 33] INFO  nextflow.processor.TaskProcessor - [e0/a95368] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (76)
+May-05 17:02:45.198 [Actor Thread 30] INFO  nextflow.processor.TaskProcessor - [28/365341] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (77)
+May-05 17:02:45.198 [Actor Thread 18] INFO  nextflow.processor.TaskProcessor - [7f/4862d7] Cached process > prep_pchic:MATCH_HIC_REGELEM (80)
+May-05 17:02:45.199 [Actor Thread 37] INFO  nextflow.processor.TaskProcessor - [88/b5dad6] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (78)
+May-05 17:02:45.199 [Actor Thread 17] INFO  nextflow.processor.TaskProcessor - [7e/5e821f] Cached process > prep_pchic:MATCH_HIC_REGELEM (81)
+May-05 17:02:45.199 [Actor Thread 26] INFO  nextflow.processor.TaskProcessor - [50/2bb9df] Cached process > prep_pchic:MATCH_HIC_REGELEM (83)
+May-05 17:02:45.199 [Actor Thread 45] INFO  nextflow.processor.TaskProcessor - [d0/c41ff0] Cached process > prep_pchic:MATCH_HIC_REGELEM (82)
+May-05 17:02:45.200 [Actor Thread 15] INFO  nextflow.processor.TaskProcessor - [22/081002] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (79)
+May-05 17:02:45.201 [Actor Thread 18] INFO  nextflow.processor.TaskProcessor - [f2/01008c] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (80)
+May-05 17:02:45.201 [Actor Thread 48] INFO  nextflow.processor.TaskProcessor - [3c/99e0b7] Cached process > prep_pchic:MATCH_HIC_REGELEM (84)
+May-05 17:02:45.203 [Actor Thread 45] INFO  nextflow.processor.TaskProcessor - [10/66c0b5] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (83)
+May-05 17:02:45.203 [Actor Thread 30] INFO  nextflow.processor.TaskProcessor - [bb/e74b68] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (82)
+May-05 17:02:45.204 [Actor Thread 17] INFO  nextflow.processor.TaskProcessor - [6d/82f732] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (81)
+May-05 17:02:45.204 [Actor Thread 48] INFO  nextflow.processor.TaskProcessor - [11/70bd7b] Cached process > prep_pchic:SELECT_UNIQ_REGELEM (84)
+May-05 17:02:45.220 [Actor Thread 26] INFO  nextflow.processor.TaskProcessor - [c4/15f7bc] Cached process > prep_pchic:COMBINE_HIC (7)
+May-05 17:02:45.220 [Actor Thread 44] INFO  nextflow.processor.TaskProcessor - [3d/f6aec0] Cached process > prep_pchic:COMBINE_HIC (13)
+May-05 17:02:45.221 [Actor Thread 46] INFO  nextflow.processor.TaskProcessor - [b9/41667d] Cached process > prep_pchic:COMBINE_HIC (32)
+May-05 17:02:45.221 [Actor Thread 43] INFO  nextflow.processor.TaskProcessor - [9d/87bec5] Cached process > prep_pchic:COMBINE_HIC (12)
+May-05 17:02:45.222 [Actor Thread 40] INFO  nextflow.processor.TaskProcessor - [08/22ca19] Cached process > prep_pchic:COMBINE_HIC (30)
+May-05 17:02:45.223 [Actor Thread 31] INFO  nextflow.processor.TaskProcessor - [51/c8d37c] Cached process > prep_pchic:COMBINE_HIC (18)
+May-05 17:02:45.223 [Actor Thread 7] INFO  nextflow.processor.TaskProcessor - [9d/961ccb] Cached process > prep_pchic:COMBINE_HIC (42)
+May-05 17:02:45.223 [Actor Thread 41] INFO  nextflow.processor.TaskProcessor - [d9/7ef338] Cached process > prep_pchic:COMBINE_HIC (21)
+May-05 17:02:45.223 [Actor Thread 42] INFO  nextflow.processor.TaskProcessor - [ee/503024] Cached process > prep_pchic:COMBINE_HIC (10)
+May-05 17:02:45.223 [Actor Thread 33] INFO  nextflow.processor.TaskProcessor - [4c/d4f36c] Cached process > prep_pchic:COMBINE_HIC (8)
+May-05 17:02:45.223 [Actor Thread 35] INFO  nextflow.processor.TaskProcessor - [b2/5acc07] Cached process > prep_pchic:COMBINE_HIC (17)
+May-05 17:02:45.223 [Actor Thread 27] INFO  nextflow.processor.TaskProcessor - [32/a8b2f7] Cached process > prep_pchic:COMBINE_HIC (27)
+May-05 17:02:45.224 [Actor Thread 36] INFO  nextflow.processor.TaskProcessor - [90/4c98ca] Cached process > prep_pchic:COMBINE_HIC (29)
+May-05 17:02:45.224 [Actor Thread 13] INFO  nextflow.processor.TaskProcessor - [d2/e79524] Cached process > prep_pchic:COMBINE_HIC (19)
+May-05 17:02:45.225 [Actor Thread 18] INFO  nextflow.processor.TaskProcessor - [aa/1a392c] Cached process > prep_pchic:COMBINE_HIC (5)
+May-05 17:02:45.224 [Actor Thread 32] INFO  nextflow.processor.TaskProcessor - [e9/40f101] Cached process > prep_pchic:COMBINE_HIC (28)
+May-05 17:02:45.225 [Actor Thread 9] INFO  nextflow.processor.TaskProcessor - [1c/45b693] Cached process > prep_pchic:COMBINE_HIC (40)
+May-05 17:02:45.225 [Actor Thread 34] INFO  nextflow.processor.TaskProcessor - [f6/9f075a] Cached process > prep_pchic:COMBINE_HIC (31)
+May-05 17:02:45.225 [Actor Thread 21] INFO  nextflow.processor.TaskProcessor - [28/5ca0ce] Cached process > prep_pchic:COMBINE_HIC (9)
+May-05 17:02:45.226 [Actor Thread 8] INFO  nextflow.processor.TaskProcessor - [6a/5cdac8] Cached process > prep_pchic:COMBINE_HIC (41)
+May-05 17:02:45.226 [Actor Thread 29] INFO  nextflow.processor.TaskProcessor - [fb/22a353] Cached process > prep_pchic:COMBINE_HIC (24)
+May-05 17:02:45.226 [Actor Thread 48] INFO  nextflow.processor.TaskProcessor - [db/48049d] Cached process > prep_pchic:COMBINE_HIC (1)
+May-05 17:02:45.226 [Actor Thread 49] INFO  nextflow.processor.TaskProcessor - [e5/fdeb2e] Cached process > prep_pchic:COMBINE_HIC (11)
+May-05 17:02:45.225 [Actor Thread 10] INFO  nextflow.processor.TaskProcessor - [0b/8b9fe4] Cached process > prep_pchic:COMBINE_HIC (39)
+May-05 17:02:45.225 [Actor Thread 30] INFO  nextflow.processor.TaskProcessor - [d7/40de09] Cached process > prep_pchic:COMBINE_HIC (3)
+May-05 17:02:45.225 [Actor Thread 20] INFO  nextflow.processor.TaskProcessor - [f8/75f3aa] Cached process > prep_pchic:COMBINE_HIC (15)
+May-05 17:02:45.225 [Actor Thread 16] INFO  nextflow.processor.TaskProcessor - [19/5c572e] Cached process > prep_pchic:COMBINE_HIC (35)
+May-05 17:02:45.226 [Actor Thread 23] INFO  nextflow.processor.TaskProcessor - [e0/3f0371] Cached process > prep_pchic:COMBINE_HIC (16)
+May-05 17:02:45.225 [Actor Thread 11] INFO  nextflow.processor.TaskProcessor - [33/22e50f] Cached process > prep_pchic:COMBINE_HIC (38)
+May-05 17:02:45.224 [Actor Thread 14] INFO  nextflow.processor.TaskProcessor - [ab/ce3e5a] Cached process > prep_pchic:COMBINE_HIC (14)
+May-05 17:02:45.228 [Actor Thread 17] INFO  nextflow.processor.TaskProcessor - [0c/1613f0] Cached process > prep_pchic:COMBINE_HIC (26)
+May-05 17:02:45.228 [Actor Thread 25] INFO  nextflow.processor.TaskProcessor - [39/961db1] Cached process > prep_pchic:COMBINE_HIC (23)
+May-05 17:02:45.228 [Actor Thread 39] INFO  nextflow.processor.TaskProcessor - [e5/bd295e] Cached process > prep_pchic:COMBINE_HIC (20)
+May-05 17:02:45.229 [Actor Thread 24] INFO  nextflow.processor.TaskProcessor - [74/186b08] Cached process > prep_pchic:COMBINE_HIC (25)
+May-05 17:02:45.229 [Actor Thread 47] INFO  nextflow.processor.TaskProcessor - [50/532e99] Cached process > prep_pchic:COMBINE_HIC (33)
+May-05 17:02:45.229 [Actor Thread 38] INFO  nextflow.processor.TaskProcessor - [48/762c06] Cached process > prep_pchic:COMBINE_HIC (2)
+May-05 17:02:45.229 [Actor Thread 28] INFO  nextflow.processor.TaskProcessor - [38/9f6016] Cached process > prep_pchic:COMBINE_HIC (22)
+May-05 17:02:45.229 [Actor Thread 19] INFO  nextflow.processor.TaskProcessor - [8c/02f82c] Cached process > prep_pchic:COMBINE_HIC (36)
+May-05 17:02:45.229 [Actor Thread 45] INFO  nextflow.processor.TaskProcessor - [88/b18c93] Cached process > prep_pchic:COMBINE_HIC (4)
+May-05 17:02:45.233 [Actor Thread 12] INFO  nextflow.processor.TaskProcessor - [fd/cc7049] Cached process > prep_pchic:COMBINE_HIC (37)
+May-05 17:02:45.233 [Actor Thread 22] INFO  nextflow.processor.TaskProcessor - [cf/b86e55] Cached process > prep_pchic:COMBINE_HIC (34)
+May-05 17:02:45.234 [Actor Thread 15] INFO  nextflow.processor.TaskProcessor - [f7/c2cbc9] Cached process > prep_pchic:COMBINE_HIC (6)
+May-05 17:02:45.235 [Actor Thread 5] INFO  nextflow.processor.TaskProcessor - [ca/ca65dd] Cached process > prep_pchic:INTEGRATE (2)
+May-05 17:02:45.235 [Actor Thread 46] INFO  nextflow.processor.TaskProcessor - [28/53b07d] Cached process > prep_pchic:INTEGRATE (6)
+May-05 17:02:45.235 [Actor Thread 8] INFO  nextflow.processor.TaskProcessor - [50/40e702] Cached process > prep_pchic:INTEGRATE (14)
+May-05 17:02:45.235 [Actor Thread 31] INFO  nextflow.processor.TaskProcessor - [79/ea7a94] Cached process > prep_pchic:INTEGRATE (7)
+May-05 17:02:45.235 [Actor Thread 9] INFO  nextflow.processor.TaskProcessor - [91/e9b522] Cached process > prep_pchic:INTEGRATE (11)
+May-05 17:02:45.236 [Actor Thread 13] INFO  nextflow.processor.TaskProcessor - [3d/e0c53b] Cached process > prep_pchic:INTEGRATE (10)
+May-05 17:02:45.237 [Actor Thread 42] INFO  nextflow.processor.TaskProcessor - [fd/24c3bc] Cached process > prep_pchic:INTEGRATE (16)
+May-05 17:02:45.237 [Actor Thread 33] INFO  nextflow.processor.TaskProcessor - [61/99f10d] Cached process > prep_pchic:INTEGRATE (9)
+May-05 17:02:45.236 [Actor Thread 27] INFO  nextflow.processor.TaskProcessor - [ff/0c8447] Cached process > prep_pchic:INTEGRATE (8)
+May-05 17:02:45.237 [Actor Thread 36] INFO  nextflow.processor.TaskProcessor - [53/d38190] Cached process > prep_pchic:INTEGRATE (12)
+May-05 17:02:45.237 [Actor Thread 11] INFO  nextflow.processor.TaskProcessor - [13/34726d] Cached process > prep_pchic:INTEGRATE (17)
+May-05 17:02:45.237 [Actor Thread 41] INFO  nextflow.processor.TaskProcessor - [02/a6188d] Cached process > prep_pchic:INTEGRATE (15)
+May-05 17:02:45.238 [Actor Thread 7] INFO  nextflow.processor.TaskProcessor - [c4/9d4a3b] Cached process > prep_pchic:INTEGRATE (13)
+May-05 17:02:45.238 [Actor Thread 40] INFO  nextflow.processor.TaskProcessor - [84/6a23b9] Cached process > prep_pchic:INTEGRATE (22)
+May-05 17:02:45.238 [Actor Thread 23] INFO  nextflow.processor.TaskProcessor - [4d/a59e84] Cached process > prep_pchic:INTEGRATE (18)
+May-05 17:02:45.238 [Actor Thread 30] INFO  nextflow.processor.TaskProcessor - [3a/4a7fd4] Cached process > prep_pchic:INTEGRATE (20)
+May-05 17:02:45.238 [Actor Thread 4] INFO  nextflow.processor.TaskProcessor - [8d/f9c728] Cached process > prep_pchic:INTEGRATE (5)
+May-05 17:02:45.238 [Actor Thread 16] INFO  nextflow.processor.TaskProcessor - [be/c72501] Cached process > prep_pchic:INTEGRATE (19)
+May-05 17:02:45.238 [Actor Thread 43] INFO  nextflow.processor.TaskProcessor - [f0/de535b] Cached process > prep_pchic:INTEGRATE (3)
+May-05 17:02:45.238 [Actor Thread 6] INFO  nextflow.processor.TaskProcessor - [a6/04a6e0] Cached process > prep_pchic:INTEGRATE (1)
+May-05 17:02:45.238 [Actor Thread 26] INFO  nextflow.processor.TaskProcessor - [54/13f72c] Cached process > prep_pchic:INTEGRATE (4)
+May-05 17:02:45.238 [Actor Thread 47] INFO  nextflow.processor.TaskProcessor - [2c/96bfce] Cached process > prep_pchic:INTEGRATE (21)
+May-05 17:02:45.239 [Actor Thread 10] INFO  nextflow.processor.TaskProcessor - [82/3869d1] Cached process > prep_pchic:INTEGRATE (23)
+May-05 17:02:45.241 [Actor Thread 35] INFO  nextflow.processor.TaskProcessor - [47/55f5a4] Cached process > prep_pchic:INTEGRATE (24)
+May-05 17:02:45.244 [Actor Thread 21] INFO  nextflow.processor.TaskProcessor - [1c/1dcc8b] Cached process > prep_pchic:INTEGRATE (27)
+May-05 17:02:45.245 [Actor Thread 20] INFO  nextflow.processor.TaskProcessor - [b0/78a1d4] Cached process > prep_pchic:INTEGRATE (25)
+May-05 17:02:45.246 [Actor Thread 18] INFO  nextflow.processor.TaskProcessor - [e1/0cc762] Cached process > prep_pchic:INTEGRATE (30)
+May-05 17:02:45.246 [Actor Thread 48] INFO  nextflow.processor.TaskProcessor - [5b/076ef9] Cached process > prep_pchic:INTEGRATE (26)
+May-05 17:02:45.247 [Actor Thread 34] INFO  nextflow.processor.TaskProcessor - [94/a15016] Cached process > prep_pchic:INTEGRATE (29)
+May-05 17:02:45.247 [Actor Thread 49] INFO  nextflow.processor.TaskProcessor - [8c/71c436] Cached process > prep_pchic:INTEGRATE (28)
+May-05 17:02:45.250 [Actor Thread 15] INFO  nextflow.processor.TaskProcessor - [5b/8418e3] Cached process > prep_pchic:INTEGRATE (31)
+May-05 17:02:45.251 [Actor Thread 45] INFO  nextflow.processor.TaskProcessor - [9d/d31845] Cached process > prep_pchic:INTEGRATE (34)
+May-05 17:02:45.250 [Actor Thread 12] INFO  nextflow.processor.TaskProcessor - [b1/fa97dd] Cached process > prep_pchic:INTEGRATE (33)
+May-05 17:02:45.251 [Actor Thread 22] INFO  nextflow.processor.TaskProcessor - [e8/f64b33] Cached process > prep_pchic:INTEGRATE (32)
+May-05 17:02:45.251 [Actor Thread 29] INFO  nextflow.processor.TaskProcessor - [d3/681718] Cached process > prep_pchic:INTEGRATE (36)
+May-05 17:02:45.252 [Actor Thread 19] INFO  nextflow.processor.TaskProcessor - [64/8f9e71] Cached process > prep_pchic:INTEGRATE (35)
+May-05 17:02:45.252 [Actor Thread 38] INFO  nextflow.processor.TaskProcessor - [db/615d4d] Cached process > prep_pchic:INTEGRATE (37)
+May-05 17:02:45.254 [Actor Thread 39] INFO  nextflow.processor.TaskProcessor - [f9/7859e5] Cached process > prep_pchic:INTEGRATE (39)
+May-05 17:02:45.254 [Actor Thread 17] INFO  nextflow.processor.TaskProcessor - [b6/c3b327] Cached process > prep_pchic:INTEGRATE (41)
+May-05 17:02:45.255 [Actor Thread 25] INFO  nextflow.processor.TaskProcessor - [f0/d281d9] Cached process > prep_pchic:INTEGRATE (40)
+May-05 17:02:45.255 [Actor Thread 48] INFO  nextflow.processor.TaskProcessor - [d3/973b23] Cached process > prep_pchic:INTEGRATE (42)
+May-05 17:02:45.255 [Actor Thread 24] INFO  nextflow.processor.TaskProcessor - [de/6acf62] Cached process > prep_pchic:INTEGRATE (38)
+May-05 17:02:45.322 [Actor Thread 35] INFO  nextflow.processor.TaskProcessor - [38/aa2cfc] Cached process > prep_pchic:AUGMENT_DATA (9)
+May-05 17:02:45.324 [Actor Thread 18] INFO  nextflow.processor.TaskProcessor - [4b/0d693f] Cached process > prep_pchic:AUGMENT_DATA (5)
+May-05 17:02:45.324 [Actor Thread 47] INFO  nextflow.processor.TaskProcessor - [bf/ffffc8] Cached process > prep_pchic:AUGMENT_DATA (11)
+May-05 17:02:45.324 [Actor Thread 31] INFO  nextflow.processor.TaskProcessor - [53/1b93ca] Cached process > prep_pchic:AUGMENT_DATA (29)
+May-05 17:02:45.324 [Actor Thread 28] INFO  nextflow.processor.TaskProcessor - [ff/fb1d71] Cached process > prep_pchic:AUGMENT_DATA (2)
+May-05 17:02:45.325 [Actor Thread 46] INFO  nextflow.processor.TaskProcessor - [21/e953cf] Cached process > prep_pchic:AUGMENT_DATA (30)
+May-05 17:02:45.325 [Actor Thread 6] INFO  nextflow.processor.TaskProcessor - [40/7b5a48] Cached process > prep_pchic:AUGMENT_DATA (13)
+May-05 17:02:45.325 [Actor Thread 4] INFO  nextflow.processor.TaskProcessor - [c6/325b23] Cached process > prep_pchic:AUGMENT_DATA (15)
+May-05 17:02:45.325 [Actor Thread 7] INFO  nextflow.processor.TaskProcessor - [ed/1121e8] Cached process > prep_pchic:AUGMENT_DATA (20)
+May-05 17:02:45.325 [Actor Thread 8] INFO  nextflow.processor.TaskProcessor - [40/59b29a] Cached process > prep_pchic:AUGMENT_DATA (31)
+May-05 17:02:45.326 [Actor Thread 5] INFO  nextflow.processor.TaskProcessor - [1b/ac4630] Cached process > prep_pchic:AUGMENT_DATA (1)
+May-05 17:02:45.326 [Actor Thread 20] INFO  nextflow.processor.TaskProcessor - [04/8c8457] Cached process > prep_pchic:AUGMENT_DATA (6)
+May-05 17:02:45.326 [Actor Thread 22] INFO  nextflow.processor.TaskProcessor - [fa/37e35d] Cached process > prep_pchic:AUGMENT_DATA (40)
+May-05 17:02:45.326 [Actor Thread 30] INFO  nextflow.processor.TaskProcessor - [8a/f35d92] Cached process > prep_pchic:AUGMENT_DATA (16)
+May-05 17:02:45.326 [Actor Thread 45] INFO  nextflow.processor.TaskProcessor - [2d/c19331] Cached process > prep_pchic:AUGMENT_DATA (41)
+May-05 17:02:45.326 [Actor Thread 29] INFO  nextflow.processor.TaskProcessor - [b4/2c0d3c] Cached process > prep_pchic:AUGMENT_DATA (38)
+May-05 17:02:45.327 [Actor Thread 36] INFO  nextflow.processor.TaskProcessor - [3b/2555d1] Cached process > prep_pchic:AUGMENT_DATA (23)
+May-05 17:02:45.327 [Actor Thread 10] INFO  nextflow.processor.TaskProcessor - [8d/8b9ec0] Cached process > prep_pchic:AUGMENT_DATA (10)
+May-05 17:02:45.327 [Actor Thread 27] INFO  nextflow.processor.TaskProcessor - [dd/631bb9] Cached process > prep_pchic:AUGMENT_DATA (26)
+May-05 17:02:45.327 [Actor Thread 13] INFO  nextflow.processor.TaskProcessor - [d0/326a85] Cached process > prep_pchic:AUGMENT_DATA (28)
+May-05 17:02:45.327 [Actor Thread 38] INFO  nextflow.processor.TaskProcessor - [cb/b1fd79] Cached process > prep_pchic:AUGMENT_DATA (37)
+May-05 17:02:45.327 [Actor Thread 9] INFO  nextflow.processor.TaskProcessor - [2c/63e52a] Cached process > prep_pchic:AUGMENT_DATA (27)
+May-05 17:02:45.327 [Actor Thread 25] INFO  nextflow.processor.TaskProcessor - [c5/3da190] Cached process > prep_pchic:AUGMENT_DATA (33)
+May-05 17:02:45.327 [Actor Thread 21] INFO  nextflow.processor.TaskProcessor - [84/8ddf9d] Cached process > prep_pchic:AUGMENT_DATA (8)
+May-05 17:02:45.327 [Actor Thread 23] INFO  nextflow.processor.TaskProcessor - [6c/6f1805] Cached process > prep_pchic:AUGMENT_DATA (17)
+May-05 17:02:45.327 [Actor Thread 19] INFO  nextflow.processor.TaskProcessor - [eb/a8236d] Cached process > prep_pchic:AUGMENT_DATA (36)
+May-05 17:02:45.327 [Actor Thread 33] INFO  nextflow.processor.TaskProcessor - [bb/5354a5] Cached process > prep_pchic:AUGMENT_DATA (24)
+May-05 17:02:45.327 [Actor Thread 48] INFO  nextflow.processor.TaskProcessor - [e7/fde92a] Cached process > prep_pchic:AUGMENT_DATA (32)
+May-05 17:02:45.327 [Actor Thread 15] INFO  nextflow.processor.TaskProcessor - [71/27376d] Cached process > prep_pchic:AUGMENT_DATA (42)
+May-05 17:02:45.327 [Actor Thread 12] INFO  nextflow.processor.TaskProcessor - [76/5e03be] Cached process > prep_pchic:AUGMENT_DATA (39)
+May-05 17:02:45.327 [Actor Thread 11] INFO  nextflow.processor.TaskProcessor - [49/da38f6] Cached process > prep_pchic:AUGMENT_DATA (21)
+May-05 17:02:45.327 [Actor Thread 40] INFO  nextflow.processor.TaskProcessor - [43/444544] Cached process > prep_pchic:AUGMENT_DATA (19)
+May-05 17:02:45.327 [Actor Thread 43] INFO  nextflow.processor.TaskProcessor - [57/ea31e8] Cached process > prep_pchic:AUGMENT_DATA (12)
+May-05 17:02:45.327 [Actor Thread 41] INFO  nextflow.processor.TaskProcessor - [f5/41f4b7] Cached process > prep_pchic:AUGMENT_DATA (22)
+May-05 17:02:45.327 [Actor Thread 49] INFO  nextflow.processor.TaskProcessor - [25/2cd103] Cached process > prep_pchic:AUGMENT_DATA (3)
+May-05 17:02:45.327 [Actor Thread 26] INFO  nextflow.processor.TaskProcessor - [bf/236973] Cached process > prep_pchic:AUGMENT_DATA (18)
+May-05 17:02:45.327 [Actor Thread 34] INFO  nextflow.processor.TaskProcessor - [8c/1409d5] Cached process > prep_pchic:AUGMENT_DATA (7)
+May-05 17:02:45.327 [Actor Thread 16] INFO  nextflow.processor.TaskProcessor - [dd/4d80e7] Cached process > prep_pchic:AUGMENT_DATA (14)
+May-05 17:02:45.328 [Actor Thread 39] INFO  nextflow.processor.TaskProcessor - [37/261ea9] Cached process > prep_pchic:AUGMENT_DATA (35)
+May-05 17:02:45.328 [Actor Thread 14] INFO  nextflow.processor.TaskProcessor - [c8/b3e070] Cached process > prep_pchic:AUGMENT_DATA (4)
+May-05 17:02:45.328 [Actor Thread 17] INFO  nextflow.processor.TaskProcessor - [14/f37790] Cached process > prep_pchic:AUGMENT_DATA (34)
+May-05 17:02:45.329 [Actor Thread 42] INFO  nextflow.processor.TaskProcessor - [9d/012b12] Cached process > prep_pchic:AUGMENT_DATA (25)
+May-05 17:02:45.702 [Actor Thread 32] INFO  nextflow.processor.TaskProcessor - [fa/72e7ea] Cached process > prep_pchic:KNAPSACK_0 (1)
+May-05 17:02:45.704 [Actor Thread 26] INFO  nextflow.processor.TaskProcessor - [a1/ffc909] Cached process > prep_pchic:KNAPSACK_0 (2)
+May-05 17:02:45.714 [Actor Thread 42] INFO  nextflow.processor.TaskProcessor - [e5/1edb36] Cached process > prep_pchic:SUBLIST_0 (3)
+May-05 17:02:45.715 [Actor Thread 36] INFO  nextflow.processor.TaskProcessor - [ed/533430] Cached process > prep_pchic:SUBLIST_0 (2)
+May-05 17:02:45.715 [Actor Thread 4] INFO  nextflow.processor.TaskProcessor - [67/0ecd59] Cached process > prep_pchic:SUBLIST_0 (4)
+May-05 17:02:45.717 [Actor Thread 34] INFO  nextflow.processor.TaskProcessor - [0e/e2312d] Cached process > prep_pchic:SUBLIST_1 (6)
+May-05 17:02:45.717 [Actor Thread 8] INFO  nextflow.processor.TaskProcessor - [f3/873f21] Cached process > prep_pchic:SUBLIST_0 (6)
+May-05 17:02:45.717 [Actor Thread 16] INFO  nextflow.processor.TaskProcessor - [cb/2d76dc] Cached process > prep_pchic:SUBLIST_1 (5)
+May-05 17:02:45.717 [Actor Thread 17] INFO  nextflow.processor.TaskProcessor - [83/f0ab29] Cached process > prep_pchic:SUBLIST_1 (8)
+May-05 17:02:45.717 [Actor Thread 30] INFO  nextflow.processor.TaskProcessor - [ad/f5f3d3] Cached process > prep_pchic:SUBLIST_1 (4)
+May-05 17:02:45.717 [Actor Thread 41] INFO  nextflow.processor.TaskProcessor - [06/7b1b65] Cached process > prep_pchic:SUBLIST_0 (5)
+May-05 17:02:45.718 [Actor Thread 49] INFO  nextflow.processor.TaskProcessor - [5c/d6c48c] Cached process > prep_pchic:SUBLIST_0 (7)
+May-05 17:02:45.718 [Actor Thread 22] INFO  nextflow.processor.TaskProcessor - [8d/d3d346] Cached process > prep_pchic:SUBLIST_1 (2)
+May-05 17:02:45.719 [Actor Thread 24] INFO  nextflow.processor.TaskProcessor - [3d/015105] Cached process > prep_pchic:SUBLIST_1 (3)
+May-05 17:02:45.719 [Actor Thread 39] INFO  nextflow.processor.TaskProcessor - [72/0de8fb] Cached process > prep_pchic:SUBLIST_1 (7)
+May-05 17:02:45.720 [Actor Thread 27] INFO  nextflow.processor.TaskProcessor - [76/c8b1f2] Cached process > prep_pchic:SUBLIST_1 (1)
+May-05 17:02:45.721 [Actor Thread 6] INFO  nextflow.processor.TaskProcessor - [fc/1dfd32] Cached process > prep_pchic:SUBLIST_0 (1)
+May-05 17:02:45.722 [Actor Thread 7] INFO  nextflow.processor.TaskProcessor - [1d/d4ff56] Cached process > prep_pchic:SUBLIST_0 (8)
+May-05 17:02:45.908 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process prep_pchic:COMBINE_FILES (7) > jobId: 14544342; workDir: /fastscratch/agarwa/nf-tmp/work/c0/8ac393550e54931f5593150200215d
+May-05 17:02:45.912 [Task submitter] INFO  nextflow.Session - [c0/8ac393] Submitted process > prep_pchic:COMBINE_FILES (7)
+May-05 17:02:45.975 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process prep_pchic:COMBINE_FILES (4) > jobId: 14544343; workDir: /fastscratch/agarwa/nf-tmp/work/f8/76214d213910501b914751562a1927
+May-05 17:02:45.976 [Task submitter] INFO  nextflow.Session - [f8/76214d] Submitted process > prep_pchic:COMBINE_FILES (4)
+May-05 17:02:46.041 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process prep_pchic:COMBINE_FILES (2) > jobId: 14544344; workDir: /fastscratch/agarwa/nf-tmp/work/8d/804a0686de1fb5bad65d7fb732d067
+May-05 17:02:46.042 [Task submitter] INFO  nextflow.Session - [8d/804a06] Submitted process > prep_pchic:COMBINE_FILES (2)
+May-05 17:02:46.095 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process prep_pchic:COMBINE_FILES (8) > jobId: 14544345; workDir: /fastscratch/agarwa/nf-tmp/work/16/1343f80f56a3be200b2caf389658bb
+May-05 17:02:46.096 [Task submitter] INFO  nextflow.Session - [16/1343f8] Submitted process > prep_pchic:COMBINE_FILES (8)
+May-05 17:02:46.155 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process prep_pchic:COMBINE_FILES (1) > jobId: 14544346; workDir: /fastscratch/agarwa/nf-tmp/work/f1/f6e0f0c996a1cface9a22decb69449
+May-05 17:02:46.155 [Task submitter] INFO  nextflow.Session - [f1/f6e0f0] Submitted process > prep_pchic:COMBINE_FILES (1)
+May-05 17:02:46.221 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process prep_pchic:COMBINE_FILES (3) > jobId: 14544347; workDir: /fastscratch/agarwa/nf-tmp/work/56/bbfe2c3321d468b298b1d37366ab9f
+May-05 17:02:46.221 [Task submitter] INFO  nextflow.Session - [56/bbfe2c] Submitted process > prep_pchic:COMBINE_FILES (3)
+May-05 17:02:46.282 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process prep_pchic:COMBINE_FILES (5) > jobId: 14544348; workDir: /fastscratch/agarwa/nf-tmp/work/81/a9c50c2ac8fb0b98ceb70a0687de04
+May-05 17:02:46.282 [Task submitter] INFO  nextflow.Session - [81/a9c50c] Submitted process > prep_pchic:COMBINE_FILES (5)
+May-05 17:02:46.344 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process prep_pchic:COMBINE_FILES (6) > jobId: 14544349; workDir: /fastscratch/agarwa/nf-tmp/work/1f/81bd7f11addaace5d2d93d6e3e4876
+May-05 17:02:46.344 [Task submitter] INFO  nextflow.Session - [1f/81bd7f] Submitted process > prep_pchic:COMBINE_FILES (6)
+May-05 17:02:46.463 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process prep_pchic:COMBINE_FILES (10) > jobId: 14544350; workDir: /fastscratch/agarwa/nf-tmp/work/80/0e6b74e6a0374b2813f336f3cffd07
+May-05 17:02:46.463 [Task submitter] INFO  nextflow.Session - [80/0e6b74] Submitted process > prep_pchic:COMBINE_FILES (10)
+May-05 17:02:46.532 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process prep_pchic:COMBINE_FILES (9) > jobId: 14544351; workDir: /fastscratch/agarwa/nf-tmp/work/8f/f9a8af464475cbb2fef637ac4a83e1
+May-05 17:02:46.532 [Task submitter] INFO  nextflow.Session - [8f/f9a8af] Submitted process > prep_pchic:COMBINE_FILES (9)
+May-05 17:02:46.597 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process prep_pchic:COMBINE_FILES (12) > jobId: 14544352; workDir: /fastscratch/agarwa/nf-tmp/work/ec/914c21ccfa1dbf6de04fe189535ed9
+May-05 17:02:46.597 [Task submitter] INFO  nextflow.Session - [ec/914c21] Submitted process > prep_pchic:COMBINE_FILES (12)
+May-05 17:02:46.649 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process prep_pchic:COMBINE_FILES (11) > jobId: 14544353; workDir: /fastscratch/agarwa/nf-tmp/work/63/34f691024a036b54690da93ad1b8a3
+May-05 17:02:46.650 [Task submitter] INFO  nextflow.Session - [63/34f691] Submitted process > prep_pchic:COMBINE_FILES (11)
+May-05 17:02:54.446 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 14544342; id: 363; name: prep_pchic:COMBINE_FILES (7); status: COMPLETED; exit: 1; error: -; workDir: /fastscratch/agarwa/nf-tmp/work/c0/8ac393550e54931f5593150200215d started: 1651784569451; exited: 2022-05-05T21:02:50.85542Z; ]
+May-05 17:02:54.494 [Task monitor] ERROR nextflow.processor.TaskProcessor - Error executing process > 'prep_pchic:COMBINE_FILES (7)'
+
+Caused by:
+  Process `prep_pchic:COMBINE_FILES (7)` terminated with an error exit status (1)
+
+Command executed:
+
+  hic_out_list=(ORSAM17821-2.chr5.score.chr5.intgr.all.csv ORSAM17821-2.chr17.score.chr17.intgr.all.csv ORSAM17821-2.chr16.score.chr16.intgr.all.csv)
+  hic_out_list=($(sort -V <<<"${hic_out_list[*]}"))
+  for file in "${hic_out_list[@]}"
+  do
+      tail -n +2 $file >> tmp.csv
+  done
+  head -n1 ${hic_out_list[0]} > $outf
+  cat tmp.csv >> ORSAM17821.score.val.intgr.csv
+
+Command exit status:
+  1
+
+Command output:
+  (empty)
+
+Command error:
+  .command.sh: line 8: outf: unbound variable
+
+Work dir:
+  /fastscratch/agarwa/nf-tmp/work/c0/8ac393550e54931f5593150200215d
+
+Tip: you can try to figure out what's wrong by changing to the process work dir and showing the script file named `.command.sh`
+May-05 17:02:54.504 [Task monitor] INFO  nextflow.Session - Execution cancelled -- Finishing pending tasks before exit
+May-05 17:02:54.538 [main] DEBUG nextflow.Session - Session await > all process finished
+May-05 17:02:54.562 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 14544343; id: 354; name: prep_pchic:COMBINE_FILES (4); status: COMPLETED; exit: 1; error: -; workDir: /fastscratch/agarwa/nf-tmp/work/f8/76214d213910501b914751562a1927 started: 1651784569521; exited: 2022-05-05T21:02:50.884981Z; ]
+May-05 17:02:54.573 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 14544344; id: 347; name: prep_pchic:COMBINE_FILES (2); status: COMPLETED; exit: 1; error: -; workDir: /fastscratch/agarwa/nf-tmp/work/8d/804a0686de1fb5bad65d7fb732d067 started: 1651784569531; exited: 2022-05-05T21:02:50.334823Z; ]
+May-05 17:02:54.582 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 14544345; id: 364; name: prep_pchic:COMBINE_FILES (8); status: COMPLETED; exit: 1; error: -; workDir: /fastscratch/agarwa/nf-tmp/work/16/1343f80f56a3be200b2caf389658bb started: 1651784569542; exited: 2022-05-05T21:02:50.524037Z; ]
+May-05 17:02:54.590 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 14544346; id: 341; name: prep_pchic:COMBINE_FILES (1); status: COMPLETED; exit: 1; error: -; workDir: /fastscratch/agarwa/nf-tmp/work/f1/f6e0f0c996a1cface9a22decb69449 started: 1651784569551; exited: 2022-05-05T21:02:50.103644Z; ]
+May-05 17:02:54.601 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 14544347; id: 353; name: prep_pchic:COMBINE_FILES (3); status: COMPLETED; exit: 1; error: -; workDir: /fastscratch/agarwa/nf-tmp/work/56/bbfe2c3321d468b298b1d37366ab9f started: 1651784569563; exited: 2022-05-05T21:02:50.578567Z; ]
+May-05 17:02:54.608 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 14544348; id: 361; name: prep_pchic:COMBINE_FILES (5); status: COMPLETED; exit: 1; error: -; workDir: /fastscratch/agarwa/nf-tmp/work/81/a9c50c2ac8fb0b98ceb70a0687de04 started: 1651784569571; exited: 2022-05-05T21:02:50.205709Z; ]
+May-05 17:02:54.617 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 14544349; id: 362; name: prep_pchic:COMBINE_FILES (6); status: COMPLETED; exit: 1; error: -; workDir: /fastscratch/agarwa/nf-tmp/work/1f/81bd7f11addaace5d2d93d6e3e4876 started: 1651784569580; exited: 2022-05-05T21:02:49.753497Z; ]
+May-05 17:02:54.627 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 14544350; id: 366; name: prep_pchic:COMBINE_FILES (10); status: COMPLETED; exit: 1; error: -; workDir: /fastscratch/agarwa/nf-tmp/work/80/0e6b74e6a0374b2813f336f3cffd07 started: 1651784569585; exited: 2022-05-05T21:02:53.078617Z; ]
+May-05 17:02:54.636 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 14544351; id: 365; name: prep_pchic:COMBINE_FILES (9); status: COMPLETED; exit: 1; error: -; workDir: /fastscratch/agarwa/nf-tmp/work/8f/f9a8af464475cbb2fef637ac4a83e1 started: 1651784569589; exited: 2022-05-05T21:02:53.625364Z; ]
+May-05 17:02:54.645 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 14544352; id: 368; name: prep_pchic:COMBINE_FILES (12); status: COMPLETED; exit: 1; error: -; workDir: /fastscratch/agarwa/nf-tmp/work/ec/914c21ccfa1dbf6de04fe189535ed9 started: 1651784569594; exited: 2022-05-05T21:02:53.005282Z; ]
+May-05 17:02:54.655 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 14544353; id: 367; name: prep_pchic:COMBINE_FILES (11); status: COMPLETED; exit: 1; error: -; workDir: /fastscratch/agarwa/nf-tmp/work/63/34f691024a036b54690da93ad1b8a3 started: 1651784569597; exited: 2022-05-05T21:02:52.840425Z; ]
+May-05 17:02:54.659 [main] DEBUG nextflow.Session - Session await > all barriers passed
+May-05 17:02:54.673 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=12; ignoredCount=0; cachedCount=356; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=1m; cachedDuration=25m 38s;loadCpus=0; loadMemory=0; peakRunning=12; peakCpus=12; peakMemory=120 GB; ]
+May-05 17:02:54.673 [main] DEBUG nextflow.trace.ReportObserver - Flow completing -- rendering html report
+May-05 17:02:54.869 [main] DEBUG nextflow.trace.ReportObserver - Execution report summary data:
+  [{"cpuUsage":{"mean":83.15,"min":77.3,"q1":80.22,"q2":83.15,"q3":86.08,"max":89,"minLabel":"prep_pchic:SPLIT_BY_CHROM (2)","maxLabel":"prep_pchic:SPLIT_BY_CHROM (1)","q1Label":"prep_pchic:SPLIT_BY_CHROM (2)","q2Label":"prep_pchic:SPLIT_BY_CHROM (2)","q3Label":"prep_pchic:SPLIT_BY_CHROM (2)"},"process":"SPLIT_BY_CHROM","mem":{"mean":97859584,"min":84680704,"q1":91270144,"q2":97859584,"q3":104449024,"max":111038464,"minLabel":"prep_pchic:SPLIT_BY_CHROM (2)","maxLabel":"prep_pchic:SPLIT_BY_CHROM (1)","q1Label":"prep_pchic:SPLIT_BY_CHROM (2)","q2Label":"prep_pchic:SPLIT_BY_CHROM (2)","q3Label":"prep_pchic:SPLIT_BY_CHROM (2)"},"memUsage":{"mean":0.91,"min":0.79,"q1":0.85,"q2":0.91,"q3":0.97,"max":1.03,"minLabel":"prep_pchic:SPLIT_BY_CHROM (2)","maxLabel":"prep_pchic:SPLIT_BY_CHROM (1)","q1Label":"prep_pchic:SPLIT_BY_CHROM (2)","q2Label":"prep_pchic:SPLIT_BY_CHROM (2)","q3Label":"prep_pchic:SPLIT_BY_CHROM (2)"},"timeUsage":{"mean":0.01,"min":0.01,"q1":0.01,"q2":0.01,"q3":0.01,"max":0.01,"minLabel":"prep_pchic:SPLIT_BY_CHROM (2)","maxLabel":"prep_pchic:SPLIT_BY_CHROM (1)","q1Label":"prep_pchic:SPLIT_BY_CHROM (2)","q2Label":"prep_pchic:SPLIT_BY_CHROM (2)","q3Label":"prep_pchic:SPLIT_BY_CHROM (2)"},"vmem":{"mean":414777344,"min":398483456,"q1":406630400,"q2":414777344,"q3":422924288,"max":431071232,"minLabel":"prep_pchic:SPLIT_BY_CHROM (2)","maxLabel":"prep_pchic:SPLIT_BY_CHROM (1)","q1Label":"prep_pchic:SPLIT_BY_CHROM (2)","q2Label":"prep_pchic:SPLIT_BY_CHROM (2)","q3Label":"prep_pchic:SPLIT_BY_CHROM (2)"},"reads":{"mean":35687192.5,"min":19904362,"q1":27795777.25,"q2":35687192.5,"q3":43578607.75,"max":51470023,"minLabel":"prep_pchic:SPLIT_BY_CHROM (2)","maxLabel":"prep_pchic:SPLIT_BY_CHROM (1)","q1Label":"prep_pchic:SPLIT_BY_CHROM (2)","q2Label":"prep_pchic:SPLIT_BY_CHROM (2)","q3Label":"prep_pchic:SPLIT_BY_CHROM (2)"},"cpu":{"mean":83.15,"min":77.3,"q1":80.22,"q2":83.15,"q3":86.08,"max":89,"minLabel":"prep_pchic:SPLIT_BY_CHROM (2)","maxLabel":"prep_pchic:SPLIT_BY_CHROM (1)","q1Label":"prep_pchic:SPLIT_BY_CHROM (2)","q2Label":"prep_pchic:SPLIT_BY_CHROM (2)","q3Label":"prep_pchic:SPLIT_BY_CHROM (2)"},"time":{"mean":2278,"min":1680,"q1":1979,"q2":2278,"q3":2577,"max":2876,"minLabel":"prep_pchic:SPLIT_BY_CHROM (2)","maxLabel":"prep_pchic:SPLIT_BY_CHROM (1)","q1Label":"prep_pchic:SPLIT_BY_CHROM (2)","q2Label":"prep_pchic:SPLIT_BY_CHROM (2)","q3Label":"prep_pchic:SPLIT_BY_CHROM (2)"},"writes":{"mean":26336268.5,"min":10551789,"q1":18444028.75,"q2":26336268.5,"q3":34228508.25,"max":42120748,"minLabel":"prep_pchic:SPLIT_BY_CHROM (2)","maxLabel":"prep_pchic:SPLIT_BY_CHROM (1)","q1Label":"prep_pchic:SPLIT_BY_CHROM (2)","q2Label":"prep_pchic:SPLIT_BY_CHROM (2)","q3Label":"prep_pchic:SPLIT_BY_CHROM (2)"}},{"cpuUsage":{"mean":69.06,"min":52.3,"q1":66.33,"q2":68.45,"q3":77.13,"max":80.6,"minLabel":"prep_pchic:SPLIT_HIC (1)","maxLabel":"prep_pchic:SPLIT_HIC (14)","q1Label":"prep_pchic:SPLIT_HIC (6)","q2Label":"prep_pchic:SPLIT_HIC (5)","q3Label":"prep_pchic:SPLIT_HIC (18)"},"process":"SPLIT_HIC","mem":{"mean":81095046.1,"min":26804224,"q1":30650368,"q2":94115840,"q3":107406336,"max":118263808,"minLabel":"prep_pchic:SPLIT_HIC (8)","maxLabel":"prep_pchic:SPLIT_HIC (6)","q1Label":"prep_pchic:SPLIT_HIC (18)","q2Label":"prep_pchic:SPLIT_HIC (2)","q3Label":"prep_pchic:SPLIT_HIC (4)"},"memUsage":{"mean":0.76,"min":0.25,"q1":0.29,"q2":0.88,"q3":1,"max":1.1,"minLabel":"prep_pchic:SPLIT_HIC (8)","maxLabel":"prep_pchic:SPLIT_HIC (6)","q1Label":"prep_pchic:SPLIT_HIC (18)","q2Label":"prep_pchic:SPLIT_HIC (2)","q3Label":"prep_pchic:SPLIT_HIC (4)"},"timeUsage":{"mean":0.01,"min":0,"q1":0.01,"q2":0.01,"q3":0.01,"max":0.01,"minLabel":"prep_pchic:SPLIT_HIC (21)","maxLabel":"prep_pchic:SPLIT_HIC (1)","q1Label":"prep_pchic:SPLIT_HIC (14)","q2Label":"prep_pchic:SPLIT_HIC (1)","q3Label":"prep_pchic:SPLIT_HIC (7)"},"vmem":{"mean":484986002.29,"min":307523584,"q1":312783872,"q2":545759232,"q3":561602560,"max":588341248,"minLabel":"prep_pchic:SPLIT_HIC (8)","maxLabel":"prep_pchic:SPLIT_HIC (21)","q1Label":"prep_pchic:SPLIT_HIC (18)","q2Label":"prep_pchic:SPLIT_HIC (12)","q3Label":"prep_pchic:SPLIT_HIC (6)"},"reads":{"mean":19675391.57,"min":19573176,"q1":19645620,"q2":19669436,"q3":19701328.75,"max":19773317,"minLabel":"prep_pchic:SPLIT_HIC (21)","maxLabel":"prep_pchic:SPLIT_HIC (11)","q1Label":"prep_pchic:SPLIT_HIC (1)","q2Label":"prep_pchic:SPLIT_HIC (9)","q3Label":"prep_pchic:SPLIT_HIC (15)"},"cpu":{"mean":69.06,"min":52.3,"q1":66.33,"q2":68.45,"q3":77.13,"max":80.6,"minLabel":"prep_pchic:SPLIT_HIC (1)","maxLabel":"prep_pchic:SPLIT_HIC (14)","q1Label":"prep_pchic:SPLIT_HIC (6)","q2Label":"prep_pchic:SPLIT_HIC (5)","q3Label":"prep_pchic:SPLIT_HIC (18)"},"time":{"mean":1867.31,"min":1048,"q1":1341.25,"q2":1877.5,"q3":2375.25,"max":3230,"minLabel":"prep_pchic:SPLIT_HIC (21)","maxLabel":"prep_pchic:SPLIT_HIC (1)","q1Label":"prep_pchic:SPLIT_HIC (14)","q2Label":"prep_pchic:SPLIT_HIC (1)","q3Label":"prep_pchic:SPLIT_HIC (7)"},"writes":{"mean":208926.24,"min":106222,"q1":178895.75,"q2":203519,"q3":234603,"max":308519,"minLabel":"prep_pchic:SPLIT_HIC (21)","maxLabel":"prep_pchic:SPLIT_HIC (11)","q1Label":"prep_pchic:SPLIT_HIC (1)","q2Label":"prep_pchic:SPLIT_HIC (9)","q3Label":"prep_pchic:SPLIT_HIC (18)"}},{"cpuUsage":{"mean":88.17,"min":72.1,"q1":87.78,"q2":88.3,"q3":89,"max":91.1,"minLabel":"prep_pchic:MATCH_HIC_REGELEM (42)","maxLabel":"prep_pchic:MATCH_HIC_REGELEM (18)","q1Label":"prep_pchic:MATCH_HIC_REGELEM (16)","q2Label":"prep_pchic:MATCH_HIC_REGELEM (12)","q3Label":"prep_pchic:MATCH_HIC_REGELEM (75)"},"process":"MATCH_HIC_REGELEM","mem":{"mean":159431387.43,"min":155672576,"q1":155676672,"q2":156780544,"q3":161914880,"max":177426432,"minLabel":"prep_pchic:MATCH_HIC_REGELEM (2)","maxLabel":"prep_pchic:MATCH_HIC_REGELEM (84)","q1Label":"prep_pchic:MATCH_HIC_REGELEM (5)","q2Label":"prep_pchic:MATCH_HIC_REGELEM (37)","q3Label":"prep_pchic:MATCH_HIC_REGELEM (3)"},"memUsage":{"mean":0.49,"min":0.48,"q1":0.48,"q2":0.49,"q3":0.5,"max":0.55,"minLabel":"prep_pchic:MATCH_HIC_REGELEM (2)","maxLabel":"prep_pchic:MATCH_HIC_REGELEM (84)","q1Label":"prep_pchic:MATCH_HIC_REGELEM (5)","q2Label":"prep_pchic:MATCH_HIC_REGELEM (37)","q3Label":"prep_pchic:MATCH_HIC_REGELEM (3)"},"timeUsage":{"mean":0.05,"min":0.01,"q1":0.04,"q2":0.05,"q3":0.06,"max":0.09,"minLabel":"prep_pchic:MATCH_HIC_REGELEM (72)","maxLabel":"prep_pchic:MATCH_HIC_REGELEM (68)","q1Label":"prep_pchic:MATCH_HIC_REGELEM (79)","q2Label":"prep_pchic:MATCH_HIC_REGELEM (31)","q3Label":"prep_pchic:MATCH_HIC_REGELEM (65)"},"vmem":{"mean":620370017.52,"min":619081728,"q1":619085824,"q2":619565056,"q3":619569152,"max":640319488,"minLabel":"prep_pchic:MATCH_HIC_REGELEM (61)","maxLabel":"prep_pchic:MATCH_HIC_REGELEM (84)","q1Label":"prep_pchic:MATCH_HIC_REGELEM (17)","q2Label":"prep_pchic:MATCH_HIC_REGELEM (53)","q3Label":"prep_pchic:MATCH_HIC_REGELEM (69)"},"reads":{"mean":42143783.79,"min":42092450,"q1":42128508,"q2":42140336.5,"q3":42157809.5,"max":42195564,"minLabel":"prep_pchic:MATCH_HIC_REGELEM (71)","maxLabel":"prep_pchic:MATCH_HIC_REGELEM (79)","q1Label":"prep_pchic:MATCH_HIC_REGELEM (16)","q2Label":"prep_pchic:MATCH_HIC_REGELEM (9)","q3Label":"prep_pchic:MATCH_HIC_REGELEM (60)"},"cpu":{"mean":88.17,"min":72.1,"q1":87.78,"q2":88.3,"q3":89,"max":91.1,"minLabel":"prep_pchic:MATCH_HIC_REGELEM (42)","maxLabel":"prep_pchic:MATCH_HIC_REGELEM (18)","q1Label":"prep_pchic:MATCH_HIC_REGELEM (16)","q2Label":"prep_pchic:MATCH_HIC_REGELEM (12)","q3Label":"prep_pchic:MATCH_HIC_REGELEM (75)"},"time":{"mean":11393.94,"min":3027,"q1":8938.25,"q2":11430,"q3":13724.5,"max":20305,"minLabel":"prep_pchic:MATCH_HIC_REGELEM (72)","maxLabel":"prep_pchic:MATCH_HIC_REGELEM (68)","q1Label":"prep_pchic:MATCH_HIC_REGELEM (79)","q2Label":"prep_pchic:MATCH_HIC_REGELEM (31)","q3Label":"prep_pchic:MATCH_HIC_REGELEM (65)"},"writes":{"mean":101065.36,"min":66908,"q1":84365,"q2":97327,"q3":119004.75,"max":149990,"minLabel":"prep_pchic:MATCH_HIC_REGELEM (34)","maxLabel":"prep_pchic:MATCH_HIC_REGELEM (84)","q1Label":"prep_pchic:MATCH_HIC_REGELEM (17)","q2Label":"prep_pchic:MATCH_HIC_REGELEM (36)","q3Label":"prep_pchic:MATCH_HIC_REGELEM (73)"}},{"cpuUsage":{"mean":76.05,"min":37.7,"q1":75.97,"q2":76.9,"q3":78.13,"max":80.8,"minLabel":"prep_pchic:SELECT_UNIQ_REGELEM (12)","maxLabel":"prep_pchic:SELECT_UNIQ_REGELEM (55)","q1Label":"prep_pchic:SELECT_UNIQ_REGELEM (49)","q2Label":"prep_pchic:SELECT_UNIQ_REGELEM (7)","q3Label":"prep_pchic:SELECT_UNIQ_REGELEM (14)"},"process":"SELECT_UNIQ_REGELEM","mem":{"mean":14187568.76,"min":10862592,"q1":12460032,"q2":13824000,"q3":13975552,"max":52084736,"minLabel":"prep_pchic:SELECT_UNIQ_REGELEM (42)","maxLabel":"prep_pchic:SELECT_UNIQ_REGELEM (12)","q1Label":"prep_pchic:SELECT_UNIQ_REGELEM (54)","q2Label":"prep_pchic:SELECT_UNIQ_REGELEM (75)","q3Label":"prep_pchic:SELECT_UNIQ_REGELEM (32)"},"memUsage":{"mean":0.01,"min":0.01,"q1":0.01,"q2":0.01,"q3":0.01,"max":0.05,"minLabel":"prep_pchic:SELECT_UNIQ_REGELEM (42)","maxLabel":"prep_pchic:SELECT_UNIQ_REGELEM (12)","q1Label":"prep_pchic:SELECT_UNIQ_REGELEM (54)","q2Label":"prep_pchic:SELECT_UNIQ_REGELEM (75)","q3Label":"prep_pchic:SELECT_UNIQ_REGELEM (32)"},"timeUsage":null,"vmem":{"mean":177250157.71,"min":170024960,"q1":171257856,"q2":172888064,"q3":173150208,"max":377139200,"minLabel":"prep_pchic:SELECT_UNIQ_REGELEM (42)","maxLabel":"prep_pchic:SELECT_UNIQ_REGELEM (25)","q1Label":"prep_pchic:SELECT_UNIQ_REGELEM (34)","q2Label":"prep_pchic:SELECT_UNIQ_REGELEM (75)","q3Label":"prep_pchic:SELECT_UNIQ_REGELEM (32)"},"reads":{"mean":9466181.49,"min":9431410,"q1":9449449.5,"q2":9462060.5,"q3":9484041.5,"max":9515270,"minLabel":"prep_pchic:SELECT_UNIQ_REGELEM (39)","maxLabel":"prep_pchic:SELECT_UNIQ_REGELEM (84)","q1Label":"prep_pchic:SELECT_UNIQ_REGELEM (25)","q2Label":"prep_pchic:SELECT_UNIQ_REGELEM (41)","q3Label":"prep_pchic:SELECT_UNIQ_REGELEM (70)"},"cpu":{"mean":76.05,"min":37.7,"q1":75.97,"q2":76.9,"q3":78.13,"max":80.8,"minLabel":"prep_pchic:SELECT_UNIQ_REGELEM (12)","maxLabel":"prep_pchic:SELECT_UNIQ_REGELEM (55)","q1Label":"prep_pchic:SELECT_UNIQ_REGELEM (49)","q2Label":"prep_pchic:SELECT_UNIQ_REGELEM (7)","q3Label":"prep_pchic:SELECT_UNIQ_REGELEM (14)"},"time":{"mean":664.38,"min":503,"q1":539.75,"q2":559.5,"q3":737.25,"max":1818,"minLabel":"prep_pchic:SELECT_UNIQ_REGELEM (5)","maxLabel":"prep_pchic:SELECT_UNIQ_REGELEM (12)","q1Label":"prep_pchic:SELECT_UNIQ_REGELEM (1)","q2Label":"prep_pchic:SELECT_UNIQ_REGELEM (74)","q3Label":"prep_pchic:SELECT_UNIQ_REGELEM (36)"},"writes":{"mean":12497.12,"min":3469,"q1":9053.25,"q2":12261,"q3":15999,"max":28907,"minLabel":"prep_pchic:SELECT_UNIQ_REGELEM (48)","maxLabel":"prep_pchic:SELECT_UNIQ_REGELEM (77)","q1Label":"prep_pchic:SELECT_UNIQ_REGELEM (84)","q2Label":"prep_pchic:SELECT_UNIQ_REGELEM (13)","q3Label":"prep_pchic:SELECT_UNIQ_REGELEM (51)"}},{"cpuUsage":{"mean":80.51,"min":73.4,"q1":78.72,"q2":80.3,"q3":82.75,"max":85.3,"minLabel":"prep_pchic:COMBINE_HIC (1)","maxLabel":"prep_pchic:COMBINE_HIC (38)","q1Label":"prep_pchic:COMBINE_HIC (41)","q2Label":"prep_pchic:COMBINE_HIC (5)","q3Label":"prep_pchic:COMBINE_HIC (25)"},"process":"COMBINE_HIC","mem":{"mean":13199457.52,"min":11378688,"q1":12152832,"q2":13627392,"q3":13860864,"max":13955072,"minLabel":"prep_pchic:COMBINE_HIC (1)","maxLabel":"prep_pchic:COMBINE_HIC (41)","q1Label":"prep_pchic:COMBINE_HIC (35)","q2Label":"prep_pchic:COMBINE_HIC (6)","q3Label":"prep_pchic:COMBINE_HIC (26)"},"memUsage":{"mean":0.12,"min":0.11,"q1":0.11,"q2":0.13,"q3":0.13,"max":0.13,"minLabel":"prep_pchic:COMBINE_HIC (1)","maxLabel":"prep_pchic:COMBINE_HIC (41)","q1Label":"prep_pchic:COMBINE_HIC (35)","q2Label":"prep_pchic:COMBINE_HIC (6)","q3Label":"prep_pchic:COMBINE_HIC (26)"},"timeUsage":{"mean":0,"min":0,"q1":0,"q2":0,"q3":0,"max":0.01,"minLabel":"prep_pchic:COMBINE_HIC (24)","maxLabel":"prep_pchic:COMBINE_HIC (38)","q1Label":"prep_pchic:COMBINE_HIC (6)","q2Label":"prep_pchic:COMBINE_HIC (30)","q3Label":"prep_pchic:COMBINE_HIC (1)"},"vmem":{"mean":172348074.67,"min":170532864,"q1":171212800,"q2":172765184,"q3":173101056,"max":173101056,"minLabel":"prep_pchic:COMBINE_HIC (3)","maxLabel":"prep_pchic:COMBINE_HIC (26)","q1Label":"prep_pchic:COMBINE_HIC (35)","q2Label":"prep_pchic:COMBINE_HIC (4)","q3Label":"prep_pchic:COMBINE_HIC (17)"},"reads":{"mean":9379744.79,"min":9361852,"q1":9374097.5,"q2":9379250.5,"q3":9386684.5,"max":9403326,"minLabel":"prep_pchic:COMBINE_HIC (24)","maxLabel":"prep_pchic:COMBINE_HIC (32)","q1Label":"prep_pchic:COMBINE_HIC (17)","q2Label":"prep_pchic:COMBINE_HIC (29)","q3Label":"prep_pchic:COMBINE_HIC (34)"},"cpu":{"mean":80.51,"min":73.4,"q1":78.72,"q2":80.3,"q3":82.75,"max":85.3,"minLabel":"prep_pchic:COMBINE_HIC (1)","maxLabel":"prep_pchic:COMBINE_HIC (38)","q1Label":"prep_pchic:COMBINE_HIC (41)","q2Label":"prep_pchic:COMBINE_HIC (5)","q3Label":"prep_pchic:COMBINE_HIC (25)"},"time":{"mean":802.05,"min":539,"q1":633.75,"q2":703.5,"q3":994.25,"max":1179,"minLabel":"prep_pchic:COMBINE_HIC (24)","maxLabel":"prep_pchic:COMBINE_HIC (38)","q1Label":"prep_pchic:COMBINE_HIC (6)","q2Label":"prep_pchic:COMBINE_HIC (30)","q3Label":"prep_pchic:COMBINE_HIC (1)"},"writes":{"mean":19720.1,"min":6039,"q1":15120.25,"q2":19218,"q3":24446,"max":39640,"minLabel":"prep_pchic:COMBINE_HIC (24)","maxLabel":"prep_pchic:COMBINE_HIC (32)","q1Label":"prep_pchic:COMBINE_HIC (11)","q2Label":"prep_pchic:COMBINE_HIC (41)","q3Label":"prep_pchic:COMBINE_HIC (22)"}},{"cpuUsage":{"mean":90.98,"min":89.4,"q1":90.3,"q2":91,"q3":91.68,"max":92.9,"minLabel":"prep_pchic:INTEGRATE (38)","maxLabel":"prep_pchic:INTEGRATE (17)","q1Label":"prep_pchic:INTEGRATE (5)","q2Label":"prep_pchic:INTEGRATE (36)","q3Label":"prep_pchic:INTEGRATE (11)"},"process":"INTEGRATE","mem":{"mean":569304697.9,"min":351395840,"q1":574804992,"q2":574849024,"q3":581040128,"max":581087232,"minLabel":"prep_pchic:INTEGRATE (23)","maxLabel":"prep_pchic:INTEGRATE (7)","q1Label":"prep_pchic:INTEGRATE (5)","q2Label":"prep_pchic:INTEGRATE (16)","q3Label":"prep_pchic:INTEGRATE (1)"},"memUsage":{"mean":1.77,"min":1.09,"q1":1.78,"q2":1.78,"q3":1.8,"max":1.8,"minLabel":"prep_pchic:INTEGRATE (23)","maxLabel":"prep_pchic:INTEGRATE (7)","q1Label":"prep_pchic:INTEGRATE (5)","q2Label":"prep_pchic:INTEGRATE (16)","q3Label":"prep_pchic:INTEGRATE (1)"},"timeUsage":null,"vmem":{"mean":867504323.05,"min":665964544,"q1":874483712,"q2":874483712,"q3":874483712,"max":874483712,"minLabel":"prep_pchic:INTEGRATE (23)","maxLabel":"prep_pchic:INTEGRATE (41)","q1Label":"prep_pchic:INTEGRATE (17)","q2Label":"prep_pchic:INTEGRATE (24)","q3Label":"prep_pchic:INTEGRATE (3)"},"reads":{"mean":550057061.12,"min":550042455,"q1":550052512,"q2":550056157.5,"q3":550061826.25,"max":550077335,"minLabel":"prep_pchic:INTEGRATE (34)","maxLabel":"prep_pchic:INTEGRATE (24)","q1Label":"prep_pchic:INTEGRATE (6)","q2Label":"prep_pchic:INTEGRATE (9)","q3Label":"prep_pchic:INTEGRATE (37)"},"cpu":{"mean":90.98,"min":89.4,"q1":90.3,"q2":91,"q3":91.68,"max":92.9,"minLabel":"prep_pchic:INTEGRATE (38)","maxLabel":"prep_pchic:INTEGRATE (17)","q1Label":"prep_pchic:INTEGRATE (5)","q2Label":"prep_pchic:INTEGRATE (36)","q3Label":"prep_pchic:INTEGRATE (11)"},"time":{"mean":7405.21,"min":4617,"q1":5692.75,"q2":6565,"q3":8915,"max":11190,"minLabel":"prep_pchic:INTEGRATE (35)","maxLabel":"prep_pchic:INTEGRATE (14)","q1Label":"prep_pchic:INTEGRATE (25)","q2Label":"prep_pchic:INTEGRATE (42)","q3Label":"prep_pchic:INTEGRATE (29)"},"writes":{"mean":25914238.21,"min":15223,"q1":16796396.75,"q2":28169786.5,"q3":33038857.25,"max":53217192,"minLabel":"prep_pchic:INTEGRATE (12)","maxLabel":"prep_pchic:INTEGRATE (10)","q1Label":"prep_pchic:INTEGRATE (18)","q2Label":"prep_pchic:INTEGRATE (11)","q3Label":"prep_pchic:INTEGRATE (25)"}},{"cpuUsage":{"mean":75.65,"min":65.2,"q1":72.3,"q2":75.35,"q3":78.9,"max":84.7,"minLabel":"prep_pchic:AUGMENT_DATA (27)","maxLabel":"prep_pchic:AUGMENT_DATA (9)","q1Label":"prep_pchic:AUGMENT_DATA (14)","q2Label":"prep_pchic:AUGMENT_DATA (29)","q3Label":"prep_pchic:AUGMENT_DATA (19)"},"process":"AUGMENT_DATA","mem":{"mean":39380796.95,"min":10862592,"q1":11377664,"q2":12619776,"q3":89414656,"max":139517952,"minLabel":"prep_pchic:AUGMENT_DATA (26)","maxLabel":"prep_pchic:AUGMENT_DATA (40)","q1Label":"prep_pchic:AUGMENT_DATA (11)","q2Label":"prep_pchic:AUGMENT_DATA (7)","q3Label":"prep_pchic:AUGMENT_DATA (15)"},"memUsage":{"mean":0.12,"min":0.03,"q1":0.04,"q2":0.04,"q3":0.28,"max":0.43,"minLabel":"prep_pchic:AUGMENT_DATA (26)","maxLabel":"prep_pchic:AUGMENT_DATA (40)","q1Label":"prep_pchic:AUGMENT_DATA (11)","q2Label":"prep_pchic:AUGMENT_DATA (7)","q3Label":"prep_pchic:AUGMENT_DATA (15)"},"timeUsage":null,"vmem":{"mean":243031478.86,"min":170024960,"q1":170561536,"q2":171681792,"q3":415329280,"max":434778112,"minLabel":"prep_pchic:AUGMENT_DATA (30)","maxLabel":"prep_pchic:AUGMENT_DATA (32)","q1Label":"prep_pchic:AUGMENT_DATA (16)","q2Label":"prep_pchic:AUGMENT_DATA (7)","q3Label":"prep_pchic:AUGMENT_DATA (42)"},"reads":{"mean":35275257.17,"min":9362995,"q1":26158508.75,"q2":37531718,"q3":42400536,"max":62579628,"minLabel":"prep_pchic:AUGMENT_DATA (10)","maxLabel":"prep_pchic:AUGMENT_DATA (32)","q1Label":"prep_pchic:AUGMENT_DATA (15)","q2Label":"prep_pchic:AUGMENT_DATA (9)","q3Label":"prep_pchic:AUGMENT_DATA (21)"},"cpu":{"mean":75.65,"min":65.2,"q1":72.3,"q2":75.35,"q3":78.9,"max":84.7,"minLabel":"prep_pchic:AUGMENT_DATA (27)","maxLabel":"prep_pchic:AUGMENT_DATA (9)","q1Label":"prep_pchic:AUGMENT_DATA (14)","q2Label":"prep_pchic:AUGMENT_DATA (29)","q3Label":"prep_pchic:AUGMENT_DATA (19)"},"time":{"mean":1234.71,"min":745,"q1":963.25,"q2":1244.5,"q3":1471,"max":2048,"minLabel":"prep_pchic:AUGMENT_DATA (23)","maxLabel":"prep_pchic:AUGMENT_DATA (14)","q1Label":"prep_pchic:AUGMENT_DATA (13)","q2Label":"prep_pchic:AUGMENT_DATA (39)","q3Label":"prep_pchic:AUGMENT_DATA (33)"},"writes":{"mean":1824102.6,"min":344,"q1":1261030.75,"q2":1832240.5,"q3":2393479.5,"max":3877459,"minLabel":"prep_pchic:AUGMENT_DATA (10)","maxLabel":"prep_pchic:AUGMENT_DATA (24)","q1Label":"prep_pchic:AUGMENT_DATA (15)","q2Label":"prep_pchic:AUGMENT_DATA (3)","q3Label":"prep_pchic:AUGMENT_DATA (36)"}},{"cpuUsage":{"mean":94.4,"min":93.5,"q1":93.95,"q2":94.4,"q3":94.85,"max":95.3,"minLabel":"prep_pchic:KNAPSACK_0 (1)","maxLabel":"prep_pchic:KNAPSACK_0 (2)","q1Label":"prep_pchic:KNAPSACK_0 (1)","q2Label":"prep_pchic:KNAPSACK_0 (1)","q3Label":"prep_pchic:KNAPSACK_0 (1)"},"process":"KNAPSACK_0","mem":{"mean":142804992,"min":122327040,"q1":132566016,"q2":142804992,"q3":153043968,"max":163282944,"minLabel":"prep_pchic:KNAPSACK_0 (1)","maxLabel":"prep_pchic:KNAPSACK_0 (2)","q1Label":"prep_pchic:KNAPSACK_0 (1)","q2Label":"prep_pchic:KNAPSACK_0 (1)","q3Label":"prep_pchic:KNAPSACK_0 (1)"},"memUsage":{"mean":1.33,"min":1.14,"q1":1.23,"q2":1.33,"q3":1.43,"max":1.52,"minLabel":"prep_pchic:KNAPSACK_0 (1)","maxLabel":"prep_pchic:KNAPSACK_0 (2)","q1Label":"prep_pchic:KNAPSACK_0 (1)","q2Label":"prep_pchic:KNAPSACK_0 (1)","q3Label":"prep_pchic:KNAPSACK_0 (1)"},"timeUsage":{"mean":0.1,"min":0.08,"q1":0.09,"q2":0.1,"q3":0.12,"max":0.13,"minLabel":"prep_pchic:KNAPSACK_0 (1)","maxLabel":"prep_pchic:KNAPSACK_0 (2)","q1Label":"prep_pchic:KNAPSACK_0 (1)","q2Label":"prep_pchic:KNAPSACK_0 (1)","q3Label":"prep_pchic:KNAPSACK_0 (1)"},"vmem":{"mean":547715072,"min":527822848,"q1":537768960,"q2":547715072,"q3":557661184,"max":567607296,"minLabel":"prep_pchic:KNAPSACK_0 (1)","maxLabel":"prep_pchic:KNAPSACK_0 (2)","q1Label":"prep_pchic:KNAPSACK_0 (1)","q2Label":"prep_pchic:KNAPSACK_0 (1)","q3Label":"prep_pchic:KNAPSACK_0 (1)"},"reads":{"mean":9410214.5,"min":9410213,"q1":9410213.75,"q2":9410214.5,"q3":9410215.25,"max":9410216,"minLabel":"prep_pchic:KNAPSACK_0 (1)","maxLabel":"prep_pchic:KNAPSACK_0 (2)","q1Label":"prep_pchic:KNAPSACK_0 (1)","q2Label":"prep_pchic:KNAPSACK_0 (1)","q3Label":"prep_pchic:KNAPSACK_0 (1)"},"cpu":{"mean":94.4,"min":93.5,"q1":93.95,"q2":94.4,"q3":94.85,"max":95.3,"minLabel":"prep_pchic:KNAPSACK_0 (1)","maxLabel":"prep_pchic:KNAPSACK_0 (2)","q1Label":"prep_pchic:KNAPSACK_0 (1)","q2Label":"prep_pchic:KNAPSACK_0 (1)","q3Label":"prep_pchic:KNAPSACK_0 (1)"},"time":{"mean":22587,"min":17070,"q1":19828.5,"q2":22587,"q3":25345.5,"max":28104,"minLabel":"prep_pchic:KNAPSACK_0 (1)","maxLabel":"prep_pchic:KNAPSACK_0 (2)","q1Label":"prep_pchic:KNAPSACK_0 (1)","q2Label":"prep_pchic:KNAPSACK_0 (1)","q3Label":"prep_pchic:KNAPSACK_0 (1)"},"writes":{"mean":1140.5,"min":1137,"q1":1138.75,"q2":1140.5,"q3":1142.25,"max":1144,"minLabel":"prep_pchic:KNAPSACK_0 (1)","maxLabel":"prep_pchic:KNAPSACK_0 (2)","q1Label":"prep_pchic:KNAPSACK_0 (1)","q2Label":"prep_pchic:KNAPSACK_0 (1)","q3Label":"prep_pchic:KNAPSACK_0 (1)"}},{"cpuUsage":{"mean":54.25,"min":18,"q1":48.75,"q2":51.9,"q3":67.25,"max":78.8,"minLabel":"prep_pchic:SUBLIST_0 (6)","maxLabel":"prep_pchic:SUBLIST_0 (4)","q1Label":"prep_pchic:SUBLIST_0 (3)","q2Label":"prep_pchic:SUBLIST_0 (1)","q3Label":"prep_pchic:SUBLIST_0 (2)"},"process":"SUBLIST_0","mem":null,"memUsage":null,"timeUsage":null,"vmem":null,"reads":{"mean":68977.13,"min":67937,"q1":68725,"q2":69204.5,"q3":69450.75,"max":69476,"minLabel":"prep_pchic:SUBLIST_0 (8)","maxLabel":"prep_pchic:SUBLIST_0 (7)","q1Label":"prep_pchic:SUBLIST_0 (3)","q2Label":"prep_pchic:SUBLIST_0 (5)","q3Label":"prep_pchic:SUBLIST_0 (2)"},"cpu":{"mean":54.25,"min":18,"q1":48.75,"q2":51.9,"q3":67.25,"max":78.8,"minLabel":"prep_pchic:SUBLIST_0 (6)","maxLabel":"prep_pchic:SUBLIST_0 (4)","q1Label":"prep_pchic:SUBLIST_0 (3)","q2Label":"prep_pchic:SUBLIST_0 (1)","q3Label":"prep_pchic:SUBLIST_0 (2)"},"time":{"mean":13.13,"min":9,"q1":13,"q2":13,"q3":14.25,"max":15,"minLabel":"prep_pchic:SUBLIST_0 (8)","maxLabel":"prep_pchic:SUBLIST_0 (6)","q1Label":"prep_pchic:SUBLIST_0 (3)","q2Label":"prep_pchic:SUBLIST_0 (4)","q3Label":"prep_pchic:SUBLIST_0 (2)"},"writes":{"mean":290.38,"min":267,"q1":279.5,"q2":286,"q3":298.5,"max":318,"minLabel":"prep_pchic:SUBLIST_0 (8)","maxLabel":"prep_pchic:SUBLIST_0 (7)","q1Label":"prep_pchic:SUBLIST_0 (4)","q2Label":"prep_pchic:SUBLIST_0 (1)","q3Label":"prep_pchic:SUBLIST_0 (5)"}},{"cpuUsage":{"mean":34.88,"min":20.5,"q1":21.95,"q2":31.35,"q3":37.42,"max":69.9,"minLabel":"prep_pchic:SUBLIST_1 (1)","maxLabel":"prep_pchic:SUBLIST_1 (4)","q1Label":"prep_pchic:SUBLIST_1 (8)","q2Label":"prep_pchic:SUBLIST_1 (5)","q3Label":"prep_pchic:SUBLIST_1 (3)"},"process":"SUBLIST_1","mem":null,"memUsage":null,"timeUsage":null,"vmem":null,"reads":{"mean":71252.63,"min":70577,"q1":71131.75,"q2":71321.5,"q3":71417.25,"max":71633,"minLabel":"prep_pchic:SUBLIST_1 (6)","maxLabel":"prep_pchic:SUBLIST_1 (5)","q1Label":"prep_pchic:SUBLIST_1 (2)","q2Label":"prep_pchic:SUBLIST_1 (8)","q3Label":"prep_pchic:SUBLIST_1 (4)"},"cpu":{"mean":34.88,"min":20.5,"q1":21.95,"q2":31.35,"q3":37.42,"max":69.9,"minLabel":"prep_pchic:SUBLIST_1 (1)","maxLabel":"prep_pchic:SUBLIST_1 (4)","q1Label":"prep_pchic:SUBLIST_1 (8)","q2Label":"prep_pchic:SUBLIST_1 (5)","q3Label":"prep_pchic:SUBLIST_1 (3)"},"time":{"mean":12.63,"min":9,"q1":10.75,"q2":13.5,"q3":14.25,"max":15,"minLabel":"prep_pchic:SUBLIST_1 (6)","maxLabel":"prep_pchic:SUBLIST_1 (8)","q1Label":"prep_pchic:SUBLIST_1 (5)","q2Label":"prep_pchic:SUBLIST_1 (7)","q3Label":"prep_pchic:SUBLIST_1 (2)"},"writes":{"mean":291.13,"min":276,"q1":277,"q2":284,"q3":298.5,"max":323,"minLabel":"prep_pchic:SUBLIST_1 (6)","maxLabel":"prep_pchic:SUBLIST_1 (3)","q1Label":"prep_pchic:SUBLIST_1 (4)","q2Label":"prep_pchic:SUBLIST_1 (2)","q3Label":"prep_pchic:SUBLIST_1 (5)"}},{"cpuUsage":null,"process":"COMBINE_FILES","mem":null,"memUsage":null,"timeUsage":{"mean":0.02,"min":0.02,"q1":0.02,"q2":0.02,"q3":0.02,"max":0.02,"minLabel":"prep_pchic:COMBINE_FILES (7)","maxLabel":"prep_pchic:COMBINE_FILES (11)","q1Label":"prep_pchic:COMBINE_FILES (5)","q2Label":"prep_pchic:COMBINE_FILES (1)","q3Label":"prep_pchic:COMBINE_FILES (10)"},"vmem":null,"reads":null,"cpu":null,"time":{"mean":5038.5,"min":4994,"q1":5037,"q2":5040,"q3":5043.25,"max":5057,"minLabel":"prep_pchic:COMBINE_FILES (7)","maxLabel":"prep_pchic:COMBINE_FILES (11)","q1Label":"prep_pchic:COMBINE_FILES (5)","q2Label":"prep_pchic:COMBINE_FILES (1)","q3Label":"prep_pchic:COMBINE_FILES (10)"},"writes":null}]
+May-05 17:02:55.682 [main] DEBUG nextflow.trace.TimelineObserver - Flow completing -- rendering html timeline
+May-05 17:02:55.981 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+May-05 17:02:56.014 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
